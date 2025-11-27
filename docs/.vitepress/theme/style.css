@@ -42,3 +42,12 @@ html {
 body {
   -ms-overflow-style: none;
 }
+
+.VPDoc,
+.VPDoc .container,
+.VPContent,
+.VPContent .content {
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding-left: 0px; /* 可选，让左边留一点间距 */
+}
