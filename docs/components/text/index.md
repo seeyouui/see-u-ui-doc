@@ -1,8 +1,10 @@
 ---
 layout: doc
+outline: deep
 title: Text 文本
-# 下面这个是你演示项目的具体页面地址
-iframeSrc: http://localhost:8080/#/pages/index/index
+titleTemplate: SeeYouUI - Text 文本
+description: SeeYouUI 组件库 seeText 文本组件
+iframeSrc: /pages/seeText/index
 ---
 
 # Text 文本

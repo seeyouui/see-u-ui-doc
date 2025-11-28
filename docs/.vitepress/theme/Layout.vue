@@ -38,6 +38,7 @@ const iframeUrl = computed(() => {
 
 // 只有在 frontmatter 中标记了 layout: doc 的页面或者是组件页才显示手机
 const showPhone = computed(() => {
+  return frontmatter.value.layout === "doc";
   // 这里可以根据你的需求定制规则，例如只在 /components/ 目录下显示
   return route.path.includes("/components/");
 });
@@ -47,7 +48,7 @@ const showPhone = computed(() => {
 /* 这里是关键样式，让它悬浮在右侧 */
 .mobile-preview-wrapper {
   position: fixed; /* ← 这里是关键 */
-  right: calc((100vw - var(--vp-layout-max-width)) / 2 + -48px);
+  right: 24px;
   top: 90px; /* 避开顶部导航（可以自己调） */
   z-index: 10;
   width: 400px;
