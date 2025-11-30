@@ -10,7 +10,7 @@ iframeSrc: /pages/index/index
 # 介绍
 
 <div style="width: 160px; margin: 0 auto;">
-  <img src="./static/logo.png" alt="logo" />
+  <img src="/static/logo.png" alt="logo" />
 
   <!-- 标题主文字：使用 vp-c-text-1 -->
   <div style="font-size: 24px; color: var(--vp-c-text-1); text-align: center; margin-top: 12px; font-weight: bold;">
@@ -42,7 +42,7 @@ iframeSrc: /pages/index/index
 
 | App（vue）                                                                      | App（nvue）                                                                     | H5                                                                              | 微信小程序                                                                      |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| <img src="./static/logo.png" alt="logo" style="display:block;margin:0 auto;" /> | <img src="./static/logo.png" alt="logo" style="display:block;margin:0 auto;" /> | <img src="./static/logo.png" alt="logo" style="display:block;margin:0 auto;" /> | <img src="./static/logo.png" alt="logo" style="display:block;margin:0 auto;" /> | -->
+| <img src="/static/logo.png" alt="logo" style="display:block;margin:0 auto;" /> | <img src="/static/logo.png" alt="logo" style="display:block;margin:0 auto;" /> | <img src="/static/logo.png" alt="logo" style="display:block;margin:0 auto;" /> | <img src="/static/logo.png" alt="logo" style="display:block;margin:0 auto;" /> | -->
 
 ## 关于 PR
 
