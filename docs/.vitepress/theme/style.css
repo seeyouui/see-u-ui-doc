@@ -73,3 +73,12 @@ body {
     padding: 0;
   }
 }
+
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4,
+.vp-doc h5,
+.vp-doc h6 {
+  scroll-margin-top: 80px;
+}
