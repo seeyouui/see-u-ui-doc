@@ -82,3 +82,7 @@ body {
 .vp-doc h6 {
   scroll-margin-top: 80px;
 }
+
+.aside-curtain {
+  display: none;
+}

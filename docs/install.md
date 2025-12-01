@@ -65,7 +65,7 @@ pnpm add see-u-ui
 
 SeeYouUI 依赖 [SCSS](https://www.sass.hk/docs/)，您必须要安装此插件，否则无法正常运行。
 
-- 如果您的项目是由 HBuilder X 创建的，请直接在[插件市场](https://ext.dcloud.net.cn/plugin?id=2046)安装 SCSS 插件。
+- 如果您的项目是由 HBuilder X 创建的，请直接在 [插件市场](https://ext.dcloud.net.cn/plugin?id=2046) 安装 SCSS 插件。
 - 如果您的项目是由 vue-cli 创建的，请通过以下命令安装对 sass(scss)的支持，如果已安装，请略过。
 
 ::: warning 注意

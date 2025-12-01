@@ -31,7 +31,7 @@ features:
 
 ## 开始使用
 
-只需简单几步即可开始使用 SeeYouUI，详见[安装](/install)。
+只需简单几步即可开始使用 SeeYouUI，详见 [安装](/install)。
 
 ::: code-group
 

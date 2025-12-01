@@ -77,11 +77,8 @@ onMounted(() => {
 <style scoped>
 .mobile-preview-wrapper {
   position: fixed;
-  right: max(
-    24px,
-    calc((100vw - var(--vp-layout-max-width, 1920px)) / 2 + 24px)
-  );
-  top: 90px;
+  right: max(12px, calc((100vw - var(--vp-layout-max-width, 1920px)) / 2));
+  top: 78px;
   z-index: 10;
   display: none;
 }
@@ -93,19 +90,19 @@ onMounted(() => {
 }
 
 .mobile-mockup {
-  width: 400px;
-  height: 790px;
-  border-radius: 30px;
+  width: 420px;
+  height: 820px;
+  border-radius: 50px;
   overflow: hidden;
-  background: url("./static/iPhone13.png") no-repeat center center;
+  background: url("./static/iPhone16fff.png") no-repeat center center;
   background-size: 100% 100%;
-  padding: 48px 13px 25px;
+  padding: 70px 25px 40px;
 }
 
 .mobile-mockup iframe {
   width: 100%;
   height: 100%;
-  border-radius: 28px;
+  border-radius: 50px;
   /* background-color: #f7f8fa; */
 }
 </style>
