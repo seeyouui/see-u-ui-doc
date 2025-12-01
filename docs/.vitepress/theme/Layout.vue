@@ -13,7 +13,7 @@
 <script setup>
 import DefaultTheme from "vitepress/theme";
 import { useData, useRoute } from "vitepress";
-import { computed } from "vue";
+import { computed, onMounted } from "vue";
 
 const { Layout } = DefaultTheme;
 const { frontmatter } = useData();
@@ -40,12 +40,47 @@ const showPhone = computed(() => {
   // 这里可以根据你的需求定制规则，例如只在 /components/ 目录下显示
   return route.path.includes("/components/");
 });
+
+// 阻止iframe滑动事件穿透到vitepress
+onMounted(() => {
+  const iframe = document.querySelector("iframe");
+
+  // 鼠标滑入 iframe 时，锁定父页面滚动
+  iframe.addEventListener("mouseenter", () => {
+    document.body.style.overflow = "hidden";
+  });
+
+  // 鼠标离开 iframe 时，恢复父页面滚动
+  iframe.addEventListener("mouseleave", () => {
+    document.body.style.overflow = "";
+  });
+
+  // 触屏设备（移动端）——手指按到 iframe 时锁定滚动
+  iframe.addEventListener(
+    "touchstart",
+    () => {
+      document.body.style.overflow = "hidden";
+    },
+    { passive: true }
+  );
+
+  iframe.addEventListener(
+    "touchend",
+    () => {
+      document.body.style.overflow = "";
+    },
+    { passive: true }
+  );
+});
 </script>
 
 <style scoped>
 .mobile-preview-wrapper {
   position: fixed;
-  right: max(24px, calc((100vw - var(--vp-layout-max-width, 1920px)) / 2 + 24px));
+  right: max(
+    24px,
+    calc((100vw - var(--vp-layout-max-width, 1920px)) / 2 + 24px)
+  );
   top: 90px;
   z-index: 10;
   display: none;
