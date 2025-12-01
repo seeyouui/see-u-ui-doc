@@ -59,7 +59,7 @@ export function createApp() {
 }
 ```
 
-> :tada: 接下来，您可以查看 [快速上手](/quick-start) 或尝试写一个 [Button 按钮](/components/button)。
+> :tada: 接下来，您可以查看 [快速上手](/quick-start) 或尝试写一个 [Button 按钮](/components/button/index)。
 
 ## 不使用 easycom
 

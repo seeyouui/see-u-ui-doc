@@ -96,7 +96,7 @@ onMounted(() => {
   overflow: hidden;
   background: url("./static/iPhone16fff.png") no-repeat center center;
   background-size: 100% 100%;
-  padding: 70px 25px 40px;
+  padding: 70px 25px 42px;
 }
 
 .mobile-mockup iframe {

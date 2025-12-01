@@ -155,4 +155,4 @@ export function createApp() {
 
 > :tada: 大功告成，你已经成功配置好 SeeYouUI 组件库。
 >
-> > 接下来，您可以查看 [快速上手](/quick-start) 或尝试写一个 [Button 按钮](/components/button)。
+> > 接下来，您可以查看 [快速上手](/quick-start) 或尝试写一个 [Button 按钮](/components/button/index)。
