@@ -42,6 +42,13 @@ npm i sass@1.63.2 -D
 npm i sass-loader@10.4.1 -D
 ```
 
+```sh [cnpm]
+cnpm i see-u-ui
+
+cnpm i sass@1.63.2 -D
+cnpm i sass-loader@10.4.1 -D
+```
+
 ```sh [yarn]
 yarn add see-u-ui
 

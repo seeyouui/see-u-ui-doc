@@ -71,7 +71,8 @@ export default defineConfig({
           { text: "介绍", link: "/start" },
           { text: "安装", link: "/install" },
           { text: "配置", link: "/config" },
-          { text: "更新日志", link: "/updatelog" },
+          { text: "快速上手", link: "/quick-start" },
+          { text: "更新日志", link: "/update-log" },
         ],
       },
       {

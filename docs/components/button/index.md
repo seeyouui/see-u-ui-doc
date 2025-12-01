@@ -13,7 +13,7 @@ iframeSrc: /pages/seeButton/index
 >
 > - 新增了[`type`](#按钮类型)属性，用于设置按钮类型
 > - 新增了[`size`](#按钮大小)属性，用于设置按钮大小
-> - 新增了[`isRipple`](#水波动画)属性，用于设置按钮点击涟漪效果
+> - 新增了[`is-ripple`](#水波动画)属性，用于设置按钮点击涟漪效果
 
 ::: warning 注意
 按钮开放能力与 uni-app 按钮组件保持一致，不新增任何功能。参考[uni-app 按钮组件](https://uniapp.dcloud.net.cn/component/button.html)
@@ -28,7 +28,7 @@ iframeSrc: /pages/seeButton/index
 ## 基本使用
 
 ```html:line-numbers {}
-<SeeButton title="默认按钮" />
+<see-button title="默认按钮" />
 ```
 
 ## 设置按钮参数
@@ -36,49 +36,49 @@ iframeSrc: /pages/seeButton/index
 ### 按钮类型
 
 ```html:line-numbers {}
-<SeeButton title="默认按钮" />
-<SeeButton title="主要按钮" type="primary" />
-<SeeButton title="失败按钮" type="error" />
-<SeeButton title="警告按钮" type="warning" />
-<SeeButton title="成功按钮" type="success" />
+<see-button title="默认按钮" />
+<see-button title="主要按钮" type="primary" />
+<see-button title="失败按钮" type="error" />
+<see-button title="警告按钮" type="warning" />
+<see-button title="成功按钮" type="success" />
 ```
 
 ### 镂空按钮
 
 ```html:line-numbers {}
-<SeeButton isHollow title="默认按钮" />
-<SeeButton isHollow title="主要按钮" type="primary" />
-<SeeButton isHollow title="失败按钮" type="error" />
-<SeeButton isHollow title="警告按钮" type="warning" />
-<SeeButton isHollow title="成功按钮" type="success" />
+<see-button isHollow title="默认按钮" />
+<see-button isHollow title="主要按钮" type="primary" />
+<see-button isHollow title="失败按钮" type="error" />
+<see-button isHollow title="警告按钮" type="warning" />
+<see-button isHollow title="成功按钮" type="success" />
 ```
 
 ### 禁用按钮
 
 ```html:line-numbers {}
-<SeeButton isDisabled title="默认按钮" />
-<SeeButton isDisabled title="主要按钮" type="primary" />
-<SeeButton isDisabled title="失败按钮" type="error" />
-<SeeButton isDisabled title="警告按钮" type="warning" />
-<SeeButton isDisabled title="成功按钮" type="success" />
+<see-button isDisabled title="默认按钮" />
+<see-button isDisabled title="主要按钮" type="primary" />
+<see-button isDisabled title="失败按钮" type="error" />
+<see-button isDisabled title="警告按钮" type="warning" />
+<see-button isDisabled title="成功按钮" type="success" />
 ```
 
 ### 按钮大小
 
 ```html:line-numbers {}
-<SeeButton size="normal" title="默认大小" />
-<SeeButton size="small" title="小型尺寸" />
-<SeeButton size="mini" title="最小尺寸" />
-<SeeButton size="large" title="超大尺寸" />
+<see-button size="normal" title="默认大小" />
+<see-button size="small" title="小型尺寸" />
+<see-button size="mini" title="最小尺寸" />
+<see-button size="large" title="超大尺寸" />
 ```
 
 ### 水波动画
 
 ```html:line-numbers {}
-<SeeButton title="默认动画" isRipple />
-<SeeButton type="primary" size="normal" title="按钮颜色" isRipple />
-<SeeButton size="normal" title="动画颜色" isRipple ripple-color="blue" />
-<SeeButton
+<see-button title="默认动画" isRipple />
+<see-button type="primary" size="normal" title="按钮颜色" isRipple />
+<see-button size="normal" title="动画颜色" isRipple ripple-color="blue" />
+<see-button
   size="large"
   title="动画时长(10000ms)"
   isRipple
@@ -90,24 +90,67 @@ iframeSrc: /pages/seeButton/index
 
 ### 自定义
 
-```html:line-numbers {}
-<SeeButton :customStyle="customStyle" title="自定义宽高" />
-<SeeButton :radius="24" title="圆角按钮" />
-<SeeButton
+::: code-group
+
+```vue [组合式]:line-numbers {}
+<see-button :customStyle="customStyle" title="自定义宽高" />
+<see-button :radius="24" title="圆角按钮" />
+<see-button
   size="large"
   title="渐变色按钮"
   textColor="#FFFFFF"
   color="linear-gradient(to right, rgb(66, 83, 216), rgb(213, 51, 186))"
   isRipple
 />
-<SeeButton title="自定义颜色" color="#8A4D35" textColor="#FFFFFF" isRipple />
-<SeeButton title="传入一个view">
+<see-button title="自定义颜色" color="#8A4D35" textColor="#FFFFFF" isRipple />
+<see-button title="传入一个view">
   <view style="width: 10px; height: 10px; border: 1px red solid" />
-</SeeButton>
-<SeeButton size="large">
+</see-button>
+<see-button size="large">
   <text>标题以slot形式</text>
-</SeeButton>
+</see-button>
+
+<script lang="ts" setup>
+const customStyle = {
+  width: "200px",
+  height: "150px",
+};
+</script>
 ```
+
+```vue [选项式]:line-numbers {}
+<see-button :customStyle="customStyle" title="自定义宽高" />
+<see-button :radius="24" title="圆角按钮" />
+<see-button
+  size="large"
+  title="渐变色按钮"
+  textColor="#FFFFFF"
+  color="linear-gradient(to right, rgb(66, 83, 216), rgb(213, 51, 186))"
+  isRipple
+/>
+<see-button title="自定义颜色" color="#8A4D35" textColor="#FFFFFF" isRipple />
+<see-button title="传入一个view">
+  <view style="width: 10px; height: 10px; border: 1px red solid" />
+</see-button>
+<see-button size="large">
+  <text>标题以slot形式</text>
+</see-button>
+
+<script>
+export default {
+  data() {
+    return {
+      customStyle: {
+        width: "200px",
+        height: "150px",
+      };
+    };
+  },
+};
+</script>
+```
+
+:::
 
 <!-- - `title`：按钮文本
 - `type`：按钮类型，可选值为`primary`、`error`、`warning`、`success`
