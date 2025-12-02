@@ -3,17 +3,17 @@
   --vp-layout-max-width: 1920px !important; /* 全局最大宽度 */
 
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(120deg, #bd34fe, #41d1ff);
+  --vp-home-hero-name-background: linear-gradient(120deg, #52f7bd, #3ca7ff);
 
   --vp-home-hero-image-background-image: linear-gradient(
     120deg,
-    #bd34fe,
-    #41d1ff
+    #52f7bd,
+    #3ca7ff
   );
   --vp-home-hero-image-filter: blur(40px);
 
-  --vp-c-brand-1: #41d1ff;
-  --vp-c-brand-2: #bd34fe;
+  --vp-c-brand-1: #3ca7ff;
+  --vp-c-brand-2: #52f7bd;
 
   --vp-doc-content-padding-x: 0px;
 }

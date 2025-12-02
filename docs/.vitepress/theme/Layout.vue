@@ -21,6 +21,7 @@ const route = useRoute();
 
 // 演示站点的基准 URL
 const BASE_URL = "http://113.44.242.235:9001/#";
+// const BASE_URL = "http://localhost:5173/#";
 
 // 根据当前文档路径，计算 iframe 应该显示的 URL
 const iframeUrl = computed(() => {
