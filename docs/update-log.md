@@ -11,6 +11,10 @@ iframeSrc: /pages/index/index
 
 > 日志说明：<Badge type="info" text="修改" /> <Badge type="tip" text="新增" /> <Badge type="warning" text="修复" /> <Badge type="danger" text="删除" />
 
+## 1.0.007 **_[`2025-12-02`](https://www.npmjs.com/package/see-u-ui/v/1.0.7)_**
+
+- <Badge type="info" text="修改" /> theme.scss 主题文件
+
 ## 1.0.006 **_[`2025-12-01`](https://www.npmjs.com/package/see-u-ui/v/1.0.6)_**
 
 - <Badge type="info" text="修改" /> SeeButton 导入结构
