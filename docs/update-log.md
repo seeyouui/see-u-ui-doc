@@ -20,16 +20,16 @@ iframeSrc: /pages/index/index
 - <Badge type="info" text="修改" /> SeeButton 导入结构
 - <Badge type="tip" text="新增" /> 类型文件 declaration.d.ts
 
-## 1.0.005 **_[`2025-12-01`](https://www.npmjs.com/package/see-u-ui/v/1.0.5)_**
+## 1.0.005-alpha **_[`2025-12-01`](https://www.npmjs.com/package/see-u-ui/v/1.0.5)_**
 
 - <Badge type="info" text="修改" /> 回滚至 **_[`1.0.3`](https://www.npmjs.com/package/see-u-ui/v/1.0.3)_**
 
-## 1.0.004 **_[`2025-12-01`](https://www.npmjs.com/package/see-u-ui/v/1.0.4)_**
+## 1.0.004-alpha **_[`2025-12-01`](https://www.npmjs.com/package/see-u-ui/v/1.0.4)_**
 
 - <Badge type="warning" text="修复" /> Typescript 失效的 bug
 - <Badge type="tip" text="新增" /> Vite 构建
 
-## 1.0.003 **_[`2025-12-01`](https://www.npmjs.com/package/see-u-ui/v/1.0.3)_**
+## 1.0.003-alpha **_[`2025-12-01`](https://www.npmjs.com/package/see-u-ui/v/1.0.3)_**
 
 - <Badge type="tip" text="新增" /> Typescript 支持
 - <Badge type="tip" text="新增" /> theme.scss
