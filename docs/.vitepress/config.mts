@@ -81,9 +81,10 @@ export default defineConfig({
           {
             text: "基础组件",
             items: [
+              { text: "Color 色彩", link: "/components/color/index.md" },
               { text: "Button 按钮", link: "/components/button/index.md" },
               { text: "Text 文本", link: "/components/text/index.md" },
-              { text: "Color 色彩", link: "/components/color/index.md" },
+              { text: "Link 链接", link: "/components/link/index.md" },
               { text: "Icon 图标", link: "/components/todo/index.md" },
               { text: "Image 图片", link: "/components/todo/index.md" },
               { text: "Badge 徽标数", link: "/components/todo/index.md" },
