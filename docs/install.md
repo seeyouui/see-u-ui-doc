@@ -144,7 +144,7 @@ export function createApp() {
   "easycom": {
     "autoscan": true,
     "custom": {
-      "^see-(.*)": "see-u-ui/components/see-$1/index.vue"
+      "^see-(.*)": "see-u-ui/components/See$1/index.vue"
     }
   },
   "pages": [

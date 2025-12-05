@@ -11,7 +11,56 @@ iframeSrc: /pages/index/index
 
 > 日志说明：<Badge type="info" text="修改" /> <Badge type="tip" text="新增" /> <Badge type="warning" text="修复" /> <Badge type="danger" text="删除" />
 
-## 1.0.008 **_[`2025-12-02`](https://www.npmjs.com/package/see-u-ui/v/1.0.8)_**
+## 1.0.009-alpha1 **_[`2025-12-05`](https://www.npmjs.com/package/see-u-ui/v/1.0.9-alpha1)_**
+
+> [`commit: a3c8efd`](https://github.com/seeyouui/see-u-ui/commit/a3c8efd5b98aa853ccb2cc969e499900d2e17180)
+>
+> > - <Badge type="tip" text="新增" /> CurrencyOptions 和 DateFormatOptions 导出
+
+## 1.0.008 **_[`2025-12-05`](https://www.npmjs.com/package/see-u-ui/v/1.0.8)_**
+
+> [`commit: d793988`](https://github.com/seeyouui/see-u-ui/commit/d793988af3d8b39fbb913e4b40f8edb1f9fee40b)
+>
+> > - <Badge type="info" text="修改" /> 组件注释位置
+
+## 1.0.008-alpha7 **_[`2025-12-05`](https://www.npmjs.com/package/see-u-ui/v/1.0.8-alpha7)_**
+
+> [`commit: 84b01af`](https://github.com/seeyouui/see-u-ui/commit/84b01af7c5bbd5775bf3c9b448846156a9a4dc3f)
+>
+> > - <Badge type="tip" text="新增" /> 组件 name
+
+## 1.0.008-alpha6 **_[`2025-12-05`](https://www.npmjs.com/package/see-u-ui/v/1.0.8-alpha6)_**
+
+> [`commit: 1db701d`](https://github.com/GmhLovEDM/SeeYouUINpm/commit/1db701d5f90685a430454663c8a153d9afb4266f)
+>
+> > - <Badge type="tip" text="新增" /> 打包路径
+
+## 1.0.008-alpha5 **_[`2025-12-05`](https://www.npmjs.com/package/see-u-ui/v/1.0.8-alpha5)_**
+
+> [`commit: f8fe7a7`](https://github.com/GmhLovEDM/SeeYouUINpm/commit/f8fe7a7734f21d8cd90fbd54ae2a009582ac2f94)
+>
+> > - <Badge type="tip" text="新增" /> 使用 vite 构建
+
+## 1.0.008-alpha4 **_[`2025-12-05`](https://www.npmjs.com/package/see-u-ui/v/1.0.8-alpha4)_**
+
+> [`commit: d0efd67`](https://github.com/GmhLovEDM/SeeYouUINpm/commit/d0efd670ff18c1c93d5fa3a8f67c614466d63ffa)
+>
+> > - <Badge type="info" text="修改" /> 打包配置
+
+## 1.0.008-alpha3 **_[`2025-12-05`](https://www.npmjs.com/package/see-u-ui/v/1.0.8-alpha3)_**
+
+> [`commit: 34c1a55`](https://github.com/GmhLovEDM/SeeYouUINpm/commit/34c1a55d899b14efa5f67b928cf2e56fa120c5c9)
+>
+> > - <Badge type="info" text="修改" /> 打包配置
+
+## 1.0.008-alpha2 **_[`2025-12-05`](https://www.npmjs.com/package/see-u-ui/v/1.0.8-alpha2)_**
+
+> [`commit: 45c35b4`](https://github.com/seeyouui/see-u-ui/commit/45c35b441b465828e74e98553f0b40d613943f36)
+>
+> > - <Badge type="info" text="修改" /> SeeLink 中 text 类型
+> > - <Badge type="warning" text="修复" /> useCurrencyFormat 中 unref 类型报错的 BUG
+
+## 1.0.008-alpha1 **_[`2025-12-04`](https://www.npmjs.com/package/see-u-ui/v/1.0.8-alpha1)_**
 
 > [`commit: 58294e3`](https://github.com/seeyouui/see-u-ui/commit/58294e3ddbf411deb3903e251231c0416ee920cc)
 >
