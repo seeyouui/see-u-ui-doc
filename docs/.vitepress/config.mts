@@ -7,7 +7,31 @@ export default defineConfig({
   description: "SeeYouUI,是全面兼容nvue的uni-app生态框架",
   lastUpdated: true,
   head: [["link", { rel: "icon", href: "/static/logo.png" }]],
+  markdown: {
+    config: (md) => {
+      // 1. 保存原有的 fence 渲染规则
+      const defaultFence =
+        md.renderer.rules.fence ||
+        function (tokens, idx, options, env, self) {
+          return self.renderToken(tokens, idx, options);
+        };
 
+      // 2. 覆盖 fence 渲染规则
+      md.renderer.rules.fence = (tokens, idx, options, env, self) => {
+        const token = tokens[idx];
+        const info = token.info.trim(); // 获取代码块语言，例如 "mermaid"
+
+        if (info === "mermaid") {
+          // 3. 如果是 mermaid 代码块，直接返回一个 div，不进行服务端渲染
+          // 注意：这里我们把原始代码放入 div 中，不做任何处理
+          return `<pre class="mermaid" v-pre>${token.content}</pre>`;
+        }
+
+        // 4. 其他语言代码块，使用默认渲染
+        return defaultFence(tokens, idx, options, env, self);
+      };
+    },
+  },
   themeConfig: {
     logo: "/static/logo.png",
 
