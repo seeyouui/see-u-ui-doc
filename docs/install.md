@@ -9,9 +9,11 @@ iframeSrc: /pages/index/index
 
 # 安装
 
-## 以 Dcloud 插件方式安装
+## 以 Dcloud 插件方式安装（推荐）
 
-暂不支持
+1. 在 HBuilder X 新建 uniapp（vue3）项目。
+2. 进入 [插件市场](https://ext.dcloud.net.cn/plugin?id=26088) ，点击下载插件并导入 HBuilder X。
+3. [配置 SeeYouUI 组件库](./config.md)
 
 ## 以 NPM 方式安装
 
@@ -126,7 +128,7 @@ export function createApp() {
 
 ```scss
 /* uni.scss */
-@import "see-u-ui/theme.scss"; // [!code focus]
+@import "see-u-ui/src/theme.scss"; // [!code focus]
 ```
 
 ### 在 pages.json 中配置 easycom 组件自动引入
@@ -144,7 +146,7 @@ export function createApp() {
   "easycom": {
     "autoscan": true,
     "custom": {
-      "^see-(.*)": "see-u-ui/components/See$1/index.vue"
+      "^see-(.*)": "see-u-ui/src/components/see-$1/index.vue"
     }
   },
   "pages": [

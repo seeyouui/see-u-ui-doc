@@ -15,7 +15,7 @@ iframeSrc: /pages/index/index
 
 ## 在 main.js 中引入 SeeYouUI
 
-```js
+```js{2,8}
 // main.js
 import SeeYouUI from "see-u-ui";
 
@@ -33,10 +33,19 @@ export function createApp() {
 
 ## 在 uni.scss 中引入 SeeYouUI 的全局 SCSS 主题文件
 
-```scss
+::: code-group
+
+```scss [Dcloud方式安装]{2}
 /* uni.scss */
-@import "see-u-ui/theme.scss";
+@import "@/uni_modules/see-u-ui/theme.scss";
 ```
+
+```scss [NPM方式安装]{2}
+/* uni.scss */
+@import "see-u-ui/src/theme.scss";
+```
+
+:::
 
 ## 在 pages.json 中配置 easycom 组件自动引入
 
@@ -44,13 +53,15 @@ export function createApp() {
 配置 easycom 组件自动引入后，您可以在项目中直接使用 SeeYouUI 组件，无需手动引入。
 :::
 
-```json
+::: code-group
+
+```json [Dcloud方式安装]{3-8}
 // pages.json
 {
   "easycom": {
     "autoscan": true,
     "custom": {
-      "^see-(.*)": "see-u-ui/components/see-$1/index.vue"
+      "^see-(.*)": "@/uni_modules/see-u-ui/components/see-$1/index.vue"
     }
   },
   "pages": [
@@ -58,6 +69,23 @@ export function createApp() {
   ]
 }
 ```
+
+```json [NPM方式安装]{3-8}
+// pages.json
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^see-(.*)": "see-u-ui/src/components/see-$1/index.vue"
+    }
+  },
+  "pages": [
+    // ...
+  ]
+}
+```
+
+:::
 
 > :tada: 接下来，您可以查看 [快速上手](/quick-start) 或尝试写一个 [Button 按钮](/components/button/index)。
 
