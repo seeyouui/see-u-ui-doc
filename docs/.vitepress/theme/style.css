@@ -86,3 +86,28 @@ body {
 .aside-curtain {
   display: none;
 }
+/* 让 mermaid 容器占满宽度 */
+.mermaid {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* 可选：如果你想要内容少时居中 */
+}
+
+/* 1. 针对普通文档流中的 Mermaid 图表 */
+.mermaid svg {
+  max-width: none !important; /* 核心代码：移除最大宽度限制 */
+  width: 100% !important; /* 强制宽度填满容器 */
+  height: auto; /* 保持比例 */
+}
+
+/* 2. 针对你贴出的代码（全屏弹窗 Modal 模式） */
+#mermaid-modal-body svg {
+  max-width: none !important; /* 强制覆盖 JS 计算出的 max-width */
+  width: 100% !important;
+}
+
+/* 可选：如果你希望弹窗里的图尽可能大，可以调整弹窗容器 */
+.mermaid-modal-content {
+  width: 90vw !important; /* 让弹窗内容框占屏幕 90% */
+  max-width: none !important;
+}

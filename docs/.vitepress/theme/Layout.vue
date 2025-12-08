@@ -13,7 +13,7 @@
 <script setup>
 import DefaultTheme from "vitepress/theme";
 import { useData, useRoute } from "vitepress";
-import { computed, onMounted } from "vue";
+import { computed, onMounted, nextTick } from "vue";
 
 const { Layout } = DefaultTheme;
 const { frontmatter } = useData();
@@ -43,7 +43,8 @@ const showPhone = computed(() => {
 });
 
 // 阻止iframe滑动事件穿透到vitepress
-onMounted(() => {
+onMounted(async () => {
+  await nextTick();
   const iframe = document.querySelector("iframe");
 
   // 鼠标滑入 iframe 时，锁定父页面滚动
