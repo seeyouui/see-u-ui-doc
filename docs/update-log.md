@@ -11,6 +11,18 @@ iframeSrc: /pages/index/index
 
 > 日志说明：<Badge type="info" text="修改" /> <Badge type="tip" text="新增" /> <Badge type="warning" text="修复" /> <Badge type="danger" text="删除" />
 
+## 1.0.010 **_[`2025-12-07`](https://www.npmjs.com/package/see-u-ui/v/1.0.10)_**
+
+> [`commit: 7320e8c`](https://github.com/seeyouui/see-u-ui/commit/7320e8cc6537097b976a71cd46db6722b8fee31d)
+>
+> > - <Badge type="info" text="修改" /> 组件位置以适配 Dcloud 插件市场
+
+## 1.0.009 **_[`2025-12-06`](https://www.npmjs.com/package/see-u-ui/v/1.0.9)_**
+
+> [`commit: 95acfdc`](https://github.com/seeyouui/see-u-ui/commit/95acfdc24af2e03e29fd29afa3ba3f93ce5dc25a)
+>
+> > - <Badge type="info" text="修改" /> 组件驼峰命名为短横线命名
+
 ## 1.0.009-alpha1 **_[`2025-12-05`](https://www.npmjs.com/package/see-u-ui/v/1.0.9-alpha1)_**
 
 > [`commit: a3c8efd`](https://github.com/seeyouui/see-u-ui/commit/a3c8efd5b98aa853ccb2cc969e499900d2e17180)

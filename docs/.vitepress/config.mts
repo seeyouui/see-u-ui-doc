@@ -83,7 +83,8 @@ export default withMermaid(
       nav: [
         { text: "首页", link: "/" },
         { text: "组件", link: "/components/button" },
-        { text: "指南", link: "/start" },
+        { text: "贡献指南", link: "/contributing" },
+        { text: "关于我们", link: "/about" },
       ],
 
       sidebar: [
@@ -94,8 +95,8 @@ export default withMermaid(
             { text: "安装", link: "/install" },
             { text: "配置", link: "/config" },
             { text: "快速上手", link: "/quick-start" },
+            { text: "注意事项", link: "/precautions" },
             { text: "更新日志", link: "/update-log" },
-            { text: "贡献指南", link: "/contributing" },
           ],
         },
         {

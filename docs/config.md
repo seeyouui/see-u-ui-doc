@@ -13,7 +13,7 @@ iframeSrc: /pages/index/index
 在配置 SeeYouUI 组件库前，请确保您已经 [安装](install.md) 了 SeeYouUI 组件库。
 :::
 
-### 在 main.js 中引入 SeeYouUI
+## 在 main.js 中引入 SeeYouUI
 
 ```js
 // main.js
@@ -31,14 +31,14 @@ export function createApp() {
 // #endif
 ```
 
-### 在 uni.scss 中引入 SeeYouUI 的全局 SCSS 主题文件
+## 在 uni.scss 中引入 SeeYouUI 的全局 SCSS 主题文件
 
 ```scss
 /* uni.scss */
 @import "see-u-ui/theme.scss";
 ```
 
-### 在 pages.json 中配置 easycom 组件自动引入
+## 在 pages.json 中配置 easycom 组件自动引入
 
 ::: tip 提示
 配置 easycom 组件自动引入后，您可以在项目中直接使用 SeeYouUI 组件，无需手动引入。

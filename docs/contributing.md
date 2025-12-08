@@ -41,8 +41,8 @@ graph TD
   see-u-ui-doc:main提交 --> Jenkins自动部署演示项目至https://www.seeuui.cn/
 ```
 
-## 开始
-
 ## 加入社区
 
 如果你的贡献度足够高，并且希望和 SeeYouUI 团队一起参与维护工作，你可以[申请成为社区协作者](mailto:GmhLovEDM@gmail.com)。
+
+你也可以在 [关于我们](./about.md) 中了解当前的主要协作者。

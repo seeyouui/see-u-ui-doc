@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "SeeYouUI"
   # text: "A VitePress Site"
-  tagline: SeeYouUI，是全面兼容nvue的uni-app生态框架
+  tagline: SeeYouUI，一个基于 uni-app 的组件库
   image:
     src: /static/logo.png
     alt: SeeYouUI

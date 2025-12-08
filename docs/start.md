@@ -44,15 +44,14 @@ iframeSrc: /pages/index/index
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | <img src="/static/logo.png" alt="logo" style="display:block;margin:0 auto;" /> | <img src="/static/logo.png" alt="logo" style="display:block;margin:0 auto;" /> | <img src="/static/logo.png" alt="logo" style="display:block;margin:0 auto;" /> | <img src="/static/logo.png" alt="logo" style="display:block;margin:0 auto;" /> | -->
 
-## 关于 PR
+## 贡献
 
 我们 **真诚、迫切、由衷地欢迎** 你提交任何形式的 [Pull Request](https://github.com/GmhLovEDM/SeeYouUI/pulls) 来一起完善 SeeYouUI 组件库。
 
 无论是修个 typo、补一句注释、提个小优化，还是提交一个超棒的新功能——**都对我们来说无比重要**。
 你的每一次贡献，真的都会让这个项目变得更好。
 
-**我们真的非常需要你的 PR 🙏❤️**
-如果你愿意帮我们一点点，我们会非常感激的。
+更多说明请参阅我们的 [贡献指南](./contributing.md) 🙏❤️
 
 <!-- - 请确保您的 PR 符合 [贡献指南](https://github.com/see-u-ui/see-u-ui/blob/main/CONTRIBUTING.md)。 -->
 
