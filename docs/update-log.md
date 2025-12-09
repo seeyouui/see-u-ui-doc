@@ -11,6 +11,14 @@ iframeSrc: /pages/index/index
 
 > 日志说明：<Badge type="info" text="修改" /> <Badge type="tip" text="新增" /> <Badge type="warning" text="修复" /> <Badge type="danger" text="删除" />
 
+## 1.0.012
+
+- 测试 GitHub Action 自动拉取最新 npm 包
+
+## 1.0.011
+
+- 测试 GitHub Action 自动拉取最新 npm 包
+
 ## 1.0.010 **_[`2025-12-07`](https://www.npmjs.com/package/see-u-ui/v/1.0.10)_**
 
 > [`commit: 7320e8c`](https://github.com/seeyouui/see-u-ui/commit/7320e8cc6537097b976a71cd46db6722b8fee31d)

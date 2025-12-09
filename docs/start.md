@@ -57,8 +57,9 @@ iframeSrc: /pages/index/index
 
 ## 社区
 
-- QQ 一群：123456789
-- 钉钉一群：123456789
+- QQ 一群：[792613113](https://qun.qq.com/universal-share/share?ac=1&authKey=P2tlNsOAS4mvQS0Q8V%2BdjBtgYusIkYXU7c63TgJab8l8%2BxZvwwga1kbJozS2gQC6&busi_data=eyJncm91cENvZGUiOiI3OTI2MTMxMTMiLCJ0b2tlbiI6IjVPK3pHUStkZVBNck5QMVFYRnRSZmlMeUlsZkVuVnZZemkxS25sOWFBT2pmeXFERFBQazUvTVZPRU5hbU0xT1YiLCJ1aW4iOiIxMjY1OTAzMTU5In0%3D&data=BIQGz4XNkPWHqdHMLLCiD-S9ZXFGmy1bACPq32ZzaJ8tWNRRXn5Mmw5ki6rR1ID-R7Azxu4wNHLl6eaLdeS7_w&svctype=4&tempid=h5_group_info)
+- 钉钉一群：[160655009037](https://qr.dingtalk.com/action/joingroup?code=v1,k1,nVryX8WJ3cP/UkIbFU2KwhIdefjMJ5j1SEi6Y5bAC6k=&_dt_no_comment=1&origin=11)
+- Discord 大群：[点击进入](https://discord.gg/c3KdbBZS)
 
 ## 许可
 

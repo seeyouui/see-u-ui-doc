@@ -101,7 +101,7 @@ export default defineConfig({
     socialLinks: [
       { icon: "github", link: "https://github.com/GmhLovEDM/SeeYouUI" },
       { icon: "twitter", link: "https://twitter.com/GmhLovEDM" },
-      { icon: "discord", link: "https://discord.gg" },
+      { icon: "discord", link: "https://discord.gg/c3KdbBZS" },
       { icon: "npm", link: "https://www.npmjs.com/package/see-u-ui" },
     ],
 
