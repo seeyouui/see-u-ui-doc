@@ -39,7 +39,7 @@ jobs:
       - name: Deploy to server
         uses: burnett01/rsync-deployments@7.0.1
         with:
-          switches: -avz --delete
+          switches: -avz --delete --exclude=".*"
           path: docs/.vitepress/dist/
           remote_path: /www/wwwroot/www.seeuui.cn/
           remote_host: ${{ secrets.SERVER_HOST }}
