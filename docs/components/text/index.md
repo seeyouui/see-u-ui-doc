@@ -43,7 +43,7 @@ iframeSrc: /pages/seeText/index
 
 ::: warning 注意
 
-如需更完整功能,请查看 [Link 链接](../link) 组件
+如需更完整功能,请查看 [Link 链接](../link/index.md) 组件
 
 :::
 
