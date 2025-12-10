@@ -44,3 +44,5 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "docs/.vitepress/dist/."
           target: "/www/wwwroot/www.seeuui.cn"
+          overwrite: true
+          recursive: true
