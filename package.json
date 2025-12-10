@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "vitepress": "^1.6.4",
-    "mermaid": "^10.5.0"
+    "mermaid": "^11.12.2"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs --port 9000",
