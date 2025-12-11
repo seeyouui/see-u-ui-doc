@@ -7,7 +7,7 @@ description: SeeYouUI 组件库 seeButton 按钮组件
 iframeSrc: /pages/seeButton/index
 ---
 
-# Button 按钮 2
+# Button 按钮
 
 > 该组件内部实现以 uni-app [`button`](https://uniapp.dcloud.net.cn/component/button.html) 组件为基础，进行二次封装，主要区别在于：
 >
