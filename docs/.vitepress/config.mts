@@ -7,7 +7,25 @@ export default defineConfig({
   title: "SeeYouUI",
   description: "SeeYouUI,是全面兼容nvue的uni-app生态框架",
   lastUpdated: true,
-  head: [["link", { rel: "icon", href: "/static/logo.png" }]],
+  head: [
+    // favicon
+    ["link", { rel: "icon", href: "/static/logo.png" }],
+
+    // 百度统计脚本
+    [
+      "script",
+      {},
+      `
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b0c2a2ab7c7842d9ecaaeec1022b8512";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+      `,
+    ],
+  ],
   markdown: {
     config: (md) => {
       // 1. 保存原有的 fence 渲染规则
