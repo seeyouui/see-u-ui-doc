@@ -35,11 +35,17 @@ iframeSrc: /pages/index/index
 
 ```mermaid
 graph TD
-  see-u-ui:main提交 -->  GmhLovEDM手动review --> 发布至Dcloud
-  see-u-ui:main提交 --> 自动同步至SeeYouUINPM仓库 --> GmhLovEDM手动review --> 发布至NPM --> 自动更新see-u-ui-project仓库
+  see-u-ui:main提交 --> GmhLovEDM手动review --> 发布至Dcloud
+  see-u-ui:main提交 --> 自动同步至see-u-ui-npm仓库 --> GmhLovEDM手动review --> 发布至NPM --> 自动更新see-u-ui-project仓库
   see-u-ui:main提交 --> 自动同步至see-u-ui-cli仓库 --> 自动部署演示项目至seeuui.cn
   see-u-ui-doc:main提交 --> 自动部署演示项目至seeuui.cn
+
+  style 自动同步至see-u-ui-npm仓库 white-space:nowrap
+  style 自动更新see-u-ui-project仓库 white-space:nowrap
 ```
+
+<!-- click 自动同步至see-u-ui-npm仓库 "https://www.npmjs.com/package/see-u-ui" _blank
+click 自动更新see-u-ui-project仓库 "https://github.com/seeyouui/see-u-ui-project" _blank -->
 
 ## 加入社区
 

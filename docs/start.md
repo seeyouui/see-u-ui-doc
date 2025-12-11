@@ -46,7 +46,7 @@ iframeSrc: /pages/index/index
 
 ## 贡献
 
-我们 **真诚、迫切、由衷地欢迎** 你提交任何形式的 [Pull Request](https://github.com/GmhLovEDM/SeeYouUI/pulls) 来一起完善 SeeYouUI 组件库。
+我们 **真诚、迫切、由衷地欢迎** 你提交任何形式的 [Pull Request](https://github.com/seeyouui/see-u-ui/pulls) 来一起完善 SeeYouUI 组件库。
 
 无论是修个 typo、补一句注释、提个小优化，还是提交一个超棒的新功能——**都对我们来说无比重要**。
 你的每一次贡献，真的都会让这个项目变得更好。

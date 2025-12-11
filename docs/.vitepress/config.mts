@@ -43,7 +43,7 @@ export default defineConfig({
     returnToTopLabel: "返回顶部",
 
     footer: {
-      message: "基于 MIT 许可发布",
+      message: "辽 ICP 备 2025070134 号",
       copyright: "版权所有 © 2025-至今 GmhLovEDM",
     },
 

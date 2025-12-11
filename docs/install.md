@@ -11,7 +11,7 @@ iframeSrc: /pages/index/index
 
 > 想要最简单的方式？请 clone [see-u-ui-project](https://github.com/seeyouui/see-u-ui-project) 项目代码，立刻开始使用。
 >
-> > :rocket: [我们的开发流程](contributing.md#我们的开发流程)会在每半个小时，[自动拉取](https://github.com/seeyouui/see-u-ui-project/actions)组件库最新的[npm 包](https://www.npmjs.com/package/see-u-ui)。
+> > :rocket: [我们的开发流程](contributing.md#我们的开发流程)会在每小时，[自动拉取](https://github.com/seeyouui/see-u-ui-project/actions)组件库最新的[npm 包](https://www.npmjs.com/package/see-u-ui)。
 
 <!-- > >
 > > 由于 [GitHub 免费账户限制](https://docs.github.com/zh/get-started/learning-about-github/githubs-plans)，我们只能保证每半个小时更新一次 -->
