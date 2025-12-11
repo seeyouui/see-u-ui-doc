@@ -37,8 +37,8 @@ iframeSrc: /pages/index/index
 graph TD
   see-u-ui:main提交 -->  GmhLovEDM手动review --> 发布至Dcloud
   see-u-ui:main提交 --> 自动同步至SeeYouUINPM仓库 --> GmhLovEDM手动review --> 发布至NPM --> 自动更新see-u-ui-project仓库
-  see-u-ui:main提交 --> Jenkins自动部署演示项目至https://www.seeuui.cn/
-  see-u-ui-doc:main提交 --> Jenkins自动部署演示项目至https://www.seeuui.cn/
+  see-u-ui:main提交 --> 自动同步至see-u-ui-cli仓库 --> 自动部署演示项目至seeuui.cn
+  see-u-ui-doc:main提交 --> 自动部署演示项目至seeuui.cn
 ```
 
 ## 加入社区
