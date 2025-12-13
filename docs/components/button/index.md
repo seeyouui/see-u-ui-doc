@@ -27,13 +27,15 @@ iframeSrc: /pages/seeButton/index
 
 ## 基本使用
 
+- 通过 `title` 设置按钮文本。
+
 ```html:line-numbers {}
 <see-button title="默认按钮" />
 ```
 
-## 设置按钮参数
+## 按钮类型
 
-### 按钮类型
+- 通过 `type` 参数设置按钮主题，默认为 `info`。
 
 ```html:line-numbers {}
 <see-button title="默认按钮" />
@@ -43,7 +45,9 @@ iframeSrc: /pages/seeButton/index
 <see-button title="成功按钮" type="success" />
 ```
 
-### 镂空按钮
+## 镂空按钮
+
+- 通过设置 `isHollow` 为 `true`，背景色变为透明，边框和文字保留主题色，默认为 `false`。
 
 ```html:line-numbers {}
 <see-button isHollow title="默认按钮" />
@@ -53,7 +57,11 @@ iframeSrc: /pages/seeButton/index
 <see-button isHollow title="成功按钮" type="success" />
 ```
 
-### 禁用按钮
+## 禁用按钮
+
+- 通过设置 `isDisabled` 为 `true` 参数设置按钮为禁用状态。
+- 禁用状态下，点击事件不会触发，且样式会变灰或降低透明度。
+
 
 ```html:line-numbers {}
 <see-button isDisabled title="默认按钮" />
@@ -63,7 +71,9 @@ iframeSrc: /pages/seeButton/index
 <see-button isDisabled title="成功按钮" type="success" />
 ```
 
-### 按钮大小
+## 按钮大小
+
+- 通过 `size` 参数设置按钮大小，我们提供了四种属性：`normal` `small` `mini` `large`
 
 ```html:line-numbers {}
 <see-button size="normal" title="默认大小" />
@@ -72,7 +82,11 @@ iframeSrc: /pages/seeButton/index
 <see-button size="large" title="超大尺寸" />
 ```
 
-### 水波动画
+## 水波动画
+
+- 开启 `isRipple` 属性后，点击按钮将产生从触点扩散的水波纹效果。
+  - `ripple-color`: 自定义波纹颜色。
+  - `ripple-time`: 波纹扩散速度（毫秒）。
 
 ```html:line-numbers {}
 <see-button title="默认动画" isRipple />
@@ -88,7 +102,7 @@ iframeSrc: /pages/seeButton/index
 />
 ```
 
-### 自定义
+## 自定义
 
 ::: code-group
 

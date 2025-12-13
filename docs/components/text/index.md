@@ -27,8 +27,7 @@ iframeSrc: /pages/seeText/index
 
 ## 设置主题
 
-- 通过 `type` 参数设置文本主题，我们提供了五类属性。
-- `primary` `error` `success` `warning` `info`
+- 通过 `type` 参数设置文本主题，我们提供了五类属性：`primary` `error` `success` `warning` `info`
 
 ```html:line-numbers {}
 <see-text text="默认" />
@@ -63,7 +62,7 @@ iframeSrc: /pages/seeText/index
 * 通过 `phone-number` 指定要拨打的手机号
 * `text` 用于控制显示内容，可与号码不同
 
-```html
+```html:line-numbers {}
 <see-text text="18888888888" type="primary" mode="phone" phone-number="18888888888" />
 <see-text text="自定义文本" type="primary" mode="phone" phone-number="19999999999" />
 ```
@@ -81,7 +80,7 @@ iframeSrc: /pages/seeText/index
 * 支持 `String` / `Number` 类型
 * 适用于金额、价格、统计数据等场景
 
-```html
+```html:line-numbers {}
 <see-text text="一千块：" />
 <see-text text="1000" type="primary" mode="price" />
 
@@ -103,7 +102,7 @@ iframeSrc: /pages/seeText/index
   * `Date` 对象
 * 通过 `date-format` 指定显示格式
 
-```html
+```html:line-numbers {}
 <see-text text="字符串时间戳：" />
 <see-text type="primary" mode="date" date="1672502400000" date-format="YYYY-MM-DD" />
 
@@ -136,7 +135,7 @@ iframeSrc: /pages/seeText/index
   * 几天前
 * 当时间跨度过大时，可回退使用 `date-format`
 
-```html
+```html:line-numbers {}
 <see-text text="当前时间 + 1秒：" />
 <see-text type="primary" mode="timeago" :date="Date.now() + 1000" date-format="YYYY-MM-DD" />
 
