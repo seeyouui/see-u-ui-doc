@@ -31,6 +31,18 @@ export default defineConfig({
       })();
       `,
     ],
+
+    // Schema 标记
+    [
+      "script",
+      { type: "application/ld+json" },
+      JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://www.seeuui.cn",
+        "name": "SeeYouUI"
+      })
+    ]
   ],
   markdown: {
     config: (md) => {
