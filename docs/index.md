@@ -8,7 +8,7 @@ hero:
   tagline: SeeYouUI，一个基于 uni-app 的组件库
   image:
     src: /static/logo.png
-    alt: SeeYouUI
+    alt: SeeYouUI Logo
   actions:
     - theme: brand
       text: 起步
