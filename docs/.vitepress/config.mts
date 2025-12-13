@@ -7,6 +7,9 @@ export default defineConfig({
   title: "SeeYouUI",
   description: "SeeYouUI,是全面兼容nvue的uni-app生态框架",
   lastUpdated: true,
+  sitemap: {
+    hostname: 'https://www.seeuui.cn'
+  },
   head: [
     // favicon
     ["link", { rel: "icon", href: "/static/logo.png" }],
