@@ -5,8 +5,9 @@ import { commonSidebar, apiSidebar } from "./sidebar";
 export default defineConfig({
   lang: "zh-CN",
   title: "SeeYouUI",
-  description: "SeeYouUI,是全面兼容nvue的uni-app生态框架",
+  description: "SeeYouUI,一个基于 uni-app 的组件库,使用TypeScript开发,提供丰富的组件和工具函数,帮助你快速构建跨平台应用。",
   lastUpdated: true,
+  cleanUrls: true,
   sitemap: {
     hostname: 'https://www.seeuui.cn'
   },
