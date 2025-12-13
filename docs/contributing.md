@@ -29,7 +29,7 @@ iframeSrc: /pages/index/index
 
 ## 第一次贡献
 
-如果你还不清楚怎么在 GitHub 上提 Pull Request ，可以阅读下面这篇文章来学习：[如何优雅地在 GitHub 上贡献代码](https://segmentfault.com/a/1190000000736629)
+如果你还不清楚怎么在 GitHub 上提 Pull Request ，可以阅读下面这篇文章来学习：[如何优雅地在 GitHub 上贡献代码](https://gmhlovedm.github.io/blog/2-github-pr/zh_CN)
 
 ## 我们的开发流程
 
