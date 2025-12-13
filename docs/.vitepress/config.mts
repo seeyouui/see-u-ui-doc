@@ -5,7 +5,7 @@ import { commonSidebar, apiSidebar } from "./sidebar";
 export default defineConfig({
   lang: "zh-CN",
   title: "SeeYouUI",
-  description: "SeeYouUI,一个基于 uni-app 的组件库,使用TypeScript开发,提供丰富的组件和工具函数,帮助你快速构建跨平台应用。",
+  description: "SeeYouUI 是一个基于 uni-app 的高质量组件库文档，使用 TypeScript 开发，提供丰富组件与工具函数，帮助你快速构建跨平台应用。",
   lastUpdated: true,
   cleanUrls: true,
   sitemap: {
@@ -14,6 +14,8 @@ export default defineConfig({
   head: [
     // favicon
     ["link", { rel: "icon", href: "/static/logo.png" }],
+    ["link", { rel: "canonical", href: "https://www.seeuui.cn/" }],
+    ["meta", { name: "keywords", content: "SeeYouUI, see-u-ui, seeuui, uni-app 组件库, uniapp 组件, 跨平台 UI 组件, TypeScript 组件库" }],
 
     // 百度统计脚本
     [
