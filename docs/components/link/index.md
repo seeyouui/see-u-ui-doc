@@ -28,6 +28,7 @@ iframeSrc: /pages/seeLink/index
 
 ```html:line-numbers {}
 <see-link text="这是SeeYouUI的官方文档" type="primary" href="https://www.baidu.com" />
+<see-link text="自定义文字颜色" color="#52f7bd" href="https://www.baidu.com" />
 ```
 
 ## 设置主题
