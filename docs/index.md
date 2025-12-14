@@ -7,7 +7,7 @@ hero:
   # text: "A VitePress Site"
   tagline: SeeYouUI，一个基于 uni-app 的组件库
   image:
-    src: /static/logo.png
+    src: /logo.png
     alt: SeeYouUI Logo
   actions:
     - theme: brand

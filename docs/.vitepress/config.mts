@@ -13,7 +13,7 @@ export default defineConfig({
   },
   head: [
     // favicon
-    ["link", { rel: "icon", href: "/static/logo.png" }],
+    ["link", { rel: "icon", href: "/logo.png" }],
     ["link", { rel: "canonical", href: "https://www.seeuui.cn/" }],
     ["meta", { name: "keywords", content: "SeeYouUI, see-u-ui, seeuui, uni-app 组件库, uniapp 组件, 跨平台 UI 组件, TypeScript 组件库" }],
 
