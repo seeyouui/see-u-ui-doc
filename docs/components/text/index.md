@@ -165,16 +165,17 @@ iframeSrc: /pages/seeText/index
 
 ### Props
 
-| 参数名        | 说明                                                                 | 类型                                                                 | 默认值           | 可选值                                                             | 平台差异 |
-| ------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------ | -------- |
-| text          | 文本内容                                                             | `String \| Number`                                                    | `''`             | 任意字符串 / 数字                                                  | -        |
-| mode          | 文本处理模式                                                         | `"text" \| "link" \| "phone" \| "price" \| "date" \| "timeago"`       | `'text'`         | `text`、`link`、`phone`、`price`、`date`、`timeago`                | -        |
-| type          | 文本预置主题样式                                                     | `"info" \| "primary" \| "error" \| "warning" \| "success"`           | `'info'`         | `info`、`primary`、`error`、`warning`、`success`                  | -        |
-| color         | 自定义文本颜色（设置后 `type` 失效）                                 | `String`                                                             | `''`             | 任意 CSS 颜色值                                                    | -        |
-| href          | 链接地址（`mode="link"` 时生效）                                     | `String`                                                             | `''`             | 合法 URL                                                           | -        |
-| phoneNumber   | 手机号（`mode="phone"` 时生效）                                      | `String`                                                             | `''`             | 合法手机号                                                         | H5 不支持拨号 |
-| date          | 日期数据（`mode="date"` / `mode="timeago"` 时生效）                 | `String \| Number \| Date`                                           | `''`             | 时间戳 / Date 对象                                                 | -        |
-| dateFormat    | 日期格式化规则（`mode="date"` 时生效）                               | `String`                                                             | `'YYYY-MM-DD'`   | 任意合法日期格式字符串                                            | -        |
+| 参数名         | 说明                                         | 类型                                                              | 默认值            | 可选值                                             | 平台差异     |
+| ----------- | ------------------------------------------ | --------------------------------------------------------------- | -------------- | ----------------------------------------------- | -------- |
+| text        | 文本内容                                       | `String \| Number`                                              | `''`           | 任意字符串 / 数字                                      | -        |
+| mode        | 文本处理模式                                     | `"text" \| "link" \| "phone" \| "price" \| "date" \| "timeago"` | `'text'`       | `text`、`link`、`phone`、`price`、`date`、`timeago`  | -        |
+| type        | 文本预置主题样式                                   | `"info" \| "primary" \| "error" \| "warning" \| "success"`      | `'info'`       | `info`、`primary`、`error`、`warning`、`success`    | -        |
+| color       | 自定义文本颜色（设置后 `type` 失效）                     | `String`                                                        | `''`           | 任意 CSS 颜色值                                      | -        |
+| size        | **文本字体大小**                                 | `String \| Number`                                              | `16`           | 数字（默认 `px`）或合法 CSS 尺寸（如 `14px`、`1.2em`、`32rpx`） | -        |
+| href        | 链接地址（`mode="link"` 时生效）                    | `String`                                                        | `''`           | 合法 URL                                          | -        |
+| phoneNumber | 手机号（`mode="phone"` 时生效）                    | `String`                                                        | `''`           | 合法手机号                                           | H5 不支持拨号 |
+| date        | 日期数据（`mode="date"` / `mode="timeago"` 时生效） | `String \| Number \| Date`                                      | `''`           | 时间戳 / Date 对象                                   | -        |
+| dateFormat  | 日期格式化规则（`mode="date"` 时生效）                 | `String`                                                        | `'YYYY-MM-DD'` | 任意合法日期格式字符串                                     | -        |
 
 ---
 
