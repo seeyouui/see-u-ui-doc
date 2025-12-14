@@ -10,7 +10,7 @@ iframeSrc: /pages/index/index
 # 介绍
 
 <div style="width: 160px; margin: 0 auto;">
-  <img src="/static/logo.png" alt="logo" />
+  <img src="/logo.png" alt="SeeYouUI Logo" />
 
   <!-- 标题主文字：使用 vp-c-text-1 -->
   <div style="font-size: 24px; color: var(--vp-c-text-1); text-align: center; margin-top: 12px; font-weight: bold;">
