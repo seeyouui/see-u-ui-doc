@@ -70,7 +70,7 @@ export default defineConfig({
     },
   },
   themeConfig: {
-    logo: "/static/logo.png",
+    logo: "/logo.png",
 
     outline: {
       label: "页面导航",
