@@ -70,7 +70,7 @@ export default defineConfig({
     },
   },
   themeConfig: {
-    logo: "/logo.png",
+    logo: { src: "/logo.png", alt: "SeeYouUI Logo" },
 
     outline: {
       label: "页面导航",
