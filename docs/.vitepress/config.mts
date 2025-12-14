@@ -111,9 +111,9 @@ export default defineConfig({
     editLink: {
       pattern: ({ filePath }) => {
         if (filePath.startsWith("packages/")) {
-          return `https://github.com/GmhLovEDM/SeeYouUIDoc/tree/main/docs/${filePath}`;
+          return `https://github.com/seeyouui/see-u-ui-doc/tree/main/docs/${filePath}`;
         } else {
-          return `https://github.com/GmhLovEDM/SeeYouUIDoc/tree/main/docs/${filePath}`;
+          return `https://github.com/seeyouui/see-u-ui-doc/tree/main/docs/${filePath}`;
         }
       },
       text: "在 GitHub 上编辑此页面",
@@ -135,7 +135,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/GmhLovEDM/SeeYouUI" },
+      { icon: "github", link: "https://github.com/seeyouui/see-u-ui" },
       { icon: "twitter", link: "https://twitter.com/GmhLovEDM" },
       { icon: "discord", link: "https://discord.gg/c3KdbBZS" },
       { icon: "npm", link: "https://www.npmjs.com/package/see-u-ui" },
