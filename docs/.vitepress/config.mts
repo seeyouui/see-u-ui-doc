@@ -5,7 +5,7 @@ import { commonSidebar, apiSidebar } from "./sidebar";
 export default defineConfig({
   lang: "zh-CN",
   title: "SeeYouUI",
-  description: "SeeYouUI 是一个基于 uni-app 的高质量组件库文档，使用 TypeScript 开发，提供丰富组件与工具函数，帮助你快速构建跨平台应用。",
+  description: "SeeYouUI 是一个基于 uni-app 的高质量组件库，使用 TypeScript 开发，提供丰富组件与工具函数，帮助你快速构建跨平台应用。",
   lastUpdated: true,
   cleanUrls: true,
   sitemap: {
@@ -80,7 +80,7 @@ export default defineConfig({
 
     footer: {
       message: "辽 ICP 备 2025070134 号",
-      copyright: "版权所有 © 2025-至今 GmhLovEDM",
+      copyright: "© SeeYouUI · 基于 uni-app 的开源 UI 组件库 · MIT License",
     },
 
     search: {
