@@ -11,6 +11,23 @@ iframeSrc: /pages/index/index
 
 > 日志说明：<Badge type="info" text="修改" /> <Badge type="tip" text="新增" /> <Badge type="warning" text="修复" /> <Badge type="danger" text="删除" />
 
+## 1.0.013 **_[`2025-12-13`](https://www.npmjs.com/package/see-u-ui/v/1.0.13)_**
+
+> [`commit: da12e81`](https://github.com/seeyouui/see-u-ui/commit/da12e81003f0cfa894562289e0583a5f466f22e1)
+>
+> > - <Badge type="tip" text="新增" /> Icon 图标组件示例
+> > - <Badge type="tip" text="新增" /> Icon 图标组件
+
+> [`commit: eaaf85a`](https://github.com/seeyouui/see-u-ui/commit/eaaf85a728521fbea2f6db18e9d7b43dd5d36867)
+>
+> > - <Badge type="tip" text="新增" /> Link 组件 Props 中的 size 属性
+> > - <Badge type="tip" text="新增" /> Text 组件 Props 中的 size 属性
+
+> [`commit: a5ec9bd`](https://github.com/seeyouui/see-u-ui/commit/a5ec9bd1448af0dcae809d997ae1a7004697dca1)
+>
+> > - <Badge type="info" text="修改" /> 部分组件中的 JsDoc
+> > - <Badge type="info" text="修改" /> Dcloud 中README.md
+
 ## 1.0.012
 
 - 测试 GitHub Action 自动拉取最新 npm 包
