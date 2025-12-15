@@ -11,7 +11,7 @@ iframeSrc: /pages/index/index
 
 > 日志说明：<Badge type="info" text="修改" /> <Badge type="tip" text="新增" /> <Badge type="warning" text="修复" /> <Badge type="danger" text="删除" />
 
-## 1.0.014 **_[`2025-12-15`](https://www.npmjs.com/package/see-u-ui/v/1.0.14)_**
+## 1.0.0141 **_[`2025-12-15`](https://www.npmjs.com/package/see-u-ui/v/1.0.14)_**
 
 > [`commit: 4300ee3`](https://github.com/seeyouui/see-u-ui/commit/4300ee31539e926fbda4fbfd747237d908eff3c2)
 >
