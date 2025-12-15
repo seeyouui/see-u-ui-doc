@@ -11,6 +11,12 @@ iframeSrc: /pages/index/index
 
 > 日志说明：<Badge type="info" text="修改" /> <Badge type="tip" text="新增" /> <Badge type="warning" text="修复" /> <Badge type="danger" text="删除" />
 
+## 1.0.013 **_[`2025-12-15`](https://www.npmjs.com/package/see-u-ui/v/1.0.13)_**
+
+> [`commit: 4300ee3`](https://github.com/seeyouui/see-u-ui/commit/4300ee31539e926fbda4fbfd747237d908eff3c2)
+>
+> > - <Badge type="tip" text="新增" /> 新增 Text 组件数字滚动
+
 ## 1.0.013 **_[`2025-12-13`](https://www.npmjs.com/package/see-u-ui/v/1.0.13)_**
 
 > [`commit: da12e81`](https://github.com/seeyouui/see-u-ui/commit/da12e81003f0cfa894562289e0583a5f466f22e1)
@@ -26,7 +32,7 @@ iframeSrc: /pages/index/index
 > [`commit: a5ec9bd`](https://github.com/seeyouui/see-u-ui/commit/a5ec9bd1448af0dcae809d997ae1a7004697dca1)
 >
 > > - <Badge type="info" text="修改" /> 部分组件中的 JsDoc
-> > - <Badge type="info" text="修改" /> Dcloud 中README.md
+> > - <Badge type="info" text="修改" /> Dcloud 中 README.md
 
 ## 1.0.012
 
