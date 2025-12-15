@@ -97,7 +97,7 @@ onMounted(async () => {
   height: 820px;
   border-radius: 50px;
   overflow: hidden;
-  background: url("../../public/static/iphone16fff.png") no-repeat center center;
+  background: url("/static/iphone16fff.png") no-repeat center center;
   background-size: 100% 100%;
   padding: 70px 25px 42px;
 }
