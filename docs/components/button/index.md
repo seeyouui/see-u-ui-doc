@@ -62,7 +62,6 @@ iframeSrc: /pages/seeButton/index
 - 通过设置 `isDisabled` 为 `true` 参数设置按钮为禁用状态。
 - 禁用状态下，点击事件不会触发，且样式会变灰或降低透明度。
 
-
 ```html:line-numbers {}
 <see-button isDisabled title="默认按钮" />
 <see-button isDisabled title="主要按钮" type="primary" />

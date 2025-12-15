@@ -19,7 +19,7 @@ iframeSrc: /pages/index/index
 
 组件库也终于全流程自动化了（我爱 GitHub Actions :heart:）。
 
-今天看了点java，写了个小工具，算是有点提升。。。
+今天看了点 java，写了个小工具，算是有点提升。。。
 
 顺便一提，我恨百度。
 
