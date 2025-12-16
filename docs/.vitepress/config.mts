@@ -14,7 +14,23 @@ export default defineConfig({
   },
   head: [
     // favicon
-    ["link", { rel: "icon", href: "/logo.png" }],
+    [
+      "link",
+      {
+        rel: "icon",
+        href: "https://www.seeuui.cn/favicon.ico",
+        sizes: "any",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "234x241",
+        href: "https://www.seeuui.cn/logo.png",
+      },
+    ],
     ["link", { rel: "canonical", href: "https://www.seeuui.cn/" }],
     [
       "meta",
@@ -49,6 +65,7 @@ export default defineConfig({
         "@type": "WebSite",
         url: "https://www.seeuui.cn",
         name: "SeeYouUI",
+        logo: "https://www.seeuui.cn/logo.png",
       }),
     ],
   ],
