@@ -4,7 +4,8 @@ import { commonSidebar, apiSidebar } from "./sidebar";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: "zh-CN",
-  title: "SeeYouUI",
+  title: "SeeYouUI 组件库 - 基于 uni-app(vue3) 的高质量 UI 框架",
+  titleTemplate: "%s 组件库 - 基于 uni-app(vue3) 的高质量 UI 框架",
   description:
     "SeeYouUI 是一个基于 uni-app 的高质量组件库，使用 TypeScript 开发，提供丰富组件与工具函数，帮助你快速构建跨平台应用。",
   lastUpdated: true,
@@ -95,6 +96,8 @@ export default defineConfig({
     },
   },
   themeConfig: {
+    siteTitle: "SeeYouUI",
+
     logo: { src: "/logo.png", alt: "SeeYouUI Logo" },
 
     outline: {
