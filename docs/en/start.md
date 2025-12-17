@@ -44,7 +44,7 @@ We **sincerely, urgently, and wholeheartedly welcome** you to submit [Pull Reque
 Whether it's fixing a typo, adding a comment, proposing a small optimization, or submitting an amazing new feature—**it is all incredibly important to us**.
 Every contribution you make genuinely helps this project become better.
 
-For more details, please refer to our [Contributing Guide](./contributing.md) 🙏❤️
+For more details, please refer to our [Contributing Guide]() 🙏❤️
 
 ## Community
 

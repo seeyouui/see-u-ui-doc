@@ -11,7 +11,7 @@ iframeSrc: /pages/index/index
 
 > Want the easiest way to get started? Simply clone the [see-u-ui-project](https://github.com/seeyouui/see-u-ui-project) repository and start using it right away.
 >
-> > :rocket: Our [development workflow](contributing.md#our-development-workflow) automatically [pulls](https://github.com/seeyouui/see-u-ui-project/actions) the latest [npm package](https://www.npmjs.com/package/see-u-ui) of the component library every hour.
+> > :rocket: Our [development workflow]() automatically [pulls](https://github.com/seeyouui/see-u-ui-project/actions) the latest [npm package](https://www.npmjs.com/package/see-u-ui) of the component library every hour.
 
 <!-- > >
 > > Due to [GitHub free account limitations](https://docs.github.com/get-started/learning-about-github/githubs-plans), we can only guarantee updates every half hour -->
@@ -20,7 +20,7 @@ iframeSrc: /pages/index/index
 
 1. Create a new uni-app (Vue 3) project in HBuilder X.
 2. Go to the [Plugin Marketplace](https://ext.dcloud.net.cn/plugin?id=26088), download the plugin, and import it into HBuilder X.
-3. [Configure the SeeYouUI component library](./config.md)
+3. [Configure the SeeYouUI component library]()
 
 ## Install via NPM
 
@@ -111,7 +111,7 @@ pnpm add sass-loader@10.4.1 -D
 
 ## Configuration
 
-> This section covers the minimum required configuration. For more details, see [Configuration](/config).
+> This section covers the minimum required configuration. For more details, see [Configuration]().
 
 ### Import SeeYouUI in `main.js`
 
