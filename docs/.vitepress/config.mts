@@ -66,7 +66,9 @@ export default defineConfig({
       label: "English",
       lang: "en",
       link: "/en/", // 对应 docs/en/ 目录
-      description: "High quality UI framework based on uni-app(vue3)",
+      title: "SeeYouUI - High Quality UI Framework based on uni-app (Vue3)",
+      description:
+        "SeeYouUI is a high-quality component library based on uni-app, developed with TypeScript, providing rich components to help you build cross-platform apps.",
       // 英文特定配置
       themeConfig: {
         nav: [
