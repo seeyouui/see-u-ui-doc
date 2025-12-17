@@ -122,6 +122,24 @@ export default defineConfig({
         sizes: "any",
       },
     ],
+    // google logo
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "https://www.seeuui.cn/logo-512.png",
+        sizes: "512x512",
+      },
+    ],
+    // ios logo
+    [
+      "link",
+      {
+        rel: "apple-touch-icon",
+        href: "https://www.seeuui.cn/logo-512.png",
+      },
+    ],
     ["link", { rel: "canonical", href: "https://www.seeuui.cn/" }],
 
     // 多语言配置
