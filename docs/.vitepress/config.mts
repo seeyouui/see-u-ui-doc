@@ -1,5 +1,6 @@
 import { defineConfig } from "vitepress";
 import { commonSidebar, apiSidebar } from "./sidebar";
+import { commonSidebarEn, apiSidebarEn } from "./sidebar_en";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -12,6 +13,103 @@ export default defineConfig({
   sitemap: {
     hostname: "https://www.seeuui.cn",
   },
+
+  // 多语言配置 (Locales)
+  // 这里配置了 root (中文) 和 en (英文) 的具体差异
+  locales: {
+    root: {
+      label: "简体中文",
+      lang: "zh-CN",
+      // 中文特定配置
+      themeConfig: {
+        nav: [
+          { text: "首页", link: "/" },
+          { text: "组件", link: "/components/button" },
+          { text: "API", link: "/api/" }, // 修正：建议加上尾部斜杠
+          { text: "贡献指南", link: "/contributing" },
+          { text: "关于我们", link: "/about" },
+        ],
+        sidebar: {
+          "/": commonSidebar,
+          "/components/": commonSidebar,
+          "/api/": apiSidebar,
+        },
+        footer: {
+          message: "辽 ICP 备 2025070134 号",
+          copyright: "© SeeYouUI · 基于 uni-app 的开源 UI 组件库 · MIT License",
+        },
+        // 中文界面文案
+        outline: {
+          label: "页面导航",
+        },
+        returnToTopLabel: "返回顶部",
+        lastUpdated: {
+          text: "最后更新于",
+        },
+        docFooter: {
+          prev: "上一篇",
+          next: "下一篇",
+        },
+        editLink: {
+          pattern: ({ filePath }) => {
+            if (filePath.startsWith("packages/")) {
+              return `https://github.com/seeyouui/see-u-ui-doc/tree/main/docs/${filePath}`;
+            } else {
+              return `https://github.com/seeyouui/see-u-ui-doc/tree/main/docs/${filePath}`;
+            }
+          },
+          text: "在 GitHub 上编辑此页面",
+        },
+      },
+    },
+    en: {
+      label: "English",
+      lang: "en",
+      link: "/en/", // 对应 docs/en/ 目录
+      description: "High quality UI framework based on uni-app(vue3)",
+      // 英文特定配置
+      themeConfig: {
+        nav: [
+          { text: "Home", link: "/en/" },
+          { text: "Components", link: "/en/components/button" },
+          { text: "API", link: "/en/api/" },
+          { text: "Contributing", link: "/en/contributing" },
+          { text: "About", link: "/en/about" },
+        ],
+        sidebar: {
+          "/en/": commonSidebarEn,
+          "/en/components/": commonSidebarEn,
+          "/en/api/": apiSidebarEn,
+        },
+        footer: {
+          message: "Liao ICP No. 2025070134",
+          copyright:
+            "© SeeYouUI · Open Source UI Library based on uni-app · MIT License",
+        },
+        // 英文界面文案
+        outline: {
+          label: "On this page",
+        },
+        returnToTopLabel: "Return to top",
+        lastUpdated: {
+          text: "Last updated",
+        },
+        docFooter: {
+          prev: "Previous page",
+          next: "Next page",
+        },
+        editLink: {
+          pattern: ({ filePath }) => {
+            // 注意：英文文档通常在 docs/en/ 下，这里路径逻辑可能需要根据你的文件结构微调
+            return `https://github.com/seeyouui/see-u-ui-doc/tree/main/docs/${filePath}`;
+          },
+          text: "Edit this page on GitHub",
+        },
+      },
+    },
+  },
+
+  // 头配置
   head: [
     // favicon
     [
@@ -23,6 +121,34 @@ export default defineConfig({
       },
     ],
     ["link", { rel: "canonical", href: "https://www.seeuui.cn/" }],
+
+    // 多语言配置
+    [
+      "link",
+      { rel: "alternate", hreflang: "zh-CN", href: "https://www.seeuui.cn/" },
+    ],
+    [
+      "link",
+      { rel: "alternate", hreflang: "zh-HK", href: "https://www.seeuui.cn/" },
+    ],
+    [
+      "link",
+      { rel: "alternate", hreflang: "en", href: "https://www.seeuui.cn/en/" },
+    ],
+    [
+      "link",
+      { rel: "alternate", hreflang: "ja", href: "https://www.seeuui.cn/ja/" },
+    ],
+    [
+      "link",
+      {
+        rel: "alternate",
+        hreflang: "x-default",
+        href: "https://www.seeuui.cn/",
+      },
+    ],
+
+    // 百度SEO
     [
       "meta",
       {
@@ -72,6 +198,7 @@ export default defineConfig({
       }),
     ],
   ],
+
   markdown: {
     config: (md) => {
       // 1. 保存原有的 fence 渲染规则
@@ -97,22 +224,14 @@ export default defineConfig({
       };
     },
   },
+
+  // 共享的主题配置 (不随语言变化，或内部处理了多语言的配置)
   themeConfig: {
     siteTitle: "SeeYouUI",
 
     logo: { src: "/logo.png", alt: "SeeYouUI Logo" },
 
-    outline: {
-      label: "页面导航",
-    },
-
-    returnToTopLabel: "返回顶部",
-
-    footer: {
-      message: "辽 ICP 备 2025070134 号",
-      copyright: "© SeeYouUI · 基于 uni-app 的开源 UI 组件库 · MIT License",
-    },
-
+    // 搜索配置：VitePress 支持在内部定义 locales
     search: {
       provider: "local",
       options: {
@@ -134,45 +253,34 @@ export default defineConfig({
               },
             },
           },
+          // 英文搜索翻译
+          en: {
+            translations: {
+              button: {
+                buttonText: "Search",
+                buttonAriaLabel: "Search docs",
+              },
+              modal: {
+                noResultsText: "No results found",
+                resetButtonTitle: "Clear search",
+                footer: {
+                  selectText: "Select",
+                  navigateText: "Navigate",
+                  closeText: "Close",
+                },
+              },
+            },
+          },
         },
       },
     },
 
-    editLink: {
-      pattern: ({ filePath }) => {
-        if (filePath.startsWith("packages/")) {
-          return `https://github.com/seeyouui/see-u-ui-doc/tree/main/docs/${filePath}`;
-        } else {
-          return `https://github.com/seeyouui/see-u-ui-doc/tree/main/docs/${filePath}`;
-        }
-      },
-      text: "在 GitHub 上编辑此页面",
-    },
-
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: "首页", link: "/" },
-      { text: "组件", link: "/components/button" },
-      { text: "API", link: "/api" },
-      { text: "贡献指南", link: "/contributing" },
-      { text: "关于我们", link: "/about" },
-    ],
-
-    sidebar: {
-      "/": commonSidebar,
-      "/components/": commonSidebar,
-      "/api/": apiSidebar,
-    },
-
+    // 社交链接 (通常全站通用)
     socialLinks: [
       { icon: "github", link: "https://github.com/seeyouui/see-u-ui" },
       { icon: "twitter", link: "https://twitter.com/GmhLovEDM" },
       { icon: "discord", link: "https://discord.gg/c3KdbBZS" },
       { icon: "npm", link: "https://www.npmjs.com/package/see-u-ui" },
     ],
-
-    lastUpdated: {
-      text: "最后更新于",
-    },
   },
 });
