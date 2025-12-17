@@ -22,15 +22,6 @@ export default defineConfig({
         sizes: "any",
       },
     ],
-    [
-      "link",
-      {
-        rel: "icon",
-        type: "image/png",
-        sizes: "234x241",
-        href: "https://www.seeuui.cn/logo.png",
-      },
-    ],
     ["link", { rel: "canonical", href: "https://www.seeuui.cn/" }],
     [
       "meta",
@@ -72,6 +63,12 @@ export default defineConfig({
           width: 512,
           height: 512,
         },
+        sameAs: [
+          "https://github.com/seeyouui/see-u-ui",
+          "https://www.npmjs.com/package/see-u-ui",
+          "https://twitter.com/GmhLovEDM",
+          "https://discord.gg/c3KdbBZS",
+        ],
       }),
     ],
   ],
