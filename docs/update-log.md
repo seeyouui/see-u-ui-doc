@@ -11,6 +11,22 @@ iframeSrc: /pages/index/index
 
 > 日志说明：<Badge type="info" text="修改" /> <Badge type="tip" text="新增" /> <Badge type="warning" text="修复" /> <Badge type="danger" text="删除" />
 
+## 1.0.014 **_[`2025-12-15`](https://www.npmjs.com/package/see-u-ui/v/1.0.14)_**
+
+> [`commit: 6524585`](https://github.com/seeyouui/see-u-ui/commit/6524585c4e974472c4a2dd60d2f7b5fd529f9528)
+>
+> > - <Badge type="warning" text="修复" /> Text 组件打字机计数方法类型错误的 BUG
+>
+> [`commit: 3cc3700`](https://github.com/seeyouui/see-u-ui/commit/3cc370020f6ec4e6e7f9a3d241f121568e6a205a)
+>
+> > - <Badge type="tip" text="新增" /> Text 组件打字机效果
+> > - <Badge type="tip" text="新增" /> 打字机效果 Hook
+> > - <Badge type="tip" text="新增" /> 新增数字滚动 Hook
+>
+> [`commit: 4300ee3`](https://github.com/seeyouui/see-u-ui/commit/4300ee31539e926fbda4fbfd747237d908eff3c2)
+>
+> > - <Badge type="tip" text="新增" /> 新增 Text 组件数字滚动
+
 ## 1.0.013 **_[`2025-12-13`](https://www.npmjs.com/package/see-u-ui/v/1.0.13)_**
 
 > [`commit: da12e81`](https://github.com/seeyouui/see-u-ui/commit/da12e81003f0cfa894562289e0583a5f466f22e1)
