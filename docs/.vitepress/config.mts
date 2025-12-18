@@ -148,7 +148,6 @@ export default defineConfig({
         href: "https://www.seeuui.cn/logo-512.png",
       },
     ],
-    ["link", { rel: "canonical", href: "https://www.seeuui.cn/" }],
 
     // 多语言配置
     [
@@ -162,10 +161,6 @@ export default defineConfig({
     [
       "link",
       { rel: "alternate", hreflang: "en", href: "https://www.seeuui.cn/en/" },
-    ],
-    [
-      "link",
-      { rel: "alternate", hreflang: "ja", href: "https://www.seeuui.cn/ja/" },
     ],
     [
       "link",
