@@ -3,7 +3,7 @@
     <template #doc-footer-before>
       <div v-if="showPhone" class="mobile-preview-wrapper">
         <div class="mobile-mockup">
-          <iframe :src="iframeUrl" frameborder="0"></iframe>
+          <iframe ref="mobileIframe" :src="iframeUrl" frameborder="0"></iframe>
         </div>
       </div>
     </template>
@@ -13,11 +13,14 @@
 <script setup>
 import DefaultTheme from "vitepress/theme";
 import { useData, useRoute } from "vitepress";
-import { computed, onMounted, nextTick } from "vue";
+import { computed, ref, watch, onUnmounted } from "vue";
 
 const { Layout } = DefaultTheme;
 const { frontmatter } = useData();
 const route = useRoute();
+
+// 定义 iframe 的引用 (替代 document.querySelector)
+const mobileIframe = ref(null);
 
 // 演示站点的基准 URL
 const BASE_URL = "https://demo.seeuui.cn/#";
@@ -43,37 +46,34 @@ const showPhone = computed(() => {
   return route.path.includes("/components/");
 });
 
+// 辅助函数：锁定和解锁滚动
+const disableScroll = () => {
+  document.body.style.overflow = "hidden";
+};
+const enableScroll = () => {
+  document.body.style.overflow = "";
+};
+
 // 阻止iframe滑动事件穿透到vitepress
-onMounted(async () => {
-  await nextTick();
-  const iframe = document.querySelector("iframe");
+// 使用 watch 监听 iframe 元素是否渲染完成，确保不会报错 Cannot read properties of null
+watch(mobileIframe, (iframeEl) => {
+  if (!iframeEl) return; // 如果元素不存在，直接返回
 
   // 鼠标滑入 iframe 时，锁定父页面滚动
-  iframe.addEventListener("mouseenter", () => {
-    document.body.style.overflow = "hidden";
-  });
+  iframeEl.addEventListener("mouseenter", disableScroll);
 
   // 鼠标离开 iframe 时，恢复父页面滚动
-  iframe.addEventListener("mouseleave", () => {
-    document.body.style.overflow = "";
-  });
+  iframeEl.addEventListener("mouseleave", enableScroll);
 
   // 触屏设备（移动端）——手指按到 iframe 时锁定滚动
-  iframe.addEventListener(
-    "touchstart",
-    () => {
-      document.body.style.overflow = "hidden";
-    },
-    { passive: true }
-  );
+  iframeEl.addEventListener("touchstart", disableScroll, { passive: true });
 
-  iframe.addEventListener(
-    "touchend",
-    () => {
-      document.body.style.overflow = "";
-    },
-    { passive: true }
-  );
+  iframeEl.addEventListener("touchend", enableScroll, { passive: true });
+});
+
+// 组件卸载时清理样式，防止意外锁定
+onUnmounted(() => {
+  enableScroll();
 });
 </script>
 
