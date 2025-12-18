@@ -113,6 +113,14 @@ export default defineConfig({
 
   // 头配置
   head: [
+    [
+      "link",
+      {
+        rel: "preconnect",
+        href: "https://demo.seeuui.cn",
+        crossorigin: "",
+      },
+    ],
     // favicon
     [
       "link",
