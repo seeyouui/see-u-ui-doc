@@ -126,7 +126,7 @@ export default defineConfig({
       "link",
       {
         rel: "icon",
-        href: "https://www.seeuui.cn/favicon.ico",
+        href: "https://www.seeuui.cn/logo.png",
         sizes: "any",
       },
     ],
