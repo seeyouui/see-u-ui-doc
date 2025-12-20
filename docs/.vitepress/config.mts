@@ -22,6 +22,11 @@ export default defineConfig({
       lang: "zh-CN",
       // 中文特定配置
       themeConfig: {
+        notFound: {
+          title: "页面不见了",
+          quote: "若你不改变航向，若你仍继续凝望，你终将抵达自己所驶去的彼方。",
+          linkText: "返回首页",
+        },
         nav: [
           { text: "首页", link: "/" },
           { text: "组件", link: "/components/button" },
