@@ -12,8 +12,8 @@ iframeSrc: /pages/index/index
 <div style="width: 160px; margin: 0 auto;">
   <img src="/logo.png" alt="SeeYouUI Logo" />
 
-  <div style="font-size: 24px; color: var(--vp-c-text-1); text-align: center; margin-top: 12px; font-weight: bold;">
-    SeeYouUI
+  <div onclick="playSeeYouUI()" style="font-size: 24px; color: var(--vp-c-text-1); text-align: center; margin-top: 12px; font-weight: bold; cursor: pointer;">
+    SeeYouUI 🔊
   </div>
 
   <div style="font-size: 12px; color: var(--vp-c-text-2); text-align: center; margin-top: 12px;">
@@ -57,3 +57,17 @@ For more details, please refer to our [Contributing Guide]() 🙏❤️
 The SeeYouUI Component Library is open-sourced based on the [MIT License](https://opensource.org/license/MIT), meaning you can use SeeYouUI in your product without paying any fees or requiring authorization.
 
 **Note**: This does not mean you can apply SeeYouUI to illegal fields, such as those involving gambling, violence, etc. SeeYouUI-related parties assume no responsibility for disputes or legal issues arising therefrom.
+
+<script>
+  window.playSeeYouUI = function () {
+    // 防止多次叠加播放
+    window.speechSynthesis.cancel();
+
+    const utterance = new SpeechSynthesisUtterance('See U UI');
+    utterance.lang = 'en-US';
+    utterance.rate = 0.95;
+    utterance.pitch = 1;
+
+    window.speechSynthesis.speak(utterance);
+  }
+</script>

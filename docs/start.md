@@ -13,8 +13,8 @@ iframeSrc: /pages/index/index
   <img src="/logo.png" alt="SeeYouUI Logo" />
 
   <!-- 标题主文字：使用 vp-c-text-1 -->
-  <div style="font-size: 24px; color: var(--vp-c-text-1); text-align: center; margin-top: 12px; font-weight: bold;">
-    SeeYouUI
+  <div onclick="playSeeYouUI()" style="font-size: 24px; color: var(--vp-c-text-1); text-align: center; margin-top: 12px; font-weight: bold; cursor: pointer;">
+    SeeYouUI 🔊
   </div>
 
   <div style="font-size: 12px; color: var(--vp-c-text-2); text-align: center; margin-top: 12px;">
@@ -66,3 +66,17 @@ iframeSrc: /pages/index/index
 SeeYouUI 组件库 基于 [MIT 协议](https://opensource.org/license/MIT) 开源协议，意味着您无需支付任何费用，也无需授权，即可将 SeeYouUI 应用到您的产品中。
 
 注意：这并不意味着您可以将 SeeYouUI 应用到非法的领域，比如涉及赌博，暴力等方面。如因此产生纠纷或法律问题，SeeYouUI 相关方不承担任何责任。
+
+<script>
+  window.playSeeYouUI = function () {
+    // 防止多次叠加播放
+    window.speechSynthesis.cancel();
+
+    const utterance = new SpeechSynthesisUtterance('See U UI');
+    utterance.lang = 'en-US';
+    utterance.rate = 0.95;
+    utterance.pitch = 1;
+
+    window.speechSynthesis.speak(utterance);
+  }
+</script>
