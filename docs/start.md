@@ -68,15 +68,16 @@ SeeYouUI 组件库 基于 [MIT 协议](https://opensource.org/license/MIT) 开�
 注意：这并不意味着您可以将 SeeYouUI 应用到非法的领域，比如涉及赌博，暴力等方面。如因此产生纠纷或法律问题，SeeYouUI 相关方不承担任何责任。
 
 <script>
-  window.playSeeYouUI = function () {
-    // 防止多次叠加播放
-    window.speechSynthesis.cancel();
+  if (typeof window !== 'undefined') {
+    window.playSeeYouUI = function () {
+      window.speechSynthesis.cancel();
 
-    const utterance = new SpeechSynthesisUtterance('See U UI');
-    utterance.lang = 'en-US';
-    utterance.rate = 0.95;
-    utterance.pitch = 1;
+      const utterance = new SpeechSynthesisUtterance('See U U I');
+      utterance.lang = 'en-US';
+      utterance.rate = 0.95;
+      utterance.pitch = 1;
 
-    window.speechSynthesis.speak(utterance);
+      window.speechSynthesis.speak(utterance);
+    };
   }
 </script>
