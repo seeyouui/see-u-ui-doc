@@ -21,7 +21,7 @@ export const commonSidebarEn = [
           { text: "Text", link: "/en/components/text/index.md" },
           { text: "Link", link: "/en/components/link/index.md" },
           { text: "Icon", link: "/en/components/icon/index.md" },
-          { text: "Image", link: "/en/components/todo/index.md" },
+          { text: "Image", link: "/en/components/image/index.md" },
           { text: "Badge", link: "/en/components/todo/index.md" },
           { text: "Tag", link: "/en/components/todo/index.md" },
         ],
