@@ -1,7 +1,11 @@
 <template>
   <Layout>
     <template #doc-footer-before>
-      <div v-if="showPhone" class="mobile-preview-wrapper" :style="wrapperStyle">
+      <div
+        v-if="showPhone"
+        class="mobile-preview-wrapper"
+        :style="wrapperStyle"
+      >
         <div class="mobile-mockup">
           <iframe ref="mobileIframe" :src="iframeUrl" frameborder="0"></iframe>
         </div>
@@ -25,7 +29,7 @@ import { useData, useRoute } from "vitepress";
 import { computed, ref, watch, onUnmounted, onMounted, reactive } from "vue";
 
 const { Layout } = DefaultTheme;
-const { frontmatter } = useData();
+const { isDark, frontmatter } = useData();
 const route = useRoute();
 
 // 定义 iframe 的引用 (替代 document.querySelector)
@@ -55,6 +59,22 @@ const showPhone = computed(() => {
   return route.path.includes("/components/");
 });
 
+// 发送主题给 iframe
+const postThemeToIframe = () => {
+  const iframe = mobileIframe.value;
+  if (!iframe?.contentWindow) return;
+
+  iframe.contentWindow.postMessage(
+    {
+      type: "vp-theme",
+      theme: isDark.value ? "dark" : "light",
+    },
+    BASE_URL
+    // 如果你想更安全，可以写成：
+    // 'https://demo.seeuui.cn'
+  );
+};
+
 // 辅助函数：锁定和解锁滚动
 const disableScroll = () => {
   document.body.style.overflow = "hidden";
@@ -68,6 +88,11 @@ const enableScroll = () => {
 watch(mobileIframe, (iframeEl) => {
   if (!iframeEl) return; // 如果元素不存在，直接返回
 
+  // 传递是否是暗黑模式
+  iframeEl.addEventListener("load", () => {
+    postThemeToIframe();
+  });
+
   // 鼠标滑入 iframe 时，锁定父页面滚动
   iframeEl.addEventListener("mouseenter", disableScroll);
 
@@ -78,6 +103,11 @@ watch(mobileIframe, (iframeEl) => {
   iframeEl.addEventListener("touchstart", disableScroll, { passive: true });
 
   iframeEl.addEventListener("touchend", enableScroll, { passive: true });
+});
+
+// VitePress 主题切换时，同步给 iframe
+watch(isDark, () => {
+  postThemeToIframe();
 });
 
 // =======================
@@ -123,9 +153,17 @@ const resetVisual = () => {
 // 辅助：生成彩带
 const triggerConfetti = () => {
   showConfetti.value = true;
-  const colors = ["#ef2964", "#00c09d", "#2d87e2", "#fdbb2d", "#8e44ad", "#ff0000", "#ffff00"];
+  const colors = [
+    "#ef2964",
+    "#00c09d",
+    "#2d87e2",
+    "#fdbb2d",
+    "#8e44ad",
+    "#ff0000",
+    "#ffff00",
+  ];
   // 彩带数量
-  const ribbonCount = 250; 
+  const ribbonCount = 250;
 
   const newRibbons = [];
   for (let i = 0; i < ribbonCount; i++) {
@@ -135,10 +173,10 @@ const triggerConfetti = () => {
         left: Math.random() * 100 + "vw", // 随机水平位置
         backgroundColor: colors[Math.floor(Math.random() * colors.length)],
         // 稍微拉长时间范围，让飘落更有层次感 (1.5s ~ 4.5s)
-        animationDuration: Math.random() * 3 + 1.5 + "s", 
+        animationDuration: Math.random() * 3 + 1.5 + "s",
         animationDelay: Math.random() * 2 + "s", // 0~2s 的随机延迟
         transform: `rotate(${Math.random() * 360}deg)`,
-        opacity: Math.random() * 0.5 + 0.5 // 随机透明度
+        opacity: Math.random() * 0.5 + 0.5, // 随机透明度
       },
     });
   }
@@ -188,7 +226,7 @@ const onKeydown = (e) => {
         scaleVal.value = 0.92; // 缩小
         break;
     }
-    
+
     // 视觉复位
     resetVisual();
 
@@ -224,7 +262,7 @@ onUnmounted(() => {
   z-index: 10;
   display: none;
   /* 确保 transform 原点在中心，缩放效果才自然 */
-  transform-origin: center center; 
+  transform-origin: center center;
 }
 
 @media (min-width: 1400px) {
@@ -270,7 +308,7 @@ onUnmounted(() => {
   width: 10px;
   height: 20px;
   /* 关键帧动画：名字 时长 线性 循环次数 */
-  animation: fall linear forwards; 
+  animation: fall linear forwards;
 }
 
 @keyframes fall {
