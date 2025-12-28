@@ -35,6 +35,11 @@ html {
   scrollbar-width: none;
 }
 
+/* 让所有元素在 Firefox 下都不显示滚动条 */
+* {
+  scrollbar-width: none;
+}
+
 /* 对于 IE 和 Edge */
 body {
   -ms-overflow-style: none;
