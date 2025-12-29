@@ -6,7 +6,10 @@
         class="mobile-preview-wrapper"
         :style="wrapperStyle"
       >
-        <div class="mobile-mockup">
+        <div
+          class="mobile-mockup"
+          :class="[{ 'is-dark': isDark, 'is-light': !isDark }]"
+        >
           <iframe ref="mobileIframe" :src="iframeUrl" frameborder="0"></iframe>
         </div>
       </div>
@@ -70,8 +73,6 @@ const postThemeToIframe = () => {
       theme: isDark.value ? "dark" : "light",
     },
     BASE_URL
-    // 如果你想更安全，可以写成：
-    // 'https://demo.seeuui.cn'
   );
 };
 
@@ -276,16 +277,24 @@ onUnmounted(() => {
   height: 820px;
   border-radius: 50px;
   overflow: hidden;
-  background: url("/static/iphone16fff.png") no-repeat center center;
   background-size: 100% 100%;
   padding: 70px 25px 42px;
+}
+
+.mobile-mockup.is-light {
+  background: url("/static/iphone16fff.png") no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.mobile-mockup.is-dark {
+  background: url("/static/iphone1614171D.png") no-repeat center center;
+  background-size: 100% 100%;
 }
 
 .mobile-mockup iframe {
   width: 100%;
   height: 100%;
   border-radius: 50px;
-  /* background-color: #f7f8fa; */
 }
 
 /* ==================
