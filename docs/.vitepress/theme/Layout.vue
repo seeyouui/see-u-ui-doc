@@ -2,7 +2,7 @@
   <Layout>
     <template #doc-footer-before>
       <div
-        v-if="showPhone"
+        v-if="showPhone && isThemeReady"
         class="mobile-preview-wrapper"
         :style="wrapperStyle"
       >
@@ -244,8 +244,14 @@ const onKeydown = (e) => {
   }
 };
 
+const isThemeReady = ref(false);
 onMounted(() => {
   window.addEventListener("keydown", onKeydown);
+
+  // 下一帧，确保 VitePress 已完成主题同步
+  requestAnimationFrame(() => {
+    isThemeReady.value = true;
+  });
 });
 
 // 组件卸载时清理样式，防止意外锁定
