@@ -3,7 +3,7 @@
     <template #doc-footer-before>
       <KonamiEasterEgg v-slot="{ wrapperStyle }">
         <div
-          v-if="showPhone && isThemeReady"
+          v-if="showPhone"
           class="mobile-preview-wrapper"
           :style="wrapperStyle"
         >
@@ -26,7 +26,7 @@
 <script setup>
 import DefaultTheme from "vitepress/theme";
 import { useData, useRoute } from "vitepress";
-import { computed, ref, watch, onMounted, onUnmounted } from "vue";
+import { computed, ref, watch, onUnmounted } from "vue";
 import KonamiEasterEgg from "./components/KonamiEasterEgg.vue";
 
 const { Layout } = DefaultTheme;
@@ -95,14 +95,6 @@ watch(mobileIframe, (iframeEl) => {
 // VitePress 主题切换时，同步给 iframe
 watch(isDark, () => {
   postThemeToIframe();
-});
-
-const isThemeReady = ref(false);
-onMounted(() => {
-  // 确保主题同步准备就绪
-  requestAnimationFrame(() => {
-    isThemeReady.value = true;
-  });
 });
 
 onUnmounted(() => {
