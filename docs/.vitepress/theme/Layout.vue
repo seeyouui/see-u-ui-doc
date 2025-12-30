@@ -3,14 +3,19 @@
     <template #doc-footer-before>
       <KonamiEasterEgg v-slot="{ wrapperStyle }">
         <div
-          v-if="showPhone"
+          v-if="showPhone && isThemeReady"
           class="mobile-preview-wrapper"
           :style="wrapperStyle"
         >
-          <div
-            class="mobile-mockup"
-            :class="[{ 'is-dark': isDark, 'is-light': !isDark }]"
-          >
+          <div class="mobile-mockup" :style="mockupStyle">
+            <div
+              class="bg-layer bg-light"
+              :style="{ opacity: bgLightOpacity }"
+            ></div>
+            <div
+              class="bg-layer bg-dark"
+              :style="{ opacity: bgDarkOpacity }"
+            ></div>
             <iframe
               ref="mobileIframe"
               :src="iframeUrl"
@@ -26,22 +31,22 @@
 <script setup>
 import DefaultTheme from "vitepress/theme";
 import { useData, useRoute } from "vitepress";
-import { computed, ref, watch, onUnmounted } from "vue";
+import { computed, ref, watch, onMounted, onUnmounted } from "vue";
 import KonamiEasterEgg from "./components/KonamiEasterEgg.vue";
 
 const { Layout } = DefaultTheme;
 const { isDark, frontmatter } = useData();
 const route = useRoute();
 
-// 定义 iframe 的引用
 const mobileIframe = ref(null);
+const bgLightOpacity = ref(1);
+const bgDarkOpacity = ref(0);
+let animationFrameId = null;
+let animationStartTime = null;
+const ANIMATION_DURATION = 300;
 
-// 演示站点的基准 URL
 const BASE_URL = "https://demo.seeuui.cn/#";
-// const BASE_URL = "http://113.44.242.235:9001/#";
-// const BASE_URL = "http://localhost:5173/#";
 
-// 根据当前文档路径，计算 iframe 应该显示的 URL
 const iframeUrl = computed(() => {
   if (frontmatter.value.iframeSrc) {
     return BASE_URL + frontmatter.value.iframeSrc;
@@ -50,14 +55,17 @@ const iframeUrl = computed(() => {
   return `${BASE_URL}${path}`;
 });
 
-// 显示规则
 const showPhone = computed(() => {
   return frontmatter.value.layout === "doc";
-  // 这里可以根据你的需求定制规则，例如只在 /components/ 目录下显示
-  return route.path.includes("/components/");
 });
 
-// 发送主题给 iframe
+const mockupStyle = computed(() => ({
+  backgroundImage: 'url("/static/iphone16fff.png")',
+  backgroundSize: "100% 100%",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center center",
+}));
+
 const postThemeToIframe = () => {
   const iframe = mobileIframe.value;
   if (!iframe?.contentWindow) return;
@@ -71,15 +79,50 @@ const postThemeToIframe = () => {
   );
 };
 
-// 辅助函数：锁定和解锁滚动
 const disableScroll = () => {
   document.body.style.overflow = "hidden";
 };
+
 const enableScroll = () => {
   document.body.style.overflow = "";
 };
 
-// 阻止iframe滑动事件穿透
+const easeInOutCubic = (t) => {
+  return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+};
+
+const animateThemeTransition = () => {
+  const animate = (currentTime) => {
+    if (!animationStartTime) {
+      animationStartTime = currentTime;
+    }
+
+    const elapsed = currentTime - animationStartTime;
+    const rawProgress = Math.min(elapsed / ANIMATION_DURATION, 1);
+    const progress = easeInOutCubic(rawProgress);
+
+    if (isDark.value) {
+      bgDarkOpacity.value = progress;
+      bgLightOpacity.value = 1 - progress;
+    } else {
+      bgLightOpacity.value = progress;
+      bgDarkOpacity.value = 1 - progress;
+    }
+
+    if (progress < 1) {
+      animationFrameId = requestAnimationFrame(animate);
+    } else {
+      animationStartTime = null;
+    }
+  };
+
+  if (animationFrameId) {
+    cancelAnimationFrame(animationFrameId);
+  }
+  animationStartTime = null;
+  animationFrameId = requestAnimationFrame(animate);
+};
+
 watch(mobileIframe, (iframeEl) => {
   if (!iframeEl) return;
 
@@ -92,13 +135,47 @@ watch(mobileIframe, (iframeEl) => {
   iframeEl.addEventListener("touchend", enableScroll, { passive: true });
 });
 
-// VitePress 主题切换时，同步给 iframe
 watch(isDark, () => {
   postThemeToIframe();
+  animateThemeTransition();
+});
+
+const isThemeReady = ref(false);
+
+const preloadImages = () => {
+  return Promise.all([
+    new Promise((resolve) => {
+      const img = new Image();
+      img.onload = resolve;
+      img.onerror = resolve;
+      img.src = "/static/iphone16fff.png";
+    }),
+    new Promise((resolve) => {
+      const img = new Image();
+      img.onload = resolve;
+      img.onerror = resolve;
+      img.src = "/static/iphone1614171D.png";
+    }),
+  ]);
+};
+
+onMounted(() => {
+  preloadImages().then(() => {
+    requestAnimationFrame(() => {
+      isThemeReady.value = true;
+      if (isDark.value) {
+        bgDarkOpacity.value = 1;
+        bgLightOpacity.value = 0;
+      }
+    });
+  });
 });
 
 onUnmounted(() => {
   enableScroll();
+  if (animationFrameId) {
+    cancelAnimationFrame(animationFrameId);
+  }
 });
 </script>
 
@@ -109,7 +186,6 @@ onUnmounted(() => {
   top: 78px;
   z-index: 10;
   display: none;
-  /* 确保 transform 原点在中心 */
   transform-origin: center center;
 }
 
@@ -120,25 +196,37 @@ onUnmounted(() => {
 }
 
 .mobile-mockup {
+  position: relative;
   width: 420px;
   height: 820px;
   border-radius: 50px;
   overflow: hidden;
-  background-size: 100% 100%;
   padding: 70px 25px 42px;
 }
 
-.mobile-mockup.is-light {
-  background: url("/static/iphone16fff.png") no-repeat center center;
+.bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: none;
 }
 
-.mobile-mockup.is-dark {
-  background: url("/static/iphone1614171D.png") no-repeat center center;
-  background-size: 100% 100%;
+.bg-light {
+  background-image: url("/static/iphone16fff.png");
+}
+
+.bg-dark {
+  background-image: url("/static/iphone1614171D.png");
 }
 
 .mobile-mockup iframe {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
   border-radius: 50px;
