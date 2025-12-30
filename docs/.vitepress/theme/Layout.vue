@@ -7,7 +7,7 @@
           class="mobile-preview-wrapper"
           :style="wrapperStyle"
         >
-          <div class="mobile-mockup" :style="mockupStyle">
+          <div class="mobile-mockup">
             <div
               class="bg-layer bg-light"
               :style="{ opacity: bgLightOpacity }"
@@ -16,6 +16,7 @@
               class="bg-layer bg-dark"
               :style="{ opacity: bgDarkOpacity }"
             ></div>
+
             <iframe
               ref="mobileIframe"
               :src="iframeUrl"
@@ -31,22 +32,37 @@
 <script setup>
 import DefaultTheme from "vitepress/theme";
 import { useData, useRoute } from "vitepress";
-import { computed, ref, watch, onMounted, onUnmounted } from "vue";
+import { computed, ref, watch, onUnmounted } from "vue";
 import KonamiEasterEgg from "./components/KonamiEasterEgg.vue";
+import { usePhoneSkinAnimation } from "./hooks/usePhoneSkinAnimation";
 
 const { Layout } = DefaultTheme;
 const { isDark, frontmatter } = useData();
 const route = useRoute();
 
-const mobileIframe = ref(null);
-const bgLightOpacity = ref(1);
-const bgDarkOpacity = ref(0);
-let animationFrameId = null;
-let animationStartTime = null;
-const ANIMATION_DURATION = 300;
-
 const BASE_URL = "https://demo.seeuui.cn/#";
+// const BASE_URL = "http://113.44.242.235:9001/#";
+// const BASE_URL = "http://localhost:5173/#";
+const IMG_LIGHT = "/static/iphone16fff.png";
+const IMG_DARK = "/static/iphone1614171D.png";
 
+/**
+ * 手机壳明暗模式切换动画 Hook
+ */
+const { bgLightOpacity, bgDarkOpacity, isThemeReady } = usePhoneSkinAnimation(
+  isDark,
+  IMG_LIGHT,
+  IMG_DARK
+);
+
+/**
+ * 手机预览 Iframe 元素引用
+ */
+const mobileIframe = ref(null);
+
+/**
+ * 计算 Iframe 加载 URL
+ */
 const iframeUrl = computed(() => {
   if (frontmatter.value.iframeSrc) {
     return BASE_URL + frontmatter.value.iframeSrc;
@@ -55,17 +71,18 @@ const iframeUrl = computed(() => {
   return `${BASE_URL}${path}`;
 });
 
+/**
+ * 判断是否显示手机预览
+ */
 const showPhone = computed(() => {
   return frontmatter.value.layout === "doc";
+  // 只在 /components/ 目录下显示
+  return route.path.includes("/components/");
 });
 
-const mockupStyle = computed(() => ({
-  backgroundImage: 'url("/static/iphone16fff.png")',
-  backgroundSize: "100% 100%",
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "center center",
-}));
-
+/**
+ * 向 Iframe 发送主题消息
+ */
 const postThemeToIframe = () => {
   const iframe = mobileIframe.value;
   if (!iframe?.contentWindow) return;
@@ -79,103 +96,48 @@ const postThemeToIframe = () => {
   );
 };
 
+/**
+ * 禁用滚动
+ */
 const disableScroll = () => {
   document.body.style.overflow = "hidden";
 };
 
+/**
+ * 启用滚动
+ */
 const enableScroll = () => {
   document.body.style.overflow = "";
 };
 
-const easeInOutCubic = (t) => {
-  return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-};
-
-const animateThemeTransition = () => {
-  const animate = (currentTime) => {
-    if (!animationStartTime) {
-      animationStartTime = currentTime;
-    }
-
-    const elapsed = currentTime - animationStartTime;
-    const rawProgress = Math.min(elapsed / ANIMATION_DURATION, 1);
-    const progress = easeInOutCubic(rawProgress);
-
-    if (isDark.value) {
-      bgDarkOpacity.value = progress;
-      bgLightOpacity.value = 1 - progress;
-    } else {
-      bgLightOpacity.value = progress;
-      bgDarkOpacity.value = 1 - progress;
-    }
-
-    if (progress < 1) {
-      animationFrameId = requestAnimationFrame(animate);
-    } else {
-      animationStartTime = null;
-    }
-  };
-
-  if (animationFrameId) {
-    cancelAnimationFrame(animationFrameId);
-  }
-  animationStartTime = null;
-  animationFrameId = requestAnimationFrame(animate);
-};
-
+/**
+ * 监听 Iframe 加载和交互事件
+ */
 watch(mobileIframe, (iframeEl) => {
   if (!iframeEl) return;
 
   iframeEl.addEventListener("load", () => {
     postThemeToIframe();
   });
+
   iframeEl.addEventListener("mouseenter", disableScroll);
   iframeEl.addEventListener("mouseleave", enableScroll);
   iframeEl.addEventListener("touchstart", disableScroll, { passive: true });
   iframeEl.addEventListener("touchend", enableScroll, { passive: true });
 });
 
+/**
+ * 监听主题变化，发送消息到 Iframe
+ */
 watch(isDark, () => {
   postThemeToIframe();
-  animateThemeTransition();
 });
 
-const isThemeReady = ref(false);
-
-const preloadImages = () => {
-  return Promise.all([
-    new Promise((resolve) => {
-      const img = new Image();
-      img.onload = resolve;
-      img.onerror = resolve;
-      img.src = "/static/iphone16fff.png";
-    }),
-    new Promise((resolve) => {
-      const img = new Image();
-      img.onload = resolve;
-      img.onerror = resolve;
-      img.src = "/static/iphone1614171D.png";
-    }),
-  ]);
-};
-
-onMounted(() => {
-  preloadImages().then(() => {
-    requestAnimationFrame(() => {
-      isThemeReady.value = true;
-      if (isDark.value) {
-        bgDarkOpacity.value = 1;
-        bgLightOpacity.value = 0;
-      }
-    });
-  });
-});
-
+/**
+ * 组件卸载时，清理滚动锁定
+ */
 onUnmounted(() => {
   enableScroll();
-  if (animationFrameId) {
-    cancelAnimationFrame(animationFrameId);
-  }
 });
 </script>
 
@@ -202,6 +164,7 @@ onUnmounted(() => {
   border-radius: 50px;
   overflow: hidden;
   padding: 70px 25px 42px;
+  /* 移除了 mockupStyle 计算属性，直接在这里定义或依靠内部 bg-layer */
 }
 
 .bg-layer {
@@ -213,7 +176,8 @@ onUnmounted(() => {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
-  transition: none;
+  transition: none; /* 关键：禁用 CSS transition，使用 JS 控制 opacity */
+  pointer-events: none; /* 确保背景不阻挡 iframe 交互 */
 }
 
 .bg-light {
@@ -230,5 +194,6 @@ onUnmounted(() => {
   width: 100%;
   height: 100%;
   border-radius: 50px;
+  background: transparent; /* 确保 iframe 背景透明（如果需要透出手机壳颜色） */
 }
 </style>
