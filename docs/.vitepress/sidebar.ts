@@ -187,7 +187,7 @@ export const commonSidebar = [
         ],
       },
       {
-        text: "导航组件",
+        text: "内容解析",
         items: [
           {
             text: "Parse 富文本解析器",
