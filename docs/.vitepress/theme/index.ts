@@ -2,6 +2,7 @@ import { type Theme } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import Layout from "./Layout.vue";
 import Badge from "vitepress/dist/client/theme-default/components/VPBadge.vue";
+import ThemeToggle from "./components/ThemeToggle.vue";
 import "./style.css";
 import { onMounted, watch, nextTick } from "vue";
 import { useRoute, useData } from "vitepress";
@@ -11,6 +12,7 @@ export default {
   Layout: Layout,
   enhanceApp({ app }) {
     app.component("Badge", Badge);
+    app.component("ThemeToggle", ThemeToggle);
   },
   setup() {
     const route = useRoute();

@@ -5,6 +5,7 @@ export const commonSidebarEn = [
       { text: "Introduction", link: "/en/start" },
       { text: "Installation", link: "/en/install" },
       { text: "Configuration", link: "/en/config" },
+      { text: "Custom Theme", link: "/en/theme" },
       { text: "Quick Start", link: "/en/quick-start" },
       { text: "Precautions", link: "/en/precautions" },
       { text: "Changelog", link: "/en/update-log" },
@@ -217,6 +218,12 @@ export const apiSidebarEn = [
           },
           { text: "useDateFormat", link: "/en/api/hooks/useDateFormat" },
           { text: "useTimeAgo", link: "/en/api/hooks/useTimeAgo" },
+        ],
+      },
+      {
+        text: "Theme",
+        items: [
+          { text: "useTheme", link: "/en/api/theme/useTheme" },
         ],
       },
     ],

@@ -5,6 +5,7 @@ export const commonSidebar = [
       { text: "介绍", link: "/start" },
       { text: "安装", link: "/install" },
       { text: "配置", link: "/config" },
+      { text: "定制主题", link: "/theme" },
       { text: "快速上手", link: "/quick-start" },
       { text: "注意事项", link: "/precautions" },
       { text: "更新日志", link: "/update-log" },
@@ -214,6 +215,12 @@ export const apiSidebar = [
           { text: "余额格式化", link: "/api/hooks/useCurrencyFormat" },
           { text: "日期格式化", link: "/api/hooks/useDateFormat" },
           { text: "时间距今", link: "/api/hooks/useTimeAgo" },
+        ],
+      },
+      {
+        text: "Theme",
+        items: [
+          { text: "切换主题", link: "/api/theme/useTheme" },
         ],
       },
     ],
