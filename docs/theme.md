@@ -50,7 +50,7 @@ iframeSrc: /pages/config/index
 
 ## 动态切换
 
-SeeYouUI 提供了 [useTheme](../api/theme/useTheme.md) Hook，你可以在代码中使用 `useTheme` 方法来切换主题。
+SeeYouUI 提供了 [useTheme](/api/theme/useTheme.md) Hook，你可以在代码中使用 `useTheme` 方法来切换主题。
 
 ::: warning 注意
 因[微信小程序限制](https://uniapp.dcloud.net.cn/tutorial/darkmode.html#mp-weixin)，`useTheme` 暂不支持小程序。
