@@ -48,22 +48,31 @@ iframeSrc: /pages/config/index
 
 好的！重启项目，试着切换手机的 **浅色/暗黑** 模式，看看效果吧！
 
-## 动态切换
+## 手动切换
 
-SeeYouUI 提供了 [useTheme](/api/theme/useTheme.md) Hook，你可以在代码中使用 `useTheme` 方法来切换主题。
+SeeYouUI 提供了 [useTheme](./api/theme/useTheme) Hook，你可以在代码中使用 `useTheme` 方法来切换主题。
 
 ::: warning 注意
-因[微信小程序限制](https://uniapp.dcloud.net.cn/tutorial/darkmode.html#mp-weixin)，`useTheme` 暂不支持小程序。
+因微信小程序限制，手动切换需要在页面中使用 `see-config` 包裹元素，详见[微信小程序手动切换主题]()
 :::
 
-```ts
-import { useTheme } from "see-u-ui";
+```vue
+<template>
+  <text>当前主题：{{ themeMode }}</text>
+  <button @click="setLightMode">浅色</button>
+  <button @click="setDarkMode">暗黑</button>
+  <button @click="setFollowSystem">跟随系统</button>
+</template>
 
-const theme = useTheme();
-theme.setTheme("dark");
-theme.setTheme("light");
+<script lang="ts" setup>
+import { useTheme } from "@/uni_modules/see-u-ui";
+const { themeMode, setLightMode, setDarkMode, setFollowSystem } = useTheme();
+</script>
 ```
 
+## 微信小程序手动切换主题
+
+todo...
 
 ## 自定义主题
 
