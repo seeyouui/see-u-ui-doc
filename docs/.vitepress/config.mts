@@ -126,31 +126,148 @@ export default defineConfig({
         crossorigin: "",
       },
     ],
-    // favicon
+    // SVG favicon (现代浏览器优先)
     [
       "link",
       {
         rel: "icon",
-        href: "https://www.seeuui.cn/logo.png",
-        sizes: "any",
+        type: "image/svg+xml",
+        href: "/favicon.svg",
       },
     ],
-    // google logo
+    // ICO favicon (传统浏览器和搜索引擎)
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.ico",
+      },
+    ],
+    // PNG favicons (不同尺寸)
     [
       "link",
       {
         rel: "icon",
         type: "image/png",
-        href: "https://www.seeuui.cn/logo-512.png",
+        href: "/favicon-16x16.png",
+        sizes: "16x16",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "/favicon-32x32.png",
+        sizes: "32x32",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "/favicon-48x48.png",
+        sizes: "48x48",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "/logo-512.png",
+        sizes: "96x96",
+      },
+    ],
+    // 大尺寸图标 (用于Google搜索结果等)
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "/logo-512.png",
         sizes: "512x512",
       },
     ],
-    // ios logo
+    // iOS touch icons (不同尺寸用于不同设备)
     [
       "link",
       {
         rel: "apple-touch-icon",
-        href: "https://www.seeuui.cn/logo-512.png",
+        href: "/apple-touch-icon.png",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "apple-touch-icon",
+        href: "/apple-touch-icon-152x152.png",
+        sizes: "152x152",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "apple-touch-icon",
+        href: "/apple-touch-icon-167x167.png",
+        sizes: "167x167",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "apple-touch-icon",
+        href: "/apple-touch-icon-180x180.png",
+        sizes: "180x180",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "apple-touch-icon",
+        href: "/logo-512.png",
+        sizes: "512x512",
+      },
+    ],
+    // Safari pinned tab icon
+    [
+      "link",
+      {
+        rel: "mask-icon",
+        href: "/safari-pinned-tab.svg",
+        color: "#75FE8D",
+      },
+    ],
+    // Web应用程序清单
+    [
+      "link",
+      {
+        rel: "manifest",
+        href: "/site.webmanifest",
+      },
+    ],
+    // 主题颜色 (帮助搜索引擎识别)
+    [
+      "meta",
+      {
+        name: "theme-color",
+        content: "#ffffff",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "msapplication-TileColor",
+        content: "#ffffff",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "msapplication-TileImage",
+        content: "/logo-512.png",
       },
     ],
 
