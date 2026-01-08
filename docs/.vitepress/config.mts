@@ -342,6 +342,29 @@ export default defineConfig({
         ],
       }),
     ],
+    [
+      "script",
+      { type: "application/ld+json" },
+      JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://www.seeuui.cn/#website",
+        name: "SeeYouUI",
+        alternateName: ["SeeYouUI 组件库", "See U UI"],
+        url: "https://www.seeuui.cn/",
+        inLanguage: ["zh-CN", "en"],
+        publisher: {
+          "@id": "https://www.seeuui.cn/#organization"
+        }
+      }),
+    ],
+    [
+      "meta",
+      {
+        property: "og:site_name",
+        content: "SeeYouUI",
+      },
+    ],
   ],
 
   markdown: {

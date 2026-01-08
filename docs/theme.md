@@ -9,7 +9,7 @@ iframeSrc: /pages/config/index
 
 # 定制主题
 
-> SeeYouUI 提供了主题配置功能，您可以根据需要[自定义主题](#自定义主题)颜色。
+> SeeYouUI 提供了浅色/暗黑主题，或者您可以根据需要[自定义主题](#自定义主题)颜色。
 
 ::: tip 提示
 当前主题为 <ThemeToggle /> 可通过文档右上角切换。
@@ -17,7 +17,7 @@ iframeSrc: /pages/config/index
 
 ## 全局暗黑模式
 
-暗黑模式默认全局生效，使页面上的所有 SeeYouUI 组件变为深色风格。
+此模式默认 `跟随系统` ，会使页面上的所有 SeeYouUI 组件变为浅色/深色风格。
 
 :balloon: 你只需要在 [manifest.json](https://uniapp.dcloud.net.cn/collocation/manifest.html) 加两行代码即可：
 
@@ -48,12 +48,16 @@ iframeSrc: /pages/config/index
 
 好的！重启项目，试着切换手机的 **浅色/暗黑** 模式，看看效果吧！
 
-## 手动切换
+## 手动切换全局主题
 
-SeeYouUI 提供了 [useTheme](./api/theme/useTheme) Hook，你可以在代码中使用 `useTheme` 方法来切换主题。
+SeeYouUI 提供了 [useTheme](./api/theme/useTheme) Hook，你可以在代码中使用 `useTheme` 方法来手动切换全局主题。
 
 ::: warning 注意
-因微信小程序限制，手动切换需要在页面中使用 `see-config` 包裹元素，详见[微信小程序手动切换主题]()
+全局主题的手动切换是 `强制生效` 的，非必要建议优先使用[跟随系统方案](#全局暗黑模式)。
+:::
+
+::: danger 警告
+如 `微信小程序` 有手动切换全局主题需求，需单独配置：[微信小程序手动切换全局主题](#微信小程序手动切换全局主题)
 :::
 
 ```vue
@@ -70,9 +74,17 @@ const { themeMode, setLightMode, setDarkMode, setFollowSystem } = useTheme();
 </script>
 ```
 
-## 微信小程序手动切换主题
+### 微信小程序手动切换全局主题
 
-todo...
+> 微信小程序每个页面是独立的，所以无法在全局根节点加 class，因此需要使用 `see-config` 组件包裹每个页面。
+
+```vue
+<template>
+  <see-config>
+    <!-- 你的页面内容 -->
+  </see-config>
+</template>
+```
 
 ## 自定义主题
 
