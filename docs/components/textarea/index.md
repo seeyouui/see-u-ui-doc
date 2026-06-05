@@ -188,3 +188,14 @@ const value = ref('')
 | onChange | 值改变时触发（失去焦点） | (value: string) => void | - | - | - |
 | onConfirm | 点击完成按钮时触发 | (value: string) => void | - | - | 小程序键盘确认 |
 | onLineChange | 行数变化时触发 | (event: { height: number, heightRpx: number, lineCount: number }) => void | - | - | - |
+
+### Expose
+
+| 属性名 | 说明 | 类型 |
+| ------ | ---- | ---- |
+| validateStatus | 当前校验状态 | `Ref<'success' \| 'error' \| 'validating' \| ''>` |
+| validateMessage | 当前校验信息 | `Ref<string>` |
+| focus | 聚焦输入框 | `() => void` |
+| blur | 失焦输入框 | `() => void` |
+| isDisabled | 是否禁用 | `() => boolean` |
+| isFocused | 是否聚焦 | `() => boolean` |

@@ -76,10 +76,10 @@ The button's open capabilities remain consistent with the uni-app button compone
 
 ## Button Sizes
 
-* Set the button size via the `size` parameter. We provide four attributes: `normal`, `small`, `mini`, `large`.
+* Set the button size via the `size` parameter. We provide four attributes: `default`, `small`, `mini`, `large`.
 
 ```html:line-numbers {}
-<see-button size="normal" title="Normal Size" />
+<see-button size="default" title="Default Size" />
 <see-button size="small" title="Small Size" />
 <see-button size="mini" title="Mini Size" />
 <see-button size="large" title="Large Size" />
@@ -96,8 +96,8 @@ The button's open capabilities remain consistent with the uni-app button compone
 
 ```html:line-numbers {}
 <see-button title="Default Animation" isRipple />
-<see-button type="primary" size="normal" title="Button Color" isRipple />
-<see-button size="normal" title="Animation Color" isRipple ripple-color="blue" />
+<see-button type="primary" size="default" title="Button Color" isRipple />
+<see-button size="default" title="Animation Color" isRipple ripple-color="blue" />
 <see-button
   size="large"
   title="Animation Duration (10000ms)"
@@ -182,7 +182,7 @@ export default {
 | Parameter | Description | Type | Default | Optional Values | Platform Notes |
 | --- | --- | --- | --- | --- | --- |
 | title | Button text content | String | `''` | Any string | - |
-| size | Button size | `"normal" | "large" | "small" | "mini"` | `'normal'` | `normal`, `large`, `small`, `mini` | - |
+| size | Button size | `"default" | "large" | "small" | "mini"` | `'default'` | `default`, `large`, `small`, `mini` | - |
 | type | Button type (preset styles) | `"info" | "primary" | "error" | "warning" | "success"` | `'info'` | `info`, `primary`, `error`, `warning`, `success` | - |
 | color | Custom background color (overrides default type color) | String | `''` | Any CSS color value | - |
 | textColor | Text color | String | `''` | Any CSS color value | - |

@@ -88,11 +88,11 @@ iframeSrc: /pages/seeTag/index
 
 ## Disabled State
 
-- Set `disabled` to `true` to disable the tag. Click events will not fire.
+- Set `isDisabled` to `true` to disable the tag. Click events will not fire.
 
 ```html:line-numbers {}
-<see-tag type="primary" disabled>Disabled</see-tag>
-<see-tag type="primary" closable disabled>Disabled Closable</see-tag>
+<see-tag type="primary" is-disabled>Disabled</see-tag>
+<see-tag type="primary" closable is-disabled>Disabled Closable</see-tag>
 ```
 
 ## Custom Colors
@@ -123,7 +123,7 @@ Custom colors are hardcoded values and will not adapt to dark/light theme change
 | bgColor | Custom background color | String | `''` | - |
 | textColor | Custom text color | String | `''` | - |
 | borderColor | Custom border color | String | `''` | - |
-| disabled | Whether disabled | Boolean | `false` | - |
+| isDisabled | Whether disabled | Boolean | `false` | - |
 | mark | Whether mark style | Boolean | `false` | - |
 | hit | Whether show border | Boolean | `false` | - |
 

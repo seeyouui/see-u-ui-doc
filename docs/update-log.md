@@ -38,6 +38,24 @@ iframeSrc: /pages/index/index
 > >   - <Badge type="tip" text="新增" /> 表单验证引擎（支持同步 / 异步校验、内置规则、自定义校验器）
 > > - <Badge type="tip" text="新增" /> 所有表单组件支持 Light / Dark 主题切换
 > > - <Badge type="tip" text="新增" /> 所有表单组件支持 H5 / 小程序 / App 多端兼容
+> > - <Badge type="info" text="修改" /> **Button** `size` 属性默认值从 `'normal'` 改为 `'default'`
+> > - <Badge type="info" text="修改" /> **Tag** `disabled` 属性重命名为 `isDisabled`，保持命名一致性
+> > - <Badge type="tip" text="新增" /> **Radio** 支持独立使用 `v-model`，无需 RadioGroup 包裹
+> > - <Badge type="tip" text="新增" /> **Textarea** 集成 `useField`，支持表单校验联动，暴露 `validateStatus` / `validateMessage`
+> > - <Badge type="info" text="修改" /> **Form** 合并多个 watch 为单个，优化响应式性能
+> > - <Badge type="info" text="修改" /> **Picker** 选中项改为居中对齐，优化滚轮交互体验
+> > - <Badge type="info" text="修改" /> **Cascader** 面板增加安全区域适配，`options` 监听改为 `deep: false` 提升性能
+> > - <Badge type="info" text="修改" /> **Slider** 垂直模式改用 CSS 变量定位，提升渲染稳定性
+> > - <Badge type="info" text="修改" /> **NumberBox** 长按重复改用递归 `setTimeout` 实现加速，修复 H5 端鼠标事件泄漏
+> > - <Badge type="info" text="修改" /> **Upload** 新增 `accept` 文件类型校验，修复 Object URL 内存泄漏，H5 端移除 `chooseMedia` 降级
+> > - <Badge type="info" text="修改" /> **Keyboard** 数字随机键盘布局改为打开时缓存，避免输入过程中变化
+> > - <Badge type="info" text="修改" /> **Link** 新增 URL 协议白名单校验，阻止非安全协议跳转
+> > - <Badge type="info" text="修改" /> **Rate** 半星渲染改用 `background-clip: text`，提升跨平台兼容性
+> > - <Badge type="info" text="修改" /> **DatetimePicker** 选项高度根据 `size` 动态计算，外层包裹 div 避免结构问题
+> > - <Badge type="info" text="修改" /> **Code** 聚焦逻辑优化，小程序端通过 `needFocus` 切换实现重新聚焦
+> > - <Badge type="info" text="修改" /> **theme.scss** 新增 `--see-bg-dark-color`、`--see-surface-color` 主题变量
+> > - <Badge type="info" text="修改" /> 所有表单组件 `inject` 统一使用 `InjectionKey`，类型更安全
+> > - <Badge type="tip" text="新增" /> **index.ts** 新增类型导出：`FormRule`、`FormInstance`、`SelectOption`、`CascaderOption` 等
 
 ## 1.0.014 **_[`2025-12-15`](https://www.npmjs.com/package/see-u-ui/v/1.0.14)_**
 

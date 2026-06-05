@@ -72,10 +72,10 @@ iframeSrc: /pages/seeButton/index
 
 ## 按钮大小
 
-- 通过 `size` 参数设置按钮大小，我们提供了四种属性：`normal` `small` `mini` `large`
+- 通过 `size` 参数设置按钮大小，我们提供了四种属性：`default` `small` `mini` `large`
 
 ```html:line-numbers {}
-<see-button size="normal" title="默认大小" />
+<see-button size="default" title="默认大小" />
 <see-button size="small" title="小型尺寸" />
 <see-button size="mini" title="最小尺寸" />
 <see-button size="large" title="超大尺寸" />
@@ -89,8 +89,8 @@ iframeSrc: /pages/seeButton/index
 
 ```html:line-numbers {}
 <see-button title="默认动画" isRipple />
-<see-button type="primary" size="normal" title="按钮颜色" isRipple />
-<see-button size="normal" title="动画颜色" isRipple ripple-color="blue" />
+<see-button type="primary" size="default" title="按钮颜色" isRipple />
+<see-button size="default" title="动画颜色" isRipple ripple-color="blue" />
 <see-button
   size="large"
   title="动画时长(10000ms)"
@@ -177,7 +177,7 @@ export default {
 | 参数名      | 说明                                                | 类型                                                       | 默认值              | 可选值                                           | 平台差异 |
 | ----------- | --------------------------------------------------- | ---------------------------------------------------------- | ------------------- | ------------------------------------------------ | -------- |
 | title       | 按钮文本内容                                        | String                                                     | `''`                | 任意字符串                                       | -        |
-| size        | 按钮尺寸                                            | `"normal" \| "large" \| "small" \| "mini"`                 | `'normal'`          | `normal`、`large`、`small`、`mini`               | -        |
+| size        | 按钮尺寸                                            | `"default" \| "large" \| "small" \| "mini"`                | `'default'`         | `default`、`large`、`small`、`mini`              | -        |
 | type        | 按钮类型（预置样式）                                | `"info" \| "primary" \| "error" \| "warning" \| "success"` | `'info'`            | `info`、`primary`、`error`、`warning`、`success` | -        |
 | color       | 自定义背景色（会覆盖 type 的默认颜色）              | String                                                     | `''`                | 任意 CSS 颜色值                                  | -        |
 | textColor   | 文本颜色                                            | String                                                     | `''`                | 任意 CSS 颜色值                                  | -        |

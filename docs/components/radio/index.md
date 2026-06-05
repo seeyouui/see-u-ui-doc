@@ -17,6 +17,26 @@ iframeSrc: /pages/seeRadio/index
 | :------: | :-------: | :-: | :----: |
 |    √     |     √     |  √  |   √    |
 
+## 独立使用
+
+`seeRadio` 支持独立使用，无需包裹在 `seeRadioGroup` 中，直接通过 `v-model` 绑定选中状态。
+
+```html:line-numbers {}
+<template>
+  <seeRadio v-model="selected" label="option1">选项一</seeRadio>
+  <seeRadio v-model="selected" label="option2">选项二</seeRadio>
+  <seeRadio v-model="selected" label="option3">选项三</seeRadio>
+
+  <text>选中值：{{ selected }}</text>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+
+const selected = ref('option1')
+</script>
+```
+
 ## 基本使用
 
 使用 `seeRadioGroup` 组件包裹多个 `seeRadio`，通过 `v-model` 绑定选中的值。
@@ -190,6 +210,7 @@ const formData = reactive({
 
 | 参数名 | 说明 | 类型 | 默认值 | 可选值 | 平台差异 |
 | ------ | ---- | ---- | ------ | ------ | -------- |
+| modelValue | 绑定值（独立使用时） | string \| number \| boolean | - | - | - |
 | label | 选项的值 | string \| number \| boolean | - | - | - |
 | isDisabled | 是否禁用 | boolean | false | - | - |
 | size | 尺寸 | string | 'default' | 'small' / 'default' / 'large' | - |

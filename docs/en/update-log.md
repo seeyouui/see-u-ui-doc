@@ -38,6 +38,24 @@ iframeSrc: /pages/index/index
 > >   - <Badge type="tip" text="Added" /> Validation engine (supports sync / async validation, built-in rules, custom validators)
 > > - <Badge type="tip" text="Added" /> All form components support Light / Dark theme switching
 > > - <Badge type="tip" text="Added" /> All form components support H5 / Mini Program / App cross-platform compatibility
+> > - <Badge type="info" text="Modified" /> **Button** `size` prop default changed from `'normal'` to `'default'`
+> > - <Badge type="info" text="Modified" /> **Tag** `disabled` prop renamed to `isDisabled` for naming consistency
+> > - <Badge type="tip" text="Added" /> **Radio** supports standalone `v-model` usage without RadioGroup wrapper
+> > - <Badge type="tip" text="Added" /> **Textarea** integrated with `useField`, supports form validation binding, exposes `validateStatus` / `validateMessage`
+> > - <Badge type="info" text="Modified" /> **Form** consolidated multiple watches into one for better reactive performance
+> > - <Badge type="info" text="Modified" /> **Picker** selected item now centered in viewport, improved wheel interaction
+> > - <Badge type="info" text="Modified" /> **Cascader** panel now supports safe area insets, `options` watcher changed to `deep: false` for performance
+> > - <Badge type="info" text="Modified" /> **Slider** vertical mode uses CSS variables for positioning, improved rendering stability
+> > - <Badge type="info" text="Modified" /> **NumberBox** long-press repeat uses recursive `setTimeout` with acceleration, fixed H5 mouse event leak
+> > - <Badge type="info" text="Modified" /> **Upload** added `accept` file type validation, fixed Object URL memory leak, H5 removes `chooseMedia` fallback
+> > - <Badge type="info" text="Modified" /> **Keyboard** random digit layout cached on open, avoids layout changes during input
+> > - <Badge type="info" text="Modified" /> **Link** added URL protocol whitelist validation, blocks unsafe protocol navigation
+> > - <Badge type="info" text="Modified" /> **Rate** half-star rendering uses `background-clip: text` for better cross-platform compatibility
+> > - <Badge type="info" text="Modified" /> **DatetimePicker** item height dynamically computed based on `size`, wrapped in div to fix structure
+> > - <Badge type="info" text="Modified" /> **Code** focus logic improved, mini-program uses `needFocus` toggle for re-focusing
+> > - <Badge type="info" text="Modified" /> **theme.scss** added `--see-bg-dark-color`, `--see-surface-color` theme variables
+> > - <Badge type="info" text="Modified" /> All form components `inject` unified with `InjectionKey` for type safety
+> > - <Badge type="tip" text="Added" /> **index.ts** added type exports: `FormRule`, `FormInstance`, `SelectOption`, `CascaderOption`, etc.
 
 ## 1.0.014 **_[`2025-12-15`](https://www.npmjs.com/package/see-u-ui/v/1.0.14)_**
 

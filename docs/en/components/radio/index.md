@@ -17,6 +17,26 @@ iframeSrc: /pages/seeRadio/index
 | :------: | :-------: | :-: | :----------: |
 |    √     |     √     |  √  |      √       |
 
+## Standalone Usage
+
+`seeRadio` supports standalone use without being wrapped in `seeRadioGroup`. Bind the selected state directly via `v-model`.
+
+```html:line-numbers {}
+<template>
+  <seeRadio v-model="selected" label="option1">Option 1</seeRadio>
+  <seeRadio v-model="selected" label="option2">Option 2</seeRadio>
+  <seeRadio v-model="selected" label="option3">Option 3</seeRadio>
+
+  <text>Selected value: {{ selected }}</text>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+
+const selected = ref('option1')
+</script>
+```
+
 ## Basic Usage
 
 Use `seeRadioGroup` component to wrap multiple `seeRadio` components. Bind the selected value via `v-model`.
@@ -190,6 +210,7 @@ const formData = reactive({
 
 | Parameter | Description | Type | Default | Platform |
 | --------- | ----------- | ---- | ------- | -------- |
+| modelValue | Bound value (standalone use) | string \| number \| boolean | - | - |
 | label | Option value | string \| number \| boolean | - | - |
 | isDisabled | Whether disabled | boolean | false | - |
 | size | Size | string | 'default' | - |

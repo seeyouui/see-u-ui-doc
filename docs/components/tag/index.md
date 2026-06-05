@@ -90,11 +90,11 @@ iframeSrc: /pages/seeTag/index
 
 ## 禁用状态
 
-- 通过设置 `disabled` 为 `true` 禁用标签，禁用后点击事件不会触发。
+- 通过设置 `isDisabled` 为 `true` 禁用标签，禁用后点击事件不会触发。
 
 ```html:line-numbers {}
-<see-tag type="primary" disabled>禁用</see-tag>
-<see-tag type="primary" closable disabled>禁用可关闭</see-tag>
+<see-tag type="primary" is-disabled>禁用</see-tag>
+<see-tag type="primary" closable is-disabled>禁用可关闭</see-tag>
 ```
 
 ## 自定义颜色
@@ -125,7 +125,7 @@ iframeSrc: /pages/seeTag/index
 | bgColor | 自定义背景颜色 | String | `''` | - |
 | textColor | 自定义文字颜色 | String | `''` | - |
 | borderColor | 自定义边框颜色 | String | `''` | - |
-| disabled | 是否禁用 | Boolean | `false` | - |
+| isDisabled | 是否禁用 | Boolean | `false` | - |
 | mark | 是否标记样式 | Boolean | `false` | - |
 | hit | 是否显示边框 | Boolean | `false` | - |
 
