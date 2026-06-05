@@ -100,6 +100,13 @@ body {
   min-width: var(--vp-sidebar-width) !important;
 }
 
+/* 首页（无 sidebar）navbar 左右间距恢复，防止缩放时紧贴浏览器边缘 */
+@media (min-width: 768px) {
+  .VPNavBar:not(.has-sidebar) .wrapper {
+    padding: 0 32px !important;
+  }
+}
+
 /* 同步内容区 padding-left = sidebar 实际宽度，防止内容跑到 sidebar 下面 */
 @media (min-width: 1440px) {
   .VPContent.has-sidebar {
@@ -107,7 +114,7 @@ body {
   }
 
   /* navbar 内容区同步 padding-left，防止搜索/链接挡住 curtain(logo 区域) */
-  .VPNavBar .content {
+  .VPNavBar.has-sidebar .content {
     padding-left: max(var(--vp-sidebar-width), calc((100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width))) !important;
   }
 
