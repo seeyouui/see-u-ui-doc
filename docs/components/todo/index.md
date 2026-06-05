@@ -15,6 +15,10 @@ iframeSrc: /pages/index/index
 
 [如果你有想法，欢迎顺手提个 PR 🙏❤️](https://github.com/seeyouui/see-u-ui/pulls)
 
+## 2026.06.05 11:20
+
+回来了。。。英语考试没有通过
+
 ## 2026.01.01 17:33
 
 :tada: 新年快乐

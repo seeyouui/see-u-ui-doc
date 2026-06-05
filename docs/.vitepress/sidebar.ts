@@ -24,7 +24,7 @@ export const commonSidebar = [
           { text: "Icon 图标", link: "/components/icon/index.md" },
           { text: "Image 图片", link: "/components/image/index.md" },
           { text: "Badge 徽标数", link: "/components/todo/index.md" },
-          { text: "Tag 标签", link: "/components/todo/index.md" },
+          { text: "Tag 标签", link: "/components/tag/index.md" },
         ],
       },
       {
