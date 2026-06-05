@@ -30,41 +30,41 @@ export const commonSidebar = [
       {
         text: "表单组件",
         items: [
-          { text: "Form 表单", link: "/components/todo/index.md" },
-          { text: "Input 输入框", link: "/components/todo/index.md" },
-          { text: "Keyboard 键盘", link: "/components/todo/index.md" },
-          {
-            text: "Select 经典下拉框",
-            link: "/components/todo/index.md",
-          },
-          { text: "Picker 选择器", link: "/components/todo/index.md" },
-          {
-            text: "Cascader 级联选择器",
-            link: "/components/todo/index.md",
-          },
-          {
-            text: "DatetimePicker 选择器",
-            link: "/components/todo/index.md",
-          },
-          { text: "Rate 评分", link: "/components/todo/index.md" },
-          { text: "Search 搜索", link: "/components/todo/index.md" },
-          { text: "NumberBox 步进器", link: "/components/todo/index.md" },
-          { text: "Upload 上传", link: "/components/todo/index.md" },
-          {
-            text: "Code 验证码输入框",
-            link: "/components/todo/index.md",
-          },
-          { text: "Textarea 文本域", link: "/components/todo/index.md" },
-          { text: "Checkbox 复选框", link: "/components/todo/index.md" },
-          { text: "Radio 单选框", link: "/components/todo/index.md" },
+          { text: "Form 表单", link: "/components/form/index.md" },
+          { text: "Input 输入框", link: "/components/input/index.md" },
+          { text: "Textarea 文本域", link: "/components/textarea/index.md" },
+          { text: "Checkbox 复选框", link: "/components/checkbox/index.md" },
+          { text: "Radio 单选框", link: "/components/radio/index.md" },
           {
             text: "Switch 开关选择器",
-            link: "/components/todo/index.md",
+            link: "/components/switch/index.md",
           },
+          { text: "Rate 评分", link: "/components/rate/index.md" },
           {
             text: "Slider 滑动选择器",
-            link: "/components/todo/index.md",
+            link: "/components/slider/index.md",
           },
+          { text: "NumberBox 步进器", link: "/components/number-box/index.md" },
+          { text: "Search 搜索", link: "/components/search/index.md" },
+          {
+            text: "Select 经典下拉框",
+            link: "/components/select/index.md",
+          },
+          { text: "Picker 选择器", link: "/components/picker/index.md" },
+          {
+            text: "Cascader 级联选择器",
+            link: "/components/cascader/index.md",
+          },
+          {
+            text: "DatetimePicker 日期选择器",
+            link: "/components/datetime-picker/index.md",
+          },
+          { text: "Upload 上传", link: "/components/upload/index.md" },
+          {
+            text: "Code 验证码输入框",
+            link: "/components/code/index.md",
+          },
+          { text: "Keyboard 键盘", link: "/components/keyboard/index.md" },
         ],
       },
       {
@@ -215,6 +215,8 @@ export const apiSidebar = [
           { text: "余额格式化", link: "/api/hooks/useCurrencyFormat" },
           { text: "日期格式化", link: "/api/hooks/useDateFormat" },
           { text: "时间距今", link: "/api/hooks/useTimeAgo" },
+          { text: "表单管理", link: "/api/hooks/useForm" },
+          { text: "字段管理", link: "/api/hooks/useField" },
         ],
       },
       {

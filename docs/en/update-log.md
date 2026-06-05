@@ -11,6 +11,34 @@ iframeSrc: /pages/index/index
 
 > Log Legend: <Badge type="info" text="Modified" /> <Badge type="tip" text="Added" /> <Badge type="warning" text="Fixed" /> <Badge type="danger" text="Removed" />
 
+## 1.1.0 **_[`2026-06-05`](https://www.npmjs.com/package/see-u-ui/v/1.1.0)_**
+
+> > - <Badge type="tip" text="Added" /> **Form Component System** — 17 form components fully implemented
+> >   - <Badge type="tip" text="Added" /> Form (supports validate / reset / clearValidate / scrollToField)
+> >   - <Badge type="tip" text="Added" /> FormItem (supports label / validation status / error message display)
+> >   - <Badge type="tip" text="Added" /> Input (supports clearable / password / formatter / prefix / suffix / count)
+> >   - <Badge type="tip" text="Added" /> Textarea (supports autoHeight / wordLimit / clearable)
+> >   - <Badge type="tip" text="Added" /> Checkbox (supports Group / indeterminate / min / max limits)
+> >   - <Badge type="tip" text="Added" /> Radio (supports Group / inline layout / border mode)
+> >   - <Badge type="tip" text="Added" /> Switch (supports custom value / color / text description)
+> >   - <Badge type="tip" text="Added" /> Rate (supports half-star / custom icon / clearable)
+> >   - <Badge type="tip" text="Added" /> Slider (supports range / vertical mode / step marks)
+> >   - <Badge type="tip" text="Added" /> NumberBox (supports step / decimal length / long-press continuous)
+> >   - <Badge type="tip" text="Added" /> Search (supports round/square shape / action button / custom slots)
+> >   - <Badge type="tip" text="Added" /> Select (supports single/multiple / filter / remote search / grouping)
+> >   - <Badge type="tip" text="Added" /> Picker (supports single / multiple / cascade columns)
+> >   - <Badge type="tip" text="Added" /> Cascader (supports infinite levels / lazy loading)
+> >   - <Badge type="tip" text="Added" /> DatetimePicker (supports date / time / datetime / year-month / month-day)
+> >   - <Badge type="tip" text="Added" /> Upload (supports image / video / file / multiple / compress / custom upload)
+> >   - <Badge type="tip" text="Added" /> Code (supports auto-focus / paste / mask / cursor animation)
+> >   - <Badge type="tip" text="Added" /> Keyboard (supports number / idcard / full / random security keyboard)
+> > - <Badge type="tip" text="Added" /> **Form Infrastructure**
+> >   - <Badge type="tip" text="Added" /> useForm Hook — Form management (validate / reset / clear / get/set values)
+> >   - <Badge type="tip" text="Added" /> useField Hook — Field management (validation state / lifecycle / Form binding)
+> >   - <Badge type="tip" text="Added" /> Validation engine (supports sync / async validation, built-in rules, custom validators)
+> > - <Badge type="tip" text="Added" /> All form components support Light / Dark theme switching
+> > - <Badge type="tip" text="Added" /> All form components support H5 / Mini Program / App cross-platform compatibility
+
 ## 1.0.014 **_[`2025-12-15`](https://www.npmjs.com/package/see-u-ui/v/1.0.14)_**
 
 > [`commit: 6524585`](https://github.com/seeyouui/see-u-ui/commit/6524585c4e974472c4a2dd60d2f7b5fd529f9528)

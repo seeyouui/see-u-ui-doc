@@ -30,41 +30,41 @@ export const commonSidebarEn = [
       {
         text: "Form Components",
         items: [
-          { text: "Form", link: "/en/components/todo/index.md" },
-          { text: "Input", link: "/en/components/todo/index.md" },
-          { text: "Keyboard", link: "/en/components/todo/index.md" },
+          { text: "Form", link: "/en/components/form/index.md" },
+          { text: "Input", link: "/en/components/input/index.md" },
+          { text: "Textarea", link: "/en/components/textarea/index.md" },
+          { text: "Checkbox", link: "/en/components/checkbox/index.md" },
+          { text: "Radio", link: "/en/components/radio/index.md" },
+          {
+            text: "Switch",
+            link: "/en/components/switch/index.md",
+          },
+          { text: "Rate", link: "/en/components/rate/index.md" },
+          {
+            text: "Slider",
+            link: "/en/components/slider/index.md",
+          },
+          { text: "NumberBox", link: "/en/components/number-box/index.md" },
+          { text: "Search", link: "/en/components/search/index.md" },
           {
             text: "Select",
-            link: "/en/components/todo/index.md",
+            link: "/en/components/select/index.md",
           },
-          { text: "Picker", link: "/en/components/todo/index.md" },
+          { text: "Picker", link: "/en/components/picker/index.md" },
           {
             text: "Cascader",
-            link: "/en/components/todo/index.md",
+            link: "/en/components/cascader/index.md",
           },
           {
             text: "DatetimePicker",
-            link: "/en/components/todo/index.md",
+            link: "/en/components/datetime-picker/index.md",
           },
-          { text: "Rate", link: "/en/components/todo/index.md" },
-          { text: "Search", link: "/en/components/todo/index.md" },
-          { text: "NumberBox", link: "/en/components/todo/index.md" },
-          { text: "Upload", link: "/en/components/todo/index.md" },
+          { text: "Upload", link: "/en/components/upload/index.md" },
           {
             text: "Code Input",
-            link: "/en/components/todo/index.md",
+            link: "/en/components/code/index.md",
           },
-          { text: "Textarea", link: "/en/components/todo/index.md" },
-          { text: "Checkbox", link: "/en/components/todo/index.md" },
-          { text: "Radio", link: "/en/components/todo/index.md" },
-          {
-            text: "Switch",
-            link: "/en/components/todo/index.md",
-          },
-          {
-            text: "Slider",
-            link: "/en/components/todo/index.md",
-          },
+          { text: "Keyboard", link: "/en/components/keyboard/index.md" },
         ],
       },
       {
@@ -218,6 +218,8 @@ export const apiSidebarEn = [
           },
           { text: "useDateFormat", link: "/en/api/hooks/useDateFormat" },
           { text: "useTimeAgo", link: "/en/api/hooks/useTimeAgo" },
+          { text: "useForm", link: "/en/api/hooks/useForm" },
+          { text: "useField", link: "/en/api/hooks/useField" },
         ],
       },
       {
