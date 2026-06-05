@@ -163,8 +163,22 @@ onUnmounted(() => {
   height: 820px;
   border-radius: 50px;
   overflow: hidden;
-  padding: 70px 25px 42px;
+  padding: 70px 26px 42px;
   /* 移除了 mockupStyle 计算属性，直接在这里定义或依靠内部 bg-layer */
+}
+
+/* 110%/125% 缩放时适当缩小手机模拟器 */
+@media (min-width: 1400px) and (max-width: 1800px) {
+  .mobile-mockup {
+    width: 380px;
+    height: 740px;
+    border-radius: 40px;
+    padding: 64px 24px 36px;
+  }
+
+  .mobile-mockup iframe {
+    border-radius: 40px;
+  }
 }
 
 .bg-layer {

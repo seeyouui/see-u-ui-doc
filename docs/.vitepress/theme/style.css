@@ -91,3 +91,38 @@ body {
 .aside-curtain {
   display: none;
 }
+
+/* 修复浏览器缩放（110%/125%）时侧边栏被遮挡的问题 */
+/* 原因：--vp-layout-max-width 为 1920px 时，VitePress 在 >=1440px 下计算的 */
+/* sidebar 宽度会随视口缩小而变小（如 1440px 视口下仅 32px），但 navbar */
+/* 的 title 固定为 272px，导致 navbar 和内容区覆盖过窄的侧边栏 */
+.VPSidebar {
+  min-width: var(--vp-sidebar-width) !important;
+}
+
+/* 同步内容区 padding-left = sidebar 实际宽度，防止内容跑到 sidebar 下面 */
+@media (min-width: 1440px) {
+  .VPContent.has-sidebar {
+    padding-left: max(var(--vp-sidebar-width), calc((100vw - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width))) !important;
+  }
+
+  /* navbar 内容区同步 padding-left，防止搜索/链接挡住 curtain(logo 区域) */
+  .VPNavBar .content {
+    padding-left: max(var(--vp-sidebar-width), calc((100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width))) !important;
+  }
+
+  /* navbar title 固定宽度 = sidebar 宽度，防止 logo 被挤窄 + border 线不跑 */
+  .VPNavBar.has-sidebar .title {
+    width: var(--vp-sidebar-width) !important;
+    min-width: var(--vp-sidebar-width) !important;
+  }
+
+  /* 右侧 padding 兜底，防止缩放时内容紧贴浏览器右边 */
+  .VPNavBar.has-sidebar .content {
+    padding-right: max(32px, calc((100vw - var(--vp-layout-max-width)) / 2 + 32px)) !important;
+  }
+
+  .VPContent.has-sidebar {
+    padding-right: max(32px, calc((100vw - var(--vp-layout-max-width)) / 2)) !important;
+  }
+}
