@@ -102,18 +102,18 @@ export const commonSidebarEn = [
       {
         text: "Data Components",
         items: [
-          { text: "List", link: "/en/components/todo/index.md" },
+          { text: "List", link: "/en/components/list/index.md" },
           {
             text: "VirtualList",
-            link: "/en/components/todo/index.md",
+            link: "/en/components/virtual-list/index.md",
           },
           {
             text: "LineProgress",
-            link: "/en/components/todo/index.md",
+            link: "/en/components/line-progress/index.md",
           },
-          { text: "Table", link: "/en/components/todo/index.md" },
-          { text: "CountDown", link: "/en/components/todo/index.md" },
-          { text: "CountTo", link: "/en/components/todo/index.md" },
+          { text: "Table", link: "/en/components/table/index.md" },
+          { text: "CountDown", link: "/en/components/count-down/index.md" },
+          { text: "CountTo", link: "/en/components/count-to/index.md" },
         ],
       },
       {
@@ -220,6 +220,9 @@ export const apiSidebarEn = [
           { text: "useTimeAgo", link: "/en/api/hooks/useTimeAgo" },
           { text: "useForm", link: "/en/api/hooks/useForm" },
           { text: "useField", link: "/en/api/hooks/useField" },
+          { text: "useCountdown", link: "/en/api/hooks/useCountdown" },
+          { text: "useCountTo", link: "/en/api/hooks/useCountTo" },
+          { text: "useVirtualWindow", link: "/en/api/hooks/useVirtualWindow" },
         ],
       },
       {

@@ -11,6 +11,23 @@ iframeSrc: /pages/index/index
 
 > 日志说明：<Badge type="info" text="修改" /> <Badge type="tip" text="新增" /> <Badge type="warning" text="修复" /> <Badge type="danger" text="删除" />
 
+## 1.2.0 **_[`2026-06-10`](https://www.npmjs.com/package/see-u-ui/v/1.2.0)_**
+
+> > - <Badge type="tip" text="新增" /> **数据组件体系** — 6 个数据组件完整实现
+> >   - <Badge type="tip" text="新增" /> CountDown 倒计时（支持精确挂钟校准 / 毫秒精度 / 自定义格式 / 服务端时间同步）
+> >   - <Badge type="tip" text="新增" /> CountTo 数字滚动（支持缓动函数 / 千分位分隔 / 前缀后缀 / 动态更新目标值）
+> >   - <Badge type="tip" text="新增" /> LineProgress 线形进度条（支持状态颜色 / 渐变色 / 条纹动画 / 文字内置 / 自定义格式化）
+> >   - <Badge type="tip" text="新增" /> List 列表（支持加载状态 / 空状态 / 错误状态 / 完成状态 / 分组 / 水平滚动 / 上拉加载更多）
+> >   - <Badge type="tip" text="新增" /> Table 表格（支持列配置 / 排序 / 行选择 / 展开行 / 树形数据 / 分页 / 吸顶表头 / 固定列 / 虚拟滚动）
+> >   - <Badge type="tip" text="新增" /> VirtualList 虚拟列表（支持固定高度 / 动态高度 / 水平滚动 / 缓冲区 / 滚动到指定位置）
+> > - <Badge type="tip" text="新增" /> **数据组件基础设施**
+> >   - <Badge type="tip" text="新增" /> useCountdown Hook — 倒计时管理（精确挂钟校准 / 暂停恢复 / 重置）
+> >   - <Badge type="tip" text="新增" /> useCountTo Hook — 数字滚动管理（缓动动画 / 暂停恢复 / 动态更新）
+> >   - <Badge type="tip" text="新增" /> useVirtualWindow Hook — 虚拟滚动窗口管理（可视区域计算 / 动态高度支持）
+> > - <Badge type="tip" text="新增" /> 所有数据组件支持 Light / Dark 主题切换
+> > - <Badge type="tip" text="新增" /> 所有数据组件支持 H5 / 小程序 / App 多端兼容
+> > - <Badge type="tip" text="新增" /> **index.ts** 新增类型导出：`CountdownTimeData`、`SeeTableColumn`、`SeeTablePagination` 等
+
 ## 1.1.0 **_[`2026-06-05`](https://www.npmjs.com/package/see-u-ui/v/1.1.0)_**
 
 > > - <Badge type="tip" text="新增" /> **表单组件体系** — 17 个表单组件完整实现

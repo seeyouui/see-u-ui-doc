@@ -11,6 +11,23 @@ iframeSrc: /pages/index/index
 
 > Log Legend: <Badge type="info" text="Modified" /> <Badge type="tip" text="Added" /> <Badge type="warning" text="Fixed" /> <Badge type="danger" text="Removed" />
 
+## 1.2.0 **_[`2026-06-10`](https://www.npmjs.com/package/see-u-ui/v/1.2.0)_**
+
+> > - <Badge type="tip" text="Added" /> **Data Component System** — 6 data components fully implemented
+> >   - <Badge type="tip" text="Added" /> CountDown (supports precise wall-clock calibration / millisecond precision / custom format / server time sync)
+> >   - <Badge type="tip" text="Added" /> CountTo (supports easing functions / thousand separator / prefix & suffix / dynamic target update)
+> >   - <Badge type="tip" text="Added" /> LineProgress (supports status colors / gradient / striped animation / text inside / custom formatter)
+> >   - <Badge type="tip" text="Added" /> List (supports loading / empty / error / finished states / grouping / horizontal scroll / load more)
+> >   - <Badge type="tip" text="Added" /> Table (supports column config / sorting / row selection / expandable rows / tree data / pagination / sticky header / fixed columns / virtual scrolling)
+> >   - <Badge type="tip" text="Added" /> VirtualList (supports fixed height / dynamic height / horizontal scroll / buffer / scroll to position)
+> > - <Badge type="tip" text="Added" /> **Data Component Infrastructure**
+> >   - <Badge type="tip" text="Added" /> useCountdown Hook — Countdown management (precise wall-clock calibration / pause & resume / reset)
+> >   - <Badge type="tip" text="Added" /> useCountTo Hook — Number scrolling management (easing animation / pause & resume / dynamic update)
+> >   - <Badge type="tip" text="Added" /> useVirtualWindow Hook — Virtual scroll window management (visible area calculation / dynamic height support)
+> > - <Badge type="tip" text="Added" /> All data components support Light / Dark theme switching
+> > - <Badge type="tip" text="Added" /> All data components support H5 / Mini Program / App cross-platform compatibility
+> > - <Badge type="tip" text="Added" /> **index.ts** added type exports: `CountdownTimeData`, `SeeTableColumn`, `SeeTablePagination`, etc.
+
 ## 1.1.0 **_[`2026-06-05`](https://www.npmjs.com/package/see-u-ui/v/1.1.0)_**
 
 > > - <Badge type="tip" text="Added" /> **Form Component System** — 17 form components fully implemented

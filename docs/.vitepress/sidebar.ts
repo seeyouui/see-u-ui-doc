@@ -102,18 +102,18 @@ export const commonSidebar = [
       {
         text: "数据组件",
         items: [
-          { text: "List 列表", link: "/components/todo/index.md" },
+          { text: "List 列表", link: "/components/list/index.md" },
           {
             text: "VirtualList 虚拟列表",
-            link: "/components/todo/index.md",
+            link: "/components/virtual-list/index.md",
           },
           {
             text: "LineProgress 线形进度条",
-            link: "/components/todo/index.md",
+            link: "/components/line-progress/index.md",
           },
-          { text: "Table 表格", link: "/components/todo/index.md" },
-          { text: "CountDown 倒计时", link: "/components/todo/index.md" },
-          { text: "CountTo 数字滚动", link: "/components/todo/index.md" },
+          { text: "Table 表格", link: "/components/table/index.md" },
+          { text: "CountDown 倒计时", link: "/components/count-down/index.md" },
+          { text: "CountTo 数字滚动", link: "/components/count-to/index.md" },
         ],
       },
       {
@@ -217,6 +217,9 @@ export const apiSidebar = [
           { text: "时间距今", link: "/api/hooks/useTimeAgo" },
           { text: "表单管理", link: "/api/hooks/useForm" },
           { text: "字段管理", link: "/api/hooks/useField" },
+          { text: "倒计时", link: "/api/hooks/useCountdown" },
+          { text: "数字滚动", link: "/api/hooks/useCountTo" },
+          { text: "虚拟窗口", link: "/api/hooks/useVirtualWindow" },
         ],
       },
       {
