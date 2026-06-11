@@ -11,6 +11,32 @@ iframeSrc: /pages/index/index
 
 > 日志说明：<Badge type="info" text="修改" /> <Badge type="tip" text="新增" /> <Badge type="warning" text="修复" /> <Badge type="danger" text="删除" />
 
+## 1.3.0 **_[`2026-06-11`](https://www.npmjs.com/package/see-u-ui/v/1.3.0)_**
+
+> > - <Badge type="tip" text="新增" /> **导航组件体系** — 13 个导航组件完整实现
+> >   - <Badge type="tip" text="新增" /> Navbar 自定义导航栏（支持固定定位 / 搜索栏嵌入 / 毛玻璃效果 / 安全区适配）
+> >   - <Badge type="tip" text="新增" /> NavbarMini 迷你导航栏（轻量子页面导航，默认高度 64rpx）
+> >   - <Badge type="tip" text="新增" /> Tabbar 底部导航栏（支持 v-model / 中央凸起按钮 / Badge 徽标 / 路由模式）
+> >   - <Badge type="tip" text="新增" /> BackTop 返回顶部（支持滚动监听 / 自定义容器 / 平滑回顶动画）
+> >   - <Badge type="tip" text="新增" /> Tabs 标签页（支持三种样式 / 滑动切换 / 懒加载 / KeepAlive 缓存 / 动态增删）
+> >   - <Badge type="tip" text="新增" /> Subsection 分段器（支持 default / button / pill 三种样式，轻量切换控件）
+> >   - <Badge type="tip" text="新增" /> Dropdown 下拉菜单（支持单选 / 多选 / 级联 / 日期筛选 / 自定义面板）
+> >   - <Badge type="tip" text="新增" /> Pagination 分页器（支持 button / simple / number 三种模式）
+> >   - <Badge type="tip" text="新增" /> Steps 步骤条（支持水平 / 垂直方向 / 四种状态 / 圆点模式）
+> >   - <Badge type="tip" text="新增" /> IndexList 索引列表（支持 A-Z 索引 / 拼音搜索 / 右侧索引导航条）
+> >   - <Badge type="tip" text="新增" /> Tree 树形组件（支持级联选择 / 半选状态 / 搜索过滤 / 10000 节点虚拟滚动）
+> >   - <Badge type="tip" text="新增" /> CityLocate 城市定位选择器（支持 GPS 定位 / 拼音搜索 / 150+ 城市数据 / 历史缓存）
+> >   - <Badge type="tip" text="新增" /> Empty 空状态组件（支持 5 种内置类型 / 自定义图片和操作按钮）
+> > - <Badge type="tip" text="新增" /> **导航基础设施**
+> >   - <Badge type="tip" text="新增" /> useRoute Hook — 跨平台路由统一封装（navigateTo / redirectTo / switchTab / reLaunch / navigateBack）
+> >   - <Badge type="tip" text="新增" /> useSafeArea Hook — 安全区适配（top / bottom / left / right 安全边距 + statusBarHeight）
+> >   - <Badge type="tip" text="新增" /> useScrollSpy Hook — 滚动位置监听（RFA 节流 / 方向判断 / 指定容器）
+> >   - <Badge type="tip" text="新增" /> useTree Hook — 树形数据管理（扁平化 / 级联算法 / 搜索过滤）
+> > - <Badge type="tip" text="新增" /> **theme.scss** 新增 55+ 导航组件 CSS 变量，含 Light / Dark 双模式
+> > - <Badge type="tip" text="新增" /> 所有导航组件支持 Light / Dark 主题切换
+> > - <Badge type="tip" text="新增" /> 所有导航组件支持 H5 / 小程序 / App 多端兼容
+> > - <Badge type="tip" text="新增" /> **index.ts** 注册 16 个导航组件 + 4 个导航 Hooks，完整类型导出
+
 ## 1.2.0 **_[`2026-06-10`](https://www.npmjs.com/package/see-u-ui/v/1.2.0)_**
 
 > > - <Badge type="tip" text="新增" /> **数据组件体系** — 6 个数据组件完整实现

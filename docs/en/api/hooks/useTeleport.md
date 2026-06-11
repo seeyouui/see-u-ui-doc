@@ -4,6 +4,7 @@ outline: deep
 title: useTeleport
 titleTemplate: SeeYouUI - useTeleport
 description: SeeYouUI useTeleport Hook
+iframeSrc: /pages/index/index
 ---
 
 # useTeleport

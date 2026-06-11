@@ -11,6 +11,32 @@ iframeSrc: /pages/index/index
 
 > Log Legend: <Badge type="info" text="Modified" /> <Badge type="tip" text="Added" /> <Badge type="warning" text="Fixed" /> <Badge type="danger" text="Removed" />
 
+## 1.3.0 **_[`2026-06-11`](https://www.npmjs.com/package/see-u-ui/v/1.3.0)_**
+
+> > - <Badge type="tip" text="Added" /> **Navigation Component System** — 13 navigation components fully implemented
+> >   - <Badge type="tip" text="Added" /> Navbar (supports fixed positioning / search bar embedding / frosted glass effect / safe area insets)
+> >   - <Badge type="tip" text="Added" /> NavbarMini (lightweight sub-page navigation, default height 64rpx)
+> >   - <Badge type="tip" text="Added" /> Tabbar (supports v-model / center raised button / badge system / route mode)
+> >   - <Badge type="tip" text="Added" /> BackTop (supports scroll spy / custom container / smooth scroll-to-top animation)
+> >   - <Badge type="tip" text="Added" /> Tabs (supports 3 styles / swipe switching / lazy loading / KeepAlive cache / dynamic add & remove)
+> >   - <Badge type="tip" text="Added" /> Subsection (lightweight toggle control, supports default / button / pill styles)
+> >   - <Badge type="tip" text="Added" /> Dropdown (supports single / multiple / cascade / date filter / custom panel)
+> >   - <Badge type="tip" text="Added" /> Pagination (supports button / simple / number modes)
+> >   - <Badge type="tip" text="Added" /> Steps (supports horizontal / vertical direction / 4 statuses / dot style)
+> >   - <Badge type="tip" text="Added" /> IndexList (supports A-Z indexing / pinyin search / right-side nav bar)
+> >   - <Badge type="tip" text="Added" /> Tree (supports cascade selection / indeterminate state / search filtering / 10000-node virtual scroll)
+> >   - <Badge type="tip" text="Added" /> CityLocate (supports GPS positioning / pinyin search / 150+ cities data / recent history cache)
+> >   - <Badge type="tip" text="Added" /> Empty (supports 5 built-in types / custom image and action button)
+> > - <Badge type="tip" text="Added" /> **Navigation Infrastructure**
+> >   - <Badge type="tip" text="Added" /> useRoute Hook — Cross-platform route unification (navigateTo / redirectTo / switchTab / reLaunch / navigateBack)
+> >   - <Badge type="tip" text="Added" /> useSafeArea Hook — Safe area insets (top / bottom / left / right + statusBarHeight)
+> >   - <Badge type="tip" text="Added" /> useScrollSpy Hook — Scroll position monitoring (rAF throttling / direction detection / custom container)
+> >   - <Badge type="tip" text="Added" /> useTree Hook — Tree data management (flattening / cascade algorithm / search filtering)
+> > - <Badge type="tip" text="Added" /> **theme.scss** added 55+ navigation component CSS variables with Light / Dark mode support
+> > - <Badge type="tip" text="Added" /> All navigation components support Light / Dark theme switching
+> > - <Badge type="tip" text="Added" /> All navigation components support H5 / Mini Program / App cross-platform compatibility
+> > - <Badge type="tip" text="Added" /> **index.ts** registered 16 navigation components + 4 navigation Hooks with full type exports
+
 ## 1.2.0 **_[`2026-06-10`](https://www.npmjs.com/package/see-u-ui/v/1.2.0)_**
 
 > > - <Badge type="tip" text="Added" /> **Data Component System** — 6 data components fully implemented

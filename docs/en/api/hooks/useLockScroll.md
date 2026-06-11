@@ -4,6 +4,7 @@ outline: deep
 title: useLockScroll
 titleTemplate: SeeYouUI - useLockScroll
 description: SeeYouUI useLockScroll Hook
+iframeSrc: /pages/index/index
 ---
 
 # useLockScroll

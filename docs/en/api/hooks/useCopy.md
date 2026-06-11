@@ -4,6 +4,7 @@ outline: deep
 title: useCopy
 titleTemplate: SeeYouUI - useCopy
 description: SeeYouUI useCopy Hook
+iframeSrc: /pages/index/index
 ---
 
 # useCopy
