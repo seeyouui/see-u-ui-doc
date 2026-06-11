@@ -4,6 +4,7 @@ outline: deep
 title: Empty 空状态
 titleTemplate: SeeYouUI - Empty 空状态
 description: SeeYouUI 组件库 seeEmpty 空状态组件
+iframeSrc: /pages/seeEmpty/index
 ---
 
 # Empty 空状态

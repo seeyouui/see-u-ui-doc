@@ -4,6 +4,7 @@ outline: deep
 title: NavbarMini 迷你导航栏
 titleTemplate: SeeYouUI - NavbarMini 迷你导航栏
 description: SeeYouUI 组件库 seeNavbarMini 迷你导航栏组件
+iframeSrc: /pages/seeNavbarMini/index
 ---
 
 # NavbarMini 迷你导航栏

@@ -4,6 +4,7 @@ outline: deep
 title: IndexList
 titleTemplate: SeeYouUI - IndexList
 description: SeeYouUI component library seeIndexList component
+iframeSrc: /pages/seeIndexList/index
 ---
 
 # IndexList

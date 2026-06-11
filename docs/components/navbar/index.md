@@ -4,6 +4,7 @@ outline: deep
 title: Navbar 自定义导航栏
 titleTemplate: SeeYouUI - Navbar 自定义导航栏
 description: SeeYouUI 组件库 seeNavbar 自定义导航栏组件
+iframeSrc: /pages/seeNavbar/index
 ---
 
 # Navbar 自定义导航栏

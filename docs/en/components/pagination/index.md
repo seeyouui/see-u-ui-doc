@@ -4,6 +4,7 @@ outline: deep
 title: Pagination
 titleTemplate: SeeYouUI - Pagination
 description: SeeYouUI component library seePagination component
+iframeSrc: /pages/seePagination/index
 ---
 
 # Pagination

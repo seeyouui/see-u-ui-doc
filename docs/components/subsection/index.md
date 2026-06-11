@@ -4,6 +4,7 @@ outline: deep
 title: Subsection 分段器
 titleTemplate: SeeYouUI - Subsection 分段器
 description: SeeYouUI 组件库 seeSubsection 分段器组件
+iframeSrc: /pages/seeSubsection/index
 ---
 
 # Subsection 分段器

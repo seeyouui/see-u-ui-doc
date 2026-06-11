@@ -4,6 +4,7 @@ outline: deep
 title: Dropdown 下拉菜单
 titleTemplate: SeeYouUI - Dropdown 下拉菜单
 description: SeeYouUI 组件库 seeDropdown 下拉菜单组件
+iframeSrc: /pages/seeDropdown/index
 ---
 
 # Dropdown 下拉菜单

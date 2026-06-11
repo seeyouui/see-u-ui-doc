@@ -4,6 +4,7 @@ outline: deep
 title: NavbarMini Mini Navigation Bar
 titleTemplate: SeeYouUI - NavbarMini Mini Navigation Bar
 description: SeeYouUI component library seeNavbarMini mini navigation bar component
+iframeSrc: /pages/seeNavbarMini/index
 ---
 
 # NavbarMini Mini Navigation Bar

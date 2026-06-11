@@ -4,6 +4,7 @@ outline: deep
 title: CityLocate City Selector
 titleTemplate: SeeYouUI - CityLocate City Selector
 description: SeeYouUI component library seeCityLocate city selector component
+iframeSrc: /pages/seeCityLocate/index
 ---
 
 # CityLocate City Selector

@@ -4,6 +4,7 @@ outline: deep
 title: Navbar Custom Navigation Bar
 titleTemplate: SeeYouUI - Navbar Custom Navigation Bar
 description: SeeYouUI component library seeNavbar custom navigation bar component
+iframeSrc: /pages/seeNavbar/index
 ---
 
 # Navbar Custom Navigation Bar

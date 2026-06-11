@@ -4,6 +4,7 @@ outline: deep
 title: IndexList 索引列表
 titleTemplate: SeeYouUI - IndexList 索引列表
 description: SeeYouUI 组件库 seeIndexList 索引列表组件
+iframeSrc: /pages/seeIndexList/index
 ---
 
 # IndexList 索引列表

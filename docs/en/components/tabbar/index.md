@@ -4,6 +4,7 @@ outline: deep
 title: Tabbar Bottom Navigation Bar
 titleTemplate: SeeYouUI - Tabbar Bottom Navigation Bar
 description: SeeYouUI component library seeTabbar bottom navigation bar component
+iframeSrc: /pages/seeTabbar/index
 ---
 
 # Tabbar Bottom Navigation Bar

@@ -4,6 +4,7 @@ outline: deep
 title: Tree
 titleTemplate: SeeYouUI - Tree
 description: SeeYouUI component library seeTree component
+iframeSrc: /pages/seeTree/index
 ---
 
 # Tree

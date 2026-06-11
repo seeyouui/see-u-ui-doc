@@ -4,6 +4,7 @@ outline: deep
 title: Tabs Tab Panel
 titleTemplate: SeeYouUI - Tabs Tab Panel
 description: SeeYouUI component library seeTabs tab panel component
+iframeSrc: /pages/seeTabs/index
 ---
 
 # Tabs Tab Panel

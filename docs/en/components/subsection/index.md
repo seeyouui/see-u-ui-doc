@@ -4,6 +4,7 @@ outline: deep
 title: Subsection Segment Control
 titleTemplate: SeeYouUI - Subsection Segment Control
 description: SeeYouUI component library seeSubsection segment control component
+iframeSrc: /pages/seeSubsection/index
 ---
 
 # Subsection Segment Control

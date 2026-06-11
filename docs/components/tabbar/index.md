@@ -4,6 +4,7 @@ outline: deep
 title: Tabbar 底部导航栏
 titleTemplate: SeeYouUI - Tabbar 底部导航栏
 description: SeeYouUI 组件库 seeTabbar 底部导航栏组件
+iframeSrc: /pages/seeTabbar/index
 ---
 
 # Tabbar 底部导航栏

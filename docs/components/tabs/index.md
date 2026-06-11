@@ -4,6 +4,7 @@ outline: deep
 title: Tabs 标签页
 titleTemplate: SeeYouUI - Tabs 标签页
 description: SeeYouUI 组件库 seeTabs 标签页组件
+iframeSrc: /pages/seeTabs/index
 ---
 
 # Tabs 标签页

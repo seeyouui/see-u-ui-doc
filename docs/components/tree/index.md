@@ -4,6 +4,7 @@ outline: deep
 title: Tree 树形组件
 titleTemplate: SeeYouUI - Tree 树形组件
 description: SeeYouUI 组件库 seeTree 树形组件
+iframeSrc: /pages/seeTree/index
 ---
 
 # Tree 树形组件

@@ -4,6 +4,7 @@ outline: deep
 title: Dropdown Menu
 titleTemplate: SeeYouUI - Dropdown Menu
 description: SeeYouUI component library seeDropdown dropdown menu component
+iframeSrc: /pages/seeDropdown/index
 ---
 
 # Dropdown Menu

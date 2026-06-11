@@ -4,6 +4,7 @@ outline: deep
 title: BackTop 返回顶部
 titleTemplate: SeeYouUI - BackTop 返回顶部
 description: SeeYouUI 组件库 seeBackTop 返回顶部组件
+iframeSrc: /pages/seeBackTop/index
 ---
 
 # BackTop 返回顶部

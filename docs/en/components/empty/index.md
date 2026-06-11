@@ -4,6 +4,7 @@ outline: deep
 title: Empty State
 titleTemplate: SeeYouUI - Empty State
 description: SeeYouUI component library seeEmpty state component
+iframeSrc: /pages/seeEmpty/index
 ---
 
 # Empty State

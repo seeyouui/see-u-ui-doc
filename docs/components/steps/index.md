@@ -4,6 +4,7 @@ outline: deep
 title: Steps 步骤条
 titleTemplate: SeeYouUI - Steps 步骤条
 description: SeeYouUI 组件库 seeSteps 步骤条组件
+iframeSrc: /pages/seeSteps/index
 ---
 
 # Steps 步骤条

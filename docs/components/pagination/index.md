@@ -4,6 +4,7 @@ outline: deep
 title: Pagination 分页器
 titleTemplate: SeeYouUI - Pagination 分页器
 description: SeeYouUI 组件库 seePagination 分页器组件
+iframeSrc: /pages/seePagination/index
 ---
 
 # Pagination 分页器

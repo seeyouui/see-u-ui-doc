@@ -4,6 +4,7 @@ outline: deep
 title: CityLocate 城市定位选择器
 titleTemplate: SeeYouUI - CityLocate 城市定位选择器
 description: SeeYouUI 组件库 seeCityLocate 城市定位选择器组件
+iframeSrc: /pages/seeCityLocate/index
 ---
 
 # CityLocate 城市定位选择器

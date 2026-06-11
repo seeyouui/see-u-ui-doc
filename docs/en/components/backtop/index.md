@@ -4,6 +4,7 @@ outline: deep
 title: BackTop Back to Top
 titleTemplate: SeeYouUI - BackTop Back to Top
 description: SeeYouUI component library seeBackTop back to top component
+iframeSrc: /pages/seeBackTop/index
 ---
 
 # BackTop Back to Top

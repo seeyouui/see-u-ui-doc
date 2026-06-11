@@ -4,6 +4,7 @@ outline: deep
 title: Steps
 titleTemplate: SeeYouUI - Steps
 description: SeeYouUI component library seeSteps component
+iframeSrc: /pages/seeSteps/index
 ---
 
 # Steps
