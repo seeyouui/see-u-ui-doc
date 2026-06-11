@@ -11,6 +11,17 @@ iframeSrc: /pages/index/index
 
 > 日志说明：<Badge type="info" text="修改" /> <Badge type="tip" text="新增" /> <Badge type="warning" text="修复" /> <Badge type="danger" text="删除" />
 
+## 1.3.1 **_[`2026-06-11`](https://www.npmjs.com/package/see-u-ui/v/1.3.1)_**
+
+> > - <Badge type="tip" text="新增" /> **内容解析组件体系** — 2 个内容解析组件完整实现
+> >   - <Badge type="tip" text="新增" /> Parse 富文本解析器（跨平台 HTML 富文本解析与渲染，内置 XSS 安全过滤 / 图片预览 / 链接拦截 / tagStyle 注入；H5 使用 v-html 直接渲染，App / 小程序使用 rich-text + parsed nodes）
+> >   - <Badge type="tip" text="新增" /> Markdown 文本解析组件（零依赖 GFM 子集纯字符串解析器：标题 / 强调 / 链接 / 图片 / 代码块 / 列表 / 任务列表 / 引用 / 水平线 / 表格 / 自动链接 / 反斜杠转义，内部委托 SeeParse 渲染并复用其 XSS 过滤、图片预览、链接拦截能力）
+> > - <Badge type="tip" text="新增" /> **内容解析基础设施**
+> >   - <Badge type="tip" text="新增" /> useHtmlParser Hook — HTML 解析工具（导出 parseHtml / stripHtml / sanitizeHtml / extractImgSrc 四个纯函数，支持 HTML 实体解码 / 标签白名单 / 危险标签及协议剥离 / tagStyle 注入）
+> >   - <Badge type="tip" text="新增" /> useMarkdownParser Hook — Markdown 解析工具（导出 markdownToHtml / stripMarkdown / extractMarkdownImages 三个纯函数，支持 GFM 开关 / 高亮回调 / 自定义 options）
+> > - <Badge type="info" text="修改" /> **useField** Hook 优化导入结构，提升模块化复用性
+> > - <Badge type="tip" text="新增" /> **index.ts** 注册 SeeParse、SeeMarkdown 组件，新增类型导出：`SeeParseProps`、`SeeParseEmits`、`SeeParseNode`、`SeeMarkdownProps`、`SeeMarkdownEmits`、`MarkdownParserOptions` 等
+
 ## 1.3.0 **_[`2026-06-11`](https://www.npmjs.com/package/see-u-ui/v/1.3.0)_**
 
 > > - <Badge type="tip" text="新增" /> **导航组件体系** — 13 个导航组件完整实现

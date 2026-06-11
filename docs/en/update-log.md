@@ -11,6 +11,17 @@ iframeSrc: /pages/index/index
 
 > Log Legend: <Badge type="info" text="Modified" /> <Badge type="tip" text="Added" /> <Badge type="warning" text="Fixed" /> <Badge type="danger" text="Removed" />
 
+## 1.3.1 **_[`2026-06-11`](https://www.npmjs.com/package/see-u-ui/v/1.3.1)_**
+
+> > - <Badge type="tip" text="Added" /> **Content Parsing Component System** — 2 content parsing components fully implemented
+> >   - <Badge type="tip" text="Added" /> Parse (cross-platform HTML rich text parser & renderer with built-in XSS sanitization / image preview / link interception / tagStyle injection; uses v-html on H5 for high fidelity, rich-text + parsed nodes on App / Mini Programs)
+> >   - <Badge type="tip" text="Added" /> Markdown (zero-dependency GFM-subset Markdown parser: headings / emphasis / links / images / code blocks / lists / task lists / blockquotes / horizontal rules / tables / autolinks / backslash escapes; delegates rendering to SeeParse, reusing its XSS filtering, image preview, and link interception capabilities)
+> > - <Badge type="tip" text="Added" /> **Content Parsing Infrastructure**
+> >   - <Badge type="tip" text="Added" /> useHtmlParser Hook — HTML parsing utilities (exports 4 pure functions: parseHtml / stripHtml / sanitizeHtml / extractImgSrc; supports HTML entity decoding / tag whitelist / dangerous tag & protocol stripping / tagStyle injection)
+> >   - <Badge type="tip" text="Added" /> useMarkdownParser Hook — Markdown parsing utilities (exports 3 pure functions: markdownToHtml / stripMarkdown / extractMarkdownImages; supports GFM toggle / highlight callback / custom options)
+> > - <Badge type="info" text="Modified" /> **useField** Hook optimized import structure for better modular reuse
+> > - <Badge type="tip" text="Added" /> **index.ts** registered SeeParse and SeeMarkdown components; added type exports: `SeeParseProps`, `SeeParseEmits`, `SeeParseNode`, `SeeMarkdownProps`, `SeeMarkdownEmits`, `MarkdownParserOptions`, etc.
+
 ## 1.3.0 **_[`2026-06-11`](https://www.npmjs.com/package/see-u-ui/v/1.3.0)_**
 
 > > - <Badge type="tip" text="Added" /> **Navigation Component System** — 13 navigation components fully implemented

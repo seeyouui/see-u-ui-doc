@@ -192,11 +192,11 @@ export const commonSidebar = [
         items: [
           {
             text: "Parse 富文本解析器",
-            link: "/components/todo/index.md",
+            link: "/components/parse/index.md",
           },
           {
             text: "Markdown 文本解析",
-            link: "/components/todo/index.md",
+            link: "/components/markdown/index.md",
           },
         ],
       },

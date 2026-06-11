@@ -192,11 +192,11 @@ export const commonSidebarEn = [
         items: [
           {
             text: "Parse",
-            link: "/en/components/todo/index.md",
+            link: "/en/components/parse/index.md",
           },
           {
             text: "Markdown",
-            link: "/en/components/todo/index.md",
+            link: "/en/components/markdown/index.md",
           },
         ],
       },
