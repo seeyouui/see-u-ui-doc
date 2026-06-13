@@ -7,6 +7,8 @@ interface UsePhoneSkinAnimationReturn {
   bgLightOpacity: Ref<number>;
   bgDarkOpacity: Ref<number>;
   isThemeReady: Ref<boolean>;
+  /** 外部强制同步：立即运行动画到目标状态 */
+  triggerSync: (dark: boolean) => void;
 }
 
 /**
@@ -36,6 +38,21 @@ export function usePhoneSkinAnimation(
 
   // 动画核心逻辑
   const animateThemeTransition = () => {
+    const targetDark = getTargetDark();
+
+    // 零时长：直接设最终值，不走 RAF（避免 0/0=NaN）
+    if (duration <= 0) {
+      if (targetDark) {
+        bgDarkOpacity.value = 1;
+        bgLightOpacity.value = 0;
+      } else {
+        bgLightOpacity.value = 1;
+        bgDarkOpacity.value = 0;
+      }
+      syncTarget.value = null;
+      return;
+    }
+
     const animate = (currentTime: number) => {
       if (!animationStartTime) {
         animationStartTime = currentTime;
@@ -45,12 +62,10 @@ export function usePhoneSkinAnimation(
       const rawProgress = Math.min(elapsed / duration, 1);
       const progress = easeInOutCubic(rawProgress);
 
-      if (isDark.value) {
-        // 切向暗黑：暗层变1，亮层变0
+      if (targetDark) {
         bgDarkOpacity.value = progress;
         bgLightOpacity.value = 1 - progress;
       } else {
-        // 切向明亮：亮层变1，暗层变0
         bgLightOpacity.value = progress;
         bgDarkOpacity.value = 1 - progress;
       }
@@ -59,6 +74,7 @@ export function usePhoneSkinAnimation(
         animationFrameId = requestAnimationFrame(animate);
       } else {
         animationStartTime = null;
+        syncTarget.value = null;
       }
     };
 
@@ -85,12 +101,25 @@ export function usePhoneSkinAnimation(
     );
   };
 
+  // 外部强制同步用的方向标记（isDark 是 computed 不可写）
+  const syncTarget = ref<boolean | null>(null);
+
+  // 获取当前目标方向：外部触发优先，否则取 isDark
+  const getTargetDark = () => syncTarget.value ?? isDark.value;
+
   // 监听主题变化触发动画
   watch(isDark, () => {
     if (isThemeReady.value) {
       animateThemeTransition();
     }
   });
+
+  // 外部强制同步：iframe 消息到达时直接驱动动画
+  const triggerSync = (dark: boolean) => {
+    if (!isThemeReady.value) return;
+    syncTarget.value = dark;
+    animateThemeTransition();
+  };
 
   onMounted(() => {
     preloadImages().then(() => {
@@ -118,5 +147,6 @@ export function usePhoneSkinAnimation(
     bgLightOpacity,
     bgDarkOpacity,
     isThemeReady,
+    triggerSync,
   };
 }

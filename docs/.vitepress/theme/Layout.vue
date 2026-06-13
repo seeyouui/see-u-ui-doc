@@ -31,14 +31,15 @@
 
 <script setup>
 import DefaultTheme from "vitepress/theme";
-import { useData, useRoute } from "vitepress";
-import { computed, ref, watch, onUnmounted } from "vue";
+import { useData, useRoute, useRouter } from "vitepress";
+import { computed, ref, watch, onUnmounted, onMounted } from "vue";
 import KonamiEasterEgg from "./components/KonamiEasterEgg.vue";
 import { usePhoneSkinAnimation } from "./hooks/usePhoneSkinAnimation";
 
 const { Layout } = DefaultTheme;
-const { isDark, frontmatter } = useData();
+const { isDark, frontmatter, lang } = useData();
 const route = useRoute();
+const router = useRouter();
 
 const BASE_URL = "https://demo.seeuui.cn/#";
 // const BASE_URL = "http://113.44.242.235:9001/#";
@@ -49,10 +50,11 @@ const IMG_DARK = "/static/iphone1614171D.png";
 /**
  * 手机壳明暗模式切换动画 Hook
  */
-const { bgLightOpacity, bgDarkOpacity, isThemeReady } = usePhoneSkinAnimation(
+const { bgLightOpacity, bgDarkOpacity, isThemeReady, triggerSync } = usePhoneSkinAnimation(
   isDark,
   IMG_LIGHT,
-  IMG_DARK
+  IMG_DARK,
+  0  // 无过渡动画，直接切换
 );
 
 /**
@@ -97,6 +99,22 @@ const postThemeToIframe = () => {
 };
 
 /**
+ * 向 Iframe 发送国际化语言消息
+ */
+const postLocaleToIframe = () => {
+  const iframe = mobileIframe.value;
+  if (!iframe?.contentWindow) return;
+
+  iframe.contentWindow.postMessage(
+    {
+      type: "vp-locale",
+      locale: lang.value,
+    },
+    BASE_URL
+  );
+};
+
+/**
  * 禁用滚动
  */
 const disableScroll = () => {
@@ -118,6 +136,7 @@ watch(mobileIframe, (iframeEl) => {
 
   iframeEl.addEventListener("load", () => {
     postThemeToIframe();
+    postLocaleToIframe();
   });
 
   iframeEl.addEventListener("mouseenter", disableScroll);
@@ -132,6 +151,48 @@ watch(mobileIframe, (iframeEl) => {
 watch(isDark, () => {
   postThemeToIframe();
 });
+
+/**
+ * 监听文档语言变化，发送国际化消息到 Iframe
+ */
+watch(lang, () => {
+  postLocaleToIframe();
+});
+
+/**
+ * 接收 Iframe 内的主题/语言变更，反向同步到文档站
+ */
+onMounted(() => {
+  const handleIframeMessage = (event) => {
+    const data = event.data
+    if (!data) return
+
+    // iframe 主题变更 → 文档站同步
+    if (data.type === 'ui-theme') {
+      const isDarkTarget = data.theme === 'dark'
+      // 同步 VitePress 的 useDark（VueUse）：class + localStorage 都要改
+      document.documentElement.classList.toggle('dark', isDarkTarget)
+      localStorage.setItem('vitepress-theme-appearance', data.theme)
+      // 强制手机框动画——绕开 isDark 响应式可能的延迟/遗漏
+      triggerSync(isDarkTarget)
+    }
+
+    // iframe 语言变更 → 文档站同步（SPA 导航，不刷新页面）
+    if (data.type === 'ui-locale') {
+      const currentLang = lang.value
+      const targetLang = data.locale // 'zh-CN' or 'en'
+      if (currentLang === targetLang) return
+
+      const path = window.location.pathname
+      const targetPath = targetLang === 'en'
+        ? '/en' + path
+        : path.replace(/^\/en/, '') || '/'
+      router.go(targetPath)
+    }
+  }
+
+  window.addEventListener('message', handleIframeMessage)
+})
 
 /**
  * 组件卸载时，清理滚动锁定

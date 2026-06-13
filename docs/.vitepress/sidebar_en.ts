@@ -5,6 +5,7 @@ export const commonSidebarEn = [
       { text: "Introduction", link: "/en/start" },
       { text: "Installation", link: "/en/install" },
       { text: "Configuration", link: "/en/config" },
+      { text: "Internationalization", link: "/en/i18n" },
       { text: "Custom Theme", link: "/en/theme" },
       { text: "Quick Start", link: "/en/quick-start" },
       { text: "Precautions", link: "/en/precautions" },
@@ -58,6 +59,10 @@ export const commonSidebarEn = [
           {
             text: "DatetimePicker",
             link: "/en/components/datetime-picker/index.md",
+          },
+          {
+            text: "Calendar",
+            link: "/en/components/calendar/index.md",
           },
           { text: "Upload", link: "/en/components/upload/index.md" },
           {
@@ -200,6 +205,23 @@ export const commonSidebarEn = [
           },
         ],
       },
+      {
+        text: "Business Components",
+        items: [
+          {
+            text: "Watermark",
+            link: "/en/components/watermark/index.md",
+          },
+          {
+            text: "Coupon",
+            link: "/en/components/coupon/index.md",
+          },
+          {
+            text: "ScratchCard",
+            link: "/en/components/scratch-card/index.md",
+          },
+        ],
+      },
     ],
   },
 ];
@@ -231,6 +253,7 @@ export const apiSidebarEn = [
           { text: "useTeleport", link: "/en/api/hooks/useTeleport" },
           { text: "useGesture", link: "/en/api/hooks/useGesture" },
           { text: "usePopoverPosition", link: "/en/api/hooks/usePopoverPosition" },
+          { text: "useI18n", link: "/en/api/hooks/useI18n" },
           { text: "useCopy", link: "/en/api/hooks/useCopy" },
           { text: "useRoute", link: "/en/api/hooks/useRoute" },
           { text: "useSafeArea", link: "/en/api/hooks/useSafeArea" },

@@ -5,6 +5,7 @@ export const commonSidebar = [
       { text: "介绍", link: "/start" },
       { text: "安装", link: "/install" },
       { text: "配置", link: "/config" },
+      { text: "国际化", link: "/i18n" },
       { text: "定制主题", link: "/theme" },
       { text: "快速上手", link: "/quick-start" },
       { text: "注意事项", link: "/precautions" },
@@ -58,6 +59,10 @@ export const commonSidebar = [
           {
             text: "DatetimePicker 日期选择器",
             link: "/components/datetime-picker/index.md",
+          },
+          {
+            text: "Calendar 日历",
+            link: "/components/calendar/index.md",
           },
           { text: "Upload 上传", link: "/components/upload/index.md" },
           {
@@ -200,6 +205,23 @@ export const commonSidebar = [
           },
         ],
       },
+      {
+        text: "业务组件",
+        items: [
+          {
+            text: "Watermark 水印",
+            link: "/components/watermark/index.md",
+          },
+          {
+            text: "Coupon 优惠券",
+            link: "/components/coupon/index.md",
+          },
+          {
+            text: "ScratchCard 刮刮卡",
+            link: "/components/scratch-card/index.md",
+          },
+        ],
+      },
     ],
   },
 ];
@@ -228,6 +250,7 @@ export const apiSidebar = [
           { text: "传送门", link: "/api/hooks/useTeleport" },
           { text: "手势识别", link: "/api/hooks/useGesture" },
           { text: "气泡定位", link: "/api/hooks/usePopoverPosition" },
+          { text: "国际化翻译", link: "/api/hooks/useI18n" },
           { text: "剪贴板复制", link: "/api/hooks/useCopy" },
           { text: "路由管理", link: "/api/hooks/useRoute" },
           { text: "安全区", link: "/api/hooks/useSafeArea" },
