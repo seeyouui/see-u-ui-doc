@@ -88,4 +88,135 @@ const { themeMode, setLightMode, setDarkMode, setFollowSystem } = useTheme();
 
 ## 自定义主题
 
-todo...
+> 定制专属的主题配色方案！自定义主题色功能允许你为主题库中的 4 个语义色（`primary` / `success` / `warning` / `error`）分别设置自定义颜色，系统会自动派生完整色板并全局生效。
+
+::: tip 提示
+此功能配合 [useThemeColor](./api/theme/useThemeColor) Hook 使用，无需修改组件源码。
+:::
+
+### 配置页操作
+
+在配置页（[`pages/config/index.vue`](https://github.com/seeyouui/see-u-ui/blob/main/pages/config/index.vue)）中，你可以直观地进行自定义：
+
+1. **选择颜色类型**：点击「主色 / 成功色 / 警告色 / 错误色」tab 切换
+2. **选取颜色**：点击「选择颜色」区域，浏览器会弹出原生取色器
+3. **重置**：点击单色右侧的「重置」按钮单独恢复，或点击右上角的「全部重置为默认」一键还原
+
+### 编程方式使用
+
+你可以在任何 Vue 组件中通过 `useThemeColor` Hook 来编程控制：
+
+```vue
+<script lang="ts" setup>
+import { useThemeColor } from "see-u-ui";
+
+const { customColors, setColor, setColors, resetColor, resetAll, isCustomized } = useThemeColor();
+
+// 设置主色为紫色
+setColor("primary", "#9b6dff");
+
+// 批量设置
+setColors({ primary: "#ff5500", success: "#00cc88" });
+
+// 重置
+resetColor("warning");     // 单独重置
+resetAll();                // 全部重置
+</script>
+
+<template>
+  <view>
+    <text>当前主色：{{ customColors.primary || "默认" }}</text>
+    <button @click="resetAll()">全部重置</button>
+  </view>
+</template>
+```
+
+### 颜色派生规则
+
+系统会自动为每个基色派生完整的 4 阶色板：
+
+**浅色模式派生公式：**
+
+| 色阶 | 调整 |
+|------|------|
+| `base` | 原色 |
+| `dark` | HSL: s+5, l-10 |
+| `disabled` | HSL: s-20, l+25 |
+| `light` | HSL: s-10, l+42 |
+
+**暗色模式派生公式：**
+
+| 色阶 | 调整 |
+|------|------|
+| `base` | 原色（不变） |
+| `dark` | HSL: s-5, l-15 |
+| `disabled` | HSL: s-15, l-30 |
+| `light` | 原色 rgba，0.15 透明度 |
+
+### 全局生效原理
+
+自定义主题色通过**动态注入 `<style>` 标签**覆盖 CSS 变量默认值实现，无需修改任何组件代码。
+
+```
+组件 → var(--see-primary) → theme.scss 默认值
+                          ↘ 自定义后的 <style> 覆盖值
+```
+
+H5 / App-Plus：在 `document.head` 中注入 `<style id="see-theme-color-runtime">`，选择器与 `theme.scss` 完全对齐。
+
+小程序：通过 `<see-config>` 组件的 `:style` 绑定，将 CSS 变量注入到根 view。
+
+### API 参考
+
+详细 API 文档请参考 [useThemeColor](./api/theme/useThemeColor)。
+
+#### `useThemeColor()` 返回值
+
+| 方法/属性 | 说明 |
+|-----------|------|
+| `customColors` | 当前自定义颜色状态（响应式） |
+| `isCustomized` | 是否有任意颜色被自定义 |
+| `setColor(token, color)` | 设置颜色（`null` 表示重置） |
+| `setColors(colors)` | 批量设置 |
+| `resetColor(token)` | 重置单个 |
+| `resetAll()` | 全部重置 |
+
+#### 启动复原
+
+在 `App.vue` 的 `onLaunch` 中最早期调用，避免颜色闪烁：
+
+```ts
+import { applyThemeColorOnLaunch } from "see-u-ui";
+
+onLaunch(() => {
+  applyThemeColorOnLaunch();
+  // ... 其他初始化
+});
+```
+
+### 可用颜色 token
+
+| Token     | 默认色   | 用途           |
+| --------- | -------- | -------------- |
+| `primary` | `#3ca7ff` | 主色、主题色   |
+| `success` | `#37d497` | 成功状态色     |
+| `warning` | `#ffb645` | 警告状态色     |
+| `error`   | `#ff6b6b` | 错误/危险状态色 |
+
+### 小程序注意事项
+
+小程序端每个页面需要用 `<see-config>` 包裹，以便接收主题色 CSS 变量：
+
+```vue
+<template>
+  <see-config>
+    <view class="your-page">
+      <!-- 页面内容 -->
+    </view>
+  </see-config>
+</template>
+```
+
+::: tip 提示
+配置页已内置了完整的自定义主题色 UI，如果你已经运行了示例项目，可以直接在配置页体验此功能。
+:::

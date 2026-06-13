@@ -170,7 +170,8 @@ onMounted(() => {
     // iframe 主题变更 → 文档站同步
     if (data.type === 'ui-theme') {
       const isDarkTarget = data.theme === 'dark'
-      // 同步 VitePress 的 useDark（VueUse）：class + localStorage 都要改
+      // 同步 VitePress 的 useDark（VueUse）：ref + class + localStorage 全部更新
+      isDark.value = isDarkTarget
       document.documentElement.classList.toggle('dark', isDarkTarget)
       localStorage.setItem('vitepress-theme-appearance', data.theme)
       // 强制手机框动画——绕开 isDark 响应式可能的延迟/遗漏

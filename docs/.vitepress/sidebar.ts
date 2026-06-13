@@ -262,6 +262,7 @@ export const apiSidebar = [
         text: "Theme",
         items: [
           { text: "切换主题", link: "/api/theme/useTheme" },
+          { text: "自定义主题色", link: "/api/theme/useThemeColor" },
         ],
       },
     ],

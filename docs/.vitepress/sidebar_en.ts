@@ -265,6 +265,7 @@ export const apiSidebarEn = [
         text: "Theme",
         items: [
           { text: "useTheme", link: "/en/api/theme/useTheme" },
+          { text: "useThemeColor", link: "/en/api/theme/useThemeColor" },
         ],
       },
     ],
