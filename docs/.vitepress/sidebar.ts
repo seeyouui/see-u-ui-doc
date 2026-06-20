@@ -99,6 +99,10 @@ export const commonSidebar = [
           { text: "Grid 宫格布局", link: "/components/grid/index.md" },
           { text: "Swiper 轮播图", link: "/components/swiper/index.md" },
           { text: "Skeleton 骨架屏", link: "/components/skeleton/index.md" },
+          {
+            text: "SkeletonGlobal 全局骨架屏",
+            link: "/components/skeleton-global/index.md",
+          },
           { text: "Sticky 吸顶", link: "/components/sticky/index.md" },
           { text: "Waterfall 瀑布流", link: "/components/waterfall/index.md" },
           { text: "Box 盒子", link: "/components/box/index.md" },

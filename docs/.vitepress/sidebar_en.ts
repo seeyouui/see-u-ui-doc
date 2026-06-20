@@ -99,6 +99,10 @@ export const commonSidebarEn = [
           { text: "Grid", link: "/en/components/grid/index.md" },
           { text: "Swiper", link: "/en/components/swiper/index.md" },
           { text: "Skeleton", link: "/en/components/skeleton/index.md" },
+          {
+            text: "SkeletonGlobal",
+            link: "/en/components/skeleton-global/index.md",
+          },
           { text: "Sticky", link: "/en/components/sticky/index.md" },
           { text: "Waterfall", link: "/en/components/waterfall/index.md" },
           { text: "Box", link: "/en/components/box/index.md" },
