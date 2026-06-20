@@ -22,7 +22,7 @@ iframeSrc: /pages/seeSkeleton/index
 The global skeleton uses different strategies per platform but exposes an identical API:
 
 - **H5 / App**: On `show()`, it traverses all **leaf nodes** (actual content elements) inside the page container and adds the `see-skeleton-loading` class — turning text and borders transparent, painting them skeleton-gray, and overlaying a shimmer animation. `hide()` removes the class to restore the original content.
-- **Mini Program**: It emits a `uni.$emit` event to the root [`see-config`](/en/components/config/index.md) component, which renders a full-screen skeleton mask.
+- **Mini Program**: It emits a `uni.$emit` event to the root `see-config` component, which renders a full-screen skeleton mask.
 
 ::: tip Zero-jitter principle
 On H5 / App, the skeleton styles only touch **pure visual properties** (background color, transparent text, transparent border) and never change box-model properties like `display` / `width` / `height`. Element sizes are therefore preserved, so toggling the skeleton causes **no layout jump or reflow** — and no size measurement is needed.

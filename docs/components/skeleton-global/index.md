@@ -22,7 +22,7 @@ iframeSrc: /pages/seeSkeleton/index
 全局骨架屏在不同平台采用不同策略，但对外的 API 完全一致：
 
 - **H5 / App**：调用 `show()` 时遍历页面容器内的所有**叶子节点**（实际内容元素），为其添加 `see-skeleton-loading` class，把文字、边框变透明并涂成骨架灰、叠加流光动画；`hide()` 时移除 class 还原。
-- **小程序**：通过 `uni.$emit` 事件通知页面根部的 [`see-config`](/components/config/index.md) 组件，由其渲染一层全屏骨架遮罩。
+- **小程序**：通过 `uni.$emit` 事件通知页面根部的 `see-config` 组件，由其渲染一层全屏骨架遮罩。
 
 ::: tip 零跳动原则
 H5 / App 端的骨架样式**只改纯视觉属性**（背景色、文字透明、边框透明），绝不改变 `display` / `width` / `height` 等盒模型属性。因此元素尺寸天然守恒，开关骨架时页面**不会发生高度跳动或重排**，无需任何尺寸测量。
