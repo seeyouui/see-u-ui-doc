@@ -11,6 +11,37 @@ iframeSrc: /pages/index/index
 
 > 日志说明：<Badge type="info" text="修改" /> <Badge type="tip" text="新增" /> <Badge type="warning" text="修复" /> <Badge type="danger" text="删除" />
 
+## 1.3.2 **_[`2026-07-13`](https://www.npmjs.com/package/see-u-ui/v/1.3.2)_**
+
+> > - <Badge type="warning" text="修复" /> **安全 · 三处 XSS 攻击面**
+> >   - <Badge type="warning" text="修复" /> Parse H5 端 `v-html` 接入标签/属性白名单与 `isSafeUrl` 协议校验，`allowedTags` / `allowedAttrs` 在 H5 端正式生效，拦截 `javascript:` / `data:text/html` 等危险协议
+> >   - <Badge type="warning" text="修复" /> useHtmlParser `on*` 事件属性过滤放宽分隔符匹配，堵住 `<img/onerror=...>` 这类以 `/` 分隔的绕过
+> >   - <Badge type="warning" text="修复" /> Markdown `highlight` 回调输出经 sanitize 清洗后再嵌入，杜绝高亮回调注入
+> > - <Badge type="warning" text="修复" /> **跨端崩溃 · 条件编译缺失**
+> >   - <Badge type="warning" text="修复" /> Popup 滚动锁 `document` 访问加运行时守卫、`requestAnimationFrame` 在非 H5 端改用 nextTick 兜底，小程序 / App 端打开弹层不再 ReferenceError
+> >   - <Badge type="warning" text="修复" /> IndexList 索引导航 `requestAnimationFrame` 改用 setTimeout 节流，非 H5 端触摸不再崩溃
+> >   - <Badge type="warning" text="修复" /> Modal 命令式调用改为响应式驱动，关闭动画可正常播放
+> >   - <Badge type="warning" text="修复" /> useGesture 补 H5 运行时守卫与 touches 空值保护
+> > - <Badge type="warning" text="修复" /> **v-model / 受控失效**
+> >   - <Badge type="warning" text="修复" /> Cascader 新增 modelValue 侦听与首屏回显，中间层点击不再直接改写外部值、取消可正确还原
+> >   - <Badge type="warning" text="修复" /> Tree 接通 v-model（modelValue 初始化 + update 回写），搜索时自动展开命中项祖先，折叠子树内的匹配项可见
+> >   - <Badge type="warning" text="修复" /> CityLocate 补齐 `update:modelValue` 闭环，支持受控设置与回显
+> > - <Badge type="warning" text="修复" /> **表单校验体系**
+> >   - <Badge type="warning" text="修复" /> useForm 全表单校验不再把无规则字段误置为 success 绿态
+> >   - <Badge type="warning" text="修复" /> FormItem 接通 change / blur 自动校验，「输入即校验」正式生效
+> >   - <Badge type="warning" text="修复" /> CheckboxGroup / RadioGroup 修正 `formContext.props` 读取路径，Form 级 disabled / readonly / size 可正确下发
+> > - <Badge type="warning" text="修复" /> **其它组件缺陷**
+> >   - <Badge type="warning" text="修复" /> Input `number` / `digit` 类型支持连续输入小数（不再吞掉小数点）
+> >   - <Badge type="warning" text="修复" /> Navbar `isShowLeft` / `isShowRight` 显隐生效；Tabbar fixed 占位补齐底部安全区、安全区 `0` 值不再被强制成 20px
+> >   - <Badge type="warning" text="修复" /> Sticky 引入占位元素修复吸顶后无法复原的「吸顶卡死」与布局跳动；Tabs 可滚动模式指示器扣除横向滚动偏移
+> >   - <Badge type="warning" text="修复" /> NoticeBar 默认图标不再被当作明文 "volume" 渲染
+> >   - <Badge type="warning" text="修复" /> Toast / Notify 单例状态多实例串味修复，命令式调用不再重复弹出
+> >   - <Badge type="warning" text="修复" /> Button `onTap` 事件正式触发、清理 ripple 队列内存泄漏、H5 点击坐标兼容
+> >   - <Badge type="warning" text="修复" /> Config 全局事件监听器改为配对注册 / 注销，消除 hide / show 往返叠加泄漏
+> >   - <Badge type="warning" text="修复" /> Upload 引入内部状态副本并按文件 id 定位，修复依赖 prop 回流导致的状态 / 进度 / url 丢失
+> >   - <Badge type="warning" text="修复" /> Image `src` 变更时重置加载状态并重新挂载，`reload()` 可真正触发重载
+> >   - <Badge type="warning" text="修复" /> Waterfall 加载更多不再只触发一次，支持持续下拉加载
+
 ## 1.3.1 **_[`2026-06-11`](https://www.npmjs.com/package/see-u-ui/v/1.3.1)_**
 
 > > - <Badge type="tip" text="新增" /> **内容解析组件体系** — 2 个内容解析组件完整实现

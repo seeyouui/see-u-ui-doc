@@ -11,6 +11,37 @@ iframeSrc: /pages/index/index
 
 > Log Legend: <Badge type="info" text="Modified" /> <Badge type="tip" text="Added" /> <Badge type="warning" text="Fixed" /> <Badge type="danger" text="Removed" />
 
+## 1.3.2 **_[`2026-07-13`](https://www.npmjs.com/package/see-u-ui/v/1.3.2)_**
+
+> > - <Badge type="warning" text="Fixed" /> **Security · Three XSS attack surfaces**
+> >   - <Badge type="warning" text="Fixed" /> Parse: H5 `v-html` now runs through the tag/attribute allowlist and `isSafeUrl` protocol check, so `allowedTags` / `allowedAttrs` take effect on H5 and dangerous protocols like `javascript:` / `data:text/html` are blocked
+> >   - <Badge type="warning" text="Fixed" /> useHtmlParser: relaxed the separator matching in the `on*` event-attribute filter to block `/`-delimited bypasses such as `<img/onerror=...>`
+> >   - <Badge type="warning" text="Fixed" /> Markdown: the `highlight` callback output is now sanitized before being embedded, preventing highlight-callback injection
+> > - <Badge type="warning" text="Fixed" /> **Cross-platform crashes · missing conditional compilation**
+> >   - <Badge type="warning" text="Fixed" /> Popup: guarded `document` access in the scroll lock and fell back to nextTick instead of `requestAnimationFrame` on non-H5, so opening a popup on Mini Program / App no longer throws ReferenceError
+> >   - <Badge type="warning" text="Fixed" /> IndexList: replaced `requestAnimationFrame` with setTimeout throttling in the index nav, no longer crashing on touch on non-H5
+> >   - <Badge type="warning" text="Fixed" /> Modal: imperative calls are now reactively driven so the close animation plays correctly
+> >   - <Badge type="warning" text="Fixed" /> useGesture: added H5 runtime guards and touches null-safety
+> > - <Badge type="warning" text="Fixed" /> **Broken v-model / controlled state**
+> >   - <Badge type="warning" text="Fixed" /> Cascader: added a modelValue watcher and first-paint echo; intermediate-level clicks no longer overwrite the external value and cancel restores correctly
+> >   - <Badge type="warning" text="Fixed" /> Tree: wired up v-model (modelValue init + update write-back) and auto-expands ancestors of matches during search so hits inside collapsed subtrees become visible
+> >   - <Badge type="warning" text="Fixed" /> CityLocate: completed the `update:modelValue` loop for controlled set/echo
+> > - <Badge type="warning" text="Fixed" /> **Form validation system**
+> >   - <Badge type="warning" text="Fixed" /> useForm: full-form validation no longer mislabels rule-less fields as success (green)
+> >   - <Badge type="warning" text="Fixed" /> FormItem: wired up change / blur auto-validation so "validate on input" actually works
+> >   - <Badge type="warning" text="Fixed" /> CheckboxGroup / RadioGroup: corrected the `formContext.props` read path so form-level disabled / readonly / size propagate correctly
+> > - <Badge type="warning" text="Fixed" /> **Other component defects**
+> >   - <Badge type="warning" text="Fixed" /> Input: `number` / `digit` types now allow continuous decimal entry (no longer swallowing the decimal point)
+> >   - <Badge type="warning" text="Fixed" /> Navbar `isShowLeft` / `isShowRight` visibility now works; Tabbar fixed placeholder includes the bottom safe area and a safe-area value of `0` is no longer forced to 20px
+> >   - <Badge type="warning" text="Fixed" /> Sticky: added a placeholder element to fix the "stuck sticky" that couldn't unstick and the layout jump; Tabs scrollable-mode indicator now subtracts the horizontal scroll offset
+> >   - <Badge type="warning" text="Fixed" /> NoticeBar: the default icon is no longer rendered as the literal text "volume"
+> >   - <Badge type="warning" text="Fixed" /> Toast / Notify: fixed singleton state bleeding across instances; imperative calls no longer fire on every mounted instance
+> >   - <Badge type="warning" text="Fixed" /> Button: `onTap` now actually fires, the ripple queue memory leak is cleaned up, and H5 click coordinates are handled
+> >   - <Badge type="warning" text="Fixed" /> Config: global event listeners now register / unregister in pairs, eliminating the hide / show re-entry leak
+> >   - <Badge type="warning" text="Fixed" /> Upload: introduced an internal state copy keyed by file id, fixing status / progress / url loss caused by relying on prop write-back
+> >   - <Badge type="warning" text="Fixed" /> Image: resets loading state and remounts on `src` change; `reload()` now truly triggers a reload
+> >   - <Badge type="warning" text="Fixed" /> Waterfall: load-more no longer fires only once and supports continuous pull-to-load
+
 ## 1.3.1 **_[`2026-06-11`](https://www.npmjs.com/package/see-u-ui/v/1.3.1)_**
 
 > > - <Badge type="tip" text="Added" /> **Content Parsing Component System** — 2 content parsing components fully implemented
