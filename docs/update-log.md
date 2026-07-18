@@ -11,6 +11,15 @@ iframeSrc: /pages/index/index
 
 > 日志说明：<Badge type="info" text="修改" /> <Badge type="tip" text="新增" /> <Badge type="warning" text="修复" /> <Badge type="danger" text="删除" />
 
+## 1.3.3 **_[`2026-07-18`](https://www.npmjs.com/package/see-u-ui/v/1.3.3)_**
+
+> [`commit: 362cb04`](https://github.com/seeyouui/see-u-ui-doc/commit/362cb042c689dae0cabda2a0135670ed1cd6b317)
+>
+> > - <Badge type="warning" text="修复" /> 修复中英文侧边栏中 Badge 组件的错误跳转链接
+> > - <Badge type="tip" text="新增" /> 补全 Icon 组件的中英文官方文档，替换原有 TODO 占位内容
+> > - <Badge type="tip" text="新增" /> 新增 Badge 组件的完整中英文使用文档
+> > - <Badge type="tip" text="新增" /> 新增组件库说明文档 llms.txt
+
 ## 1.3.2 **_[`2026-07-13`](https://www.npmjs.com/package/see-u-ui/v/1.3.2)_**
 
 > > - <Badge type="warning" text="修复" /> **安全 · 三处 XSS 攻击面**

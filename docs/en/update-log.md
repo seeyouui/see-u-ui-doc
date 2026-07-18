@@ -11,6 +11,15 @@ iframeSrc: /pages/index/index
 
 > Log Legend: <Badge type="info" text="Modified" /> <Badge type="tip" text="Added" /> <Badge type="warning" text="Fixed" /> <Badge type="danger" text="Removed" />
 
+## 1.3.3 **_[`2026-07-18`](https://www.npmjs.com/package/see-u-ui/v/1.3.3)_**
+
+> [`commit: 362cb04`](https://github.com/seeyouui/see-u-ui-doc/commit/362cb042c689dae0cabda2a0135670ed1cd6b317)
+>
+> > - <Badge type="warning" text="Fixed" /> Fixed incorrect navigation links for Badge component in both Chinese and English sidebars
+> > - <Badge type="tip" text="Added" /> Completed Icon component documentation in both Chinese and English, replacing the original TODO placeholder
+> > - <Badge type="tip" text="Added" /> Added complete Badge component documentation in both Chinese and English
+> > - <Badge type="tip" text="Added" /> Added component library documentation file llms.txt
+
 ## 1.3.2 **_[`2026-07-13`](https://www.npmjs.com/package/see-u-ui/v/1.3.2)_**
 
 > > - <Badge type="warning" text="Fixed" /> **Security · Three XSS attack surfaces**
