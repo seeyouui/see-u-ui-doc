@@ -34,7 +34,7 @@ iframeSrc: /pages/index/index
 - 🧩 100+ Components (Coming soon), hoping to help you write less code.
 - 🔍 Supports [TypeScript](https://www.typescriptlang.org/), providing complete type definition files.
 - 🔧 Full-link development and design tool system.
-- 🔨 Deep [theme customization](theme/) capabilities in every detail.
+- 🔨 Deep [theme customization](./theme) capabilities in every detail.
 - 🔑 Comprehensive documentation and examples to help you get started quickly.
 - 🤖 Natively [AI](./ai/)-friendly.
 

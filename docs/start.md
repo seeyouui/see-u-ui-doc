@@ -35,7 +35,7 @@ iframeSrc: /pages/index/index
 - 🧩 100+个组件（即将），希望让你少写点代码。
 - 🔍 支持 [TypeScript](https://www.typescriptlang.org/)，提供完整的类型定义文件。
 - 🔧 全链路开发和设计工具体系。
-- 🔨 深入每个细节的[主题定制](theme/)能力。
+- 🔨 深入每个细节的[主题定制](./theme)能力。
 - 🔑 完善的文档和示例，帮助您快速上手。
 - 🤖 原生 [AI](./ai/) 友好。
 
