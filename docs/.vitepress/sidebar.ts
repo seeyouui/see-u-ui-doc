@@ -13,6 +13,16 @@ export const commonSidebar = [
     ],
   },
   {
+    text: "AI",
+    items: [
+      { text: "AI 总览", link: "/ai/" },
+      { text: "MCP 接入", link: "/ai/mcp" },
+      { text: "Agent 规则", link: "/ai/agents" },
+      { text: "LLMs.txt", link: "/ai/llms" },
+      { text: "IDE 补全", link: "/ai/web-types" },
+    ],
+  },
+  {
     text: "组件",
     items: [
       {

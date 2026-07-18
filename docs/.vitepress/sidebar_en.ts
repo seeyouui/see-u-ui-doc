@@ -13,6 +13,16 @@ export const commonSidebarEn = [
     ],
   },
   {
+    text: "AI",
+    items: [
+      { text: "AI Overview", link: "/en/ai/" },
+      { text: "MCP Integration", link: "/en/ai/mcp" },
+      { text: "Agent Rules", link: "/en/ai/agents" },
+      { text: "LLMs.txt", link: "/en/ai/llms" },
+      { text: "IDE Completion", link: "/en/ai/web-types" },
+    ],
+  },
+  {
     text: "Components",
     items: [
       {

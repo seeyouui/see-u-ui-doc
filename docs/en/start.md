@@ -32,10 +32,11 @@ iframeSrc: /pages/index/index
 ## Features
 
 - 🧩 100+ Components (Coming soon), hoping to help you write less code.
-- 🔍 Supports TypeScript, providing complete type definition files.
+- 🔍 Supports [TypeScript](https://www.typescriptlang.org/), providing complete type definition files.
 - 🔧 Full-link development and design tool system.
-- 🔨 Theme customization capabilities deep into every detail.
+- 🔨 Deep [theme customization](theme/) capabilities in every detail.
 - 🔑 Comprehensive documentation and examples to help you get started quickly.
+- 🤖 Natively [AI](./ai/)-friendly.
 
 ## Contributing
 
@@ -45,6 +46,14 @@ Whether it's fixing a typo, adding a comment, proposing a small optimization, or
 Every contribution you make genuinely helps this project become better.
 
 For more details, please refer to our [Contributing Guide]() 🙏❤️
+
+## About AI
+
+SeeYouUI is not just a component library for humans - it's built for AI, too.
+
+From day one, we've made it AI-native: a single source of truth ([registry.json](https://github.com/seeyouui/see-u-ui-mcp/blob/main/data/registry.json)) auto-derives into multiple AI-consumable artifacts, covering mainstream AI tool integrations.
+
+👉 Start from the [AI Overview](./ai/).
 
 ## Community
 

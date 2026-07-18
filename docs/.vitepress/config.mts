@@ -30,6 +30,7 @@ export default defineConfig({
         nav: [
           { text: "首页", link: "/" },
           { text: "组件", link: "/components/button" },
+          { text: "AI", link: "/ai/" },
           { text: "API", link: "/api/" }, // 修正：建议加上尾部斜杠
           { text: "贡献指南", link: "/contributing" },
           { text: "关于我们", link: "/about" },
@@ -79,6 +80,7 @@ export default defineConfig({
         nav: [
           { text: "Home", link: "/en/" },
           { text: "Components", link: "/en/components/button" },
+          { text: "AI", link: "/en/ai/" },
           { text: "API", link: "/en/api/" },
           { text: "Contributing", link: "/en/contributing" },
           { text: "About", link: "/en/about" },

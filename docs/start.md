@@ -33,10 +33,11 @@ iframeSrc: /pages/index/index
 ## 特性
 
 - 🧩 100+个组件（即将），希望让你少写点代码。
-- 🔍 支持 TypeScript，提供完整的类型定义文件。
+- 🔍 支持 [TypeScript](https://www.typescriptlang.org/)，提供完整的类型定义文件。
 - 🔧 全链路开发和设计工具体系。
-- 🔨 深入每个细节的主题定制能力。
+- 🔨 深入每个细节的[主题定制](theme/)能力。
 - 🔑 完善的文档和示例，帮助您快速上手。
+- 🤖 原生 [AI](./ai/) 友好。
 
 <!-- ## 预览
 
@@ -54,6 +55,14 @@ iframeSrc: /pages/index/index
 更多说明请参阅我们的 [贡献指南](./contributing.md) 🙏❤️
 
 <!-- - 请确保您的 PR 符合 [贡献指南](https://github.com/see-u-ui/see-u-ui/blob/main/CONTRIBUTING.md)。 -->
+
+## 关于 AI
+
+SeeYouUI 不只是为人设计的组件库，也是为 AI 设计的。
+
+我们从一开始就把组件库打造成 AI 原生友好：一份单一数据源（[registry.json](https://github.com/seeyouui/see-u-ui-mcp/blob/main/data/registry.json)），自动派生出多种 AI 可消费的产物，覆盖主流 AI 工具的接入方式。
+
+👉 从 [AI 总览](./ai/) 开始了解。
 
 ## 社区
 
